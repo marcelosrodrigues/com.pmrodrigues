@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import static org.hibernate.criterion.Restrictions.eq;
 
-@Repository("EstadoRepository")
+@Repository
 public class EstadoRepositoryImpl extends AbstractRepository<Estado> implements EstadoRepository {
 
     private static final long serialVersionUID = 1L;

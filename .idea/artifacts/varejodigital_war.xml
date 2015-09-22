@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="varejodigital:war">
+    <output-path>$PROJECT_DIR$/varejodigital/target</output-path>
+    <root id="archive" name="varejo.war">
+      <element id="artifact" artifact-name="varejodigital:war exploded" />
+    </root>
+  </artifact>
+</component>

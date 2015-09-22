@@ -1,6 +1,7 @@
 package com.pmrodrigues.boletos.models;
 
 import br.com.caelum.stella.bean.validation.CNPJ;
+import com.pmrodrigues.endereco.models.Endereco;
 import lombok.*;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -62,6 +63,13 @@ public class Cedente implements Serializable {
     @Setter
     @Getter
     private String convenio;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "endereco_id")
+    @Getter
+    @Setter
+    private Endereco endereco;
+
 
     public Cedente comNome(final String nome) {
         this.nome = nome;

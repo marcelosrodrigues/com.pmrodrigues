@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sisgns:war">
+    <output-path>$PROJECT_DIR$/sisgns/target</output-path>
+    <root id="archive" name="ibws.war">
+      <element id="artifact" artifact-name="sisgns:war exploded" />
+    </root>
+  </artifact>
+</component>

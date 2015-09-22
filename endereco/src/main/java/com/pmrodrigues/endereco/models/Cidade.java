@@ -13,9 +13,7 @@ import java.io.Serializable;
 @EqualsAndHashCode()
 @ToString()
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
-public
-@Data
-class Cidade implements Serializable {
+public @Data class Cidade implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -69,7 +69,7 @@ public class GeradorBoleto {
 
     private Sacado criarCliente(final Boleto boleto) {
 
-        final Sacado sacado = new Sacado(boleto.getSacado().getNome(), boleto.getSacado().getCpf());
+        final Sacado sacado = new Sacado(boleto.getSacado().getNome(), boleto.getSacado().getDocumento());
         final Endereco endereco = new Endereco();
         endereco.setBairro(boleto.getSacado().getEndereco().getLogradouro().getBairro().getNome());
         endereco.setCep(boleto.getSacado().getEndereco().getLogradouro().getCep());

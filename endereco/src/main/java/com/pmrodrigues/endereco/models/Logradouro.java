@@ -13,9 +13,7 @@ import java.io.Serializable;
 @EqualsAndHashCode()
 @ToString()
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
-public
-@Data
-class Logradouro implements Serializable {
+public @Data class Logradouro implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

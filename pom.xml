@@ -20,6 +20,8 @@
         <module>boleto</module>
         <module>xml</module>
         <module>endereco</module>
+        <module>sisgns</module>
+        <module>pessoa</module>
     </modules>
     <packaging>pom</packaging>
 

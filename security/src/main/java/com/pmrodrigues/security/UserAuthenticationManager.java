@@ -14,6 +14,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
 
+import static java.lang.String.format;
+
 /**
  * Created by Marceloo on 24/03/2015.
  */

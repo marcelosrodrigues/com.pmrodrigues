@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="boleto-webservice:war">
+    <output-path>$PROJECT_DIR$/boleto-webservice/target</output-path>
+    <root id="archive" name="ibws.war">
+      <element id="artifact" artifact-name="boleto-webservice:war exploded" />
+    </root>
+  </artifact>
+</component>

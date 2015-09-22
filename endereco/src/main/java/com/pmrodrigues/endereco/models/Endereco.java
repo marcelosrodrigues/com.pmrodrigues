@@ -8,12 +8,12 @@ import java.io.Serializable;
 /**
  * Created by Marceloo on 22/09/2015.
  */
+@Entity
+@Table
 @EqualsAndHashCode()
 @ToString()
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
-public
-@Data
-class Endereco implements Serializable {
+public @Data class Endereco implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

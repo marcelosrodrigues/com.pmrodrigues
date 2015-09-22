@@ -3,6 +3,7 @@ package test.com.pmrodrigues.boletos.model;
 import com.pmrodrigues.boletos.gerador.GeradorBoleto;
 import com.pmrodrigues.boletos.models.*;
 import com.pmrodrigues.endereco.models.*;
+import com.pmrodrigues.pessoa.models.PessoaFisica;
 import org.joda.time.DateTime;
 import org.junit.Test;
 
@@ -48,9 +49,9 @@ public class TestBoleto {
     }
 
     private Boleto gerarBoleto() {
-        return new Boleto().comCliente(new Sacado()
+        return new Boleto().comCliente(new PessoaFisica()
                 .comNome("MARCELO DA SILVA RODRIGUES")
-                .comCPF("07032327702")
+                .comDocumento("07032327702")
                 .comEmail("marcelosrodrigues@globo.com")
                 .comEndereco(new Endereco()
                         .comNumero("84")

@@ -1,0 +1,17 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+
+<Configure id="ellaDS" class="org.eclipse.jetty.webapp.WebAppContext">
+
+    <New id="ellaDS" class="org.eclipse.jetty.plus.jndi.Resource">
+        <Arg>jdbc/boletoDS</Arg>
+        <Arg>
+            <New class="org.apache.commons.dbcp.BasicDataSource">
+                <Set name="driverClassName">com.mysql.jdbc.Driver</Set>
+                <Set name="url">jdbc:mysql://localhost:3306/boletos?autoReconnect=true</Set>
+                <Set name="username">boletos</Set>
+                <Set name="password">boletos</Set>
+            </New>
+        </Arg>
+    </New>
+</Configure>

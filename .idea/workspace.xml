@@ -1,0 +1,3127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1d0caf9d-1ed8-4ca4-83ab-f28ad8f58a2e" name="Default" comment="carregando detalhes do projeto">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/alacoro.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/animated-overlay.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ico_itau.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/plus_minus_icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/progressbar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-bg_flat_10_000000_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-bg_glass_100_f6f6f6_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-bg_glass_100_fdf5ce_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-icons_228ef1_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-icons_ef8c08_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-icons_ffd27a_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Administradora.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/BairroRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/BairroRepositoryImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/CidadeRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/CidadeRepositoryImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissionamento.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Contrato.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Corretor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/models/Dependente.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/LogradouroRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/LogradouroRepositoryImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Operadora.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/security/Perfil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/models/Pessoa.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/models/PessoaFisica.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/models/PessoaJuridica.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/repository/PessoaRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/repository/impl/PessoaRepositoryImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Plano.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/security/Usuario.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/UsuarioRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/impl/UsuarioRepositoryImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/services/UsuarioService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/resources/db/migration/V1_CREATE_DATABASE.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_bordered-pulled.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_core.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_fixed-width.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_icons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_larger.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_list.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_path.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_rotated-flipped.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_spinning.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_stacked.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/sistema/base.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/boleto.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boleto/boleto.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/bootstrap-theme.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/bootswatch.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/bordered-pulled.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com.pmrodrigues.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/core.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/plugins/dataTables.bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/dataTables/dataTables.bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/endereco/endereco.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/flot/excanvas.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/fixed-width.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/flot/flot-data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/css/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/font-awesome.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/font-awesome.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/icons.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/io/io.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/test/resources/jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/resources/jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/test/resources/jetty-env.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/resources/jetty-env.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery-maskinput.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/jquery-ui-1.10.4.custom.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery-ui-datepicker-pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.Jcrop.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.color.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/dataTables/jquery.dataTables.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.fileupload-angular.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.fileupload-audio.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.fileupload-image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.fileupload-jquery-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/jquery.fileupload-noscript.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.fileupload-process.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/jquery.fileupload-ui-noscript.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/jquery.fileupload-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.fileupload-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.fileupload-validate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.fileupload-video.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/jquery.fileupload.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.fileupload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/flot/jquery.flot.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/flot/jquery.flot.pie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/flot/jquery.flot.resize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/flot/jquery.flot.tooltip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.iframe-transport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.maskMoney.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/cors/jquery.postmessage-transport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/vendor/jquery.ui.widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/cors/jquery.xdr-transport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/larger.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/list.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/login.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/sistema/includes/menu-lateral.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/sistema/includes/menu-superior.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/sistema/includes/menu.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/resources/messages.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/plugins/metisMenu/metisMenu.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/metisMenu/metisMenu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/plugins/metisMenu/metisMenu.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/metisMenu/metisMenu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/less/mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/morris/morris-data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/plugins/morris.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/morris/morris.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/morris/morris.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/path.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/principal.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/plugins/morris/raphael.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/rotated-flipped.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/sb-admin-2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/sb-admin-2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/less/sb-admin-2.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/sb-admin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/sistema/includes/search-formulario.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/security/security.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/test/resources/seguranca.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/resources/seguranca.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/sisgns_war.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/sisgns_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms/sms.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/plugins/social-buttons.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/spinning.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/stacked.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/sun-jaxws.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taglib/taglib.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/test/resources/test-applicationContext-data.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/resources/test-applicationContext-data.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/test/resources/test-applicationContext-email.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/resources/test-applicationContext-email.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/test/resources/test-applicationContext-security.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/resources/test-applicationContext-security.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pessoa/src/test/resources/test-applicationContext.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/resources/test-applicationContext.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/tiles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/plugins/timeline.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/treeview.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utilities/utilities.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/variables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/variables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/less/variables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vraptor-crud/vraptor-crud.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml/xml.iml" />
+      <change type="DELETED" beforePath="C:\Users\Marceloo\workspace\com.pmrodrigues\boleto\src\main\java\com\pmrodrigues\boletos\models\Sacado.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Bairro.java" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Bairro.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Boleto.java" afterPath="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Boleto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Cedente.java" afterPath="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Cedente.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Cidade.java" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Cidade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Endereco.java" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Endereco.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Estado.java" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Estado.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/EstadoRepositoryImpl.java" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/EstadoRepositoryImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/gerador/GeradorBoleto.java" afterPath="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/gerador/GeradorBoleto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Logradouro.java" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Logradouro.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boleto/src/test/java/test/com/pmrodrigues/boletos/model/TestBoleto.java" afterPath="$PROJECT_DIR$/boleto/src/test/java/test/com/pmrodrigues/boletos/model/TestBoleto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vraptor-crud/src/main/java/com/pmrodrigues/vraptor/crud/resolvers/TilesPathResolver.java" afterPath="$PROJECT_DIR$/vraptor-crud/src/main/java/com/pmrodrigues/vraptor/crud/resolvers/TilesPathResolver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/UserAuthenticationManager.java" afterPath="$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/UserAuthenticationManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boleto/pom.xml" afterPath="$PROJECT_DIR$/boleto/pom.xml" />
+    </list>
+    <list id="67e8f95b-5763-4ff1-a6db-8cf5c8aff601" name="New changelist" comment="" />
+    <ignored path="com.pmrodrigues.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/persistence/target/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <ignored path="$PROJECT_DIR$/taglib/target/" />
+    <ignored path="$PROJECT_DIR$/vraptor-crud/target/" />
+    <ignored path="$PROJECT_DIR$/akatus/target/" />
+    <ignored path="$PROJECT_DIR$/pagamento/target/" />
+    <ignored path="$PROJECT_DIR$/security/target/" />
+    <ignored path="$PROJECT_DIR$/emissor-boleto/target/" />
+    <ignored path="$PROJECT_DIR$/utilities/target/" />
+    <ignored path="$PROJECT_DIR$/sms/target/" />
+    <ignored path="$PROJECT_DIR$/boleto-webservice/target/" />
+    <ignored mask="*/target/**/*" />
+    <ignored path=".idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" />
+    <ignored path=".idea/libraries/Maven__br_com_caelum_stella_caelum_stella_core_2_1_2.xml" />
+    <ignored path=".idea/libraries/Maven__javax_activation_activation_1_1_1.xml" />
+    <ignored path=".idea/libraries/Maven__net_sourceforge_barbecue_barbecue_1_5_beta1.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_commons_commons_email_1_3_3.xml" />
+    <ignored path=".idea/libraries/Maven__com_lowagie_itext_2_1_7_js2.xml" />
+    <ignored path=".idea/libraries/Maven__br_com_caelum_stella_caelum_stella_boleto_2_1_2.xml" />
+    <ignored path=".idea/libraries/Maven__net_sf_jasperreports_jasperreports_5_5_0.xml" />
+    <ignored path=".idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" />
+    <ignored path=".idea/libraries/Maven__javax_el_el_api_2_2.xml" />
+    <ignored path=".idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" />
+    <ignored path=".idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
+    <ignored path=".idea/sqldialects.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_security_spring_security_acl_3_2_5_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_web_4_1_0_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_security_spring_security_taglibs_3_2_5_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_aop_3_2_8_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_security_spring_security_config_3_2_5_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_security_spring_security_web_3_2_5_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_beans_3_2_8_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_security_spring_security_core_3_2_5_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
+    <ignored path=".idea/libraries/Maven__commons_codec_commons_codec_1_8.xml" />
+    <ignored path=".idea/libraries/Maven__org_glassfish_javax_servlet_3_0.xml" />
+    <ignored path=".idea/libraries/Maven__javax_mail_mail_1_4_7.xml" />
+    <ignored path=".idea/libraries/Maven__org_objenesis_objenesis_1_0.xml" />
+    <ignored path=".idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_velocity_velocity_1_7.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_aop_4_1_0_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_beans_4_1_0_RELEASE.xml" />
+    <ignored path=".idea/artifacts/emissor_boleto_war.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_context_4_1_0_RELEASE.xml" />
+    <ignored path=".idea/artifacts/emissor_boleto_war_exploded.xml" />
+    <ignored path=".idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" />
+    <ignored path=".idea/libraries/Maven__javax_xml_ws_jaxws_api_2_2_9.xml" />
+    <ignored path=".idea/libraries/Maven__org_jvnet_mimepull_mimepull_1_9_1.xml" />
+    <ignored path=".idea/libraries/Maven__log4j_log4j_1_2_16.xml" />
+    <ignored path=".idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2_b03.xml" />
+    <ignored path=".idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_GA.xml" />
+    <ignored path=".idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_1_2.xml" />
+    <ignored path=".idea/libraries/Maven__com_sun_xml_ws_jaxws_rt_2_2_8.xml" />
+    <ignored path=".idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" />
+    <ignored path=".idea/libraries/Maven__cglib_cglib_nodep_2_1_3.xml" />
+    <ignored path=".idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_7.xml" />
+    <ignored path=".idea/libraries/Maven__com_sun_org_apache_xml_internal_resolver_20050927.xml" />
+    <ignored path=".idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_jdbc_4_1_0_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_7_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_context_support_4_1_0_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__commons_digester_commons_digester_1_8.xml" />
+    <ignored path=".idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_7.xml" />
+    <ignored path=".idea/libraries/Maven__com_sun_xml_stream_buffer_streambuffer_1_5_3.xml" />
+    <ignored path=".idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_1.xml" />
+    <ignored path=".idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+    <ignored path=".idea/libraries/Maven__com_sun_xml_messaging_saaj_saaj_impl_1_3_20.xml" />
+    <ignored path=".idea/libraries/Maven__commons_beanutils_commons_beanutils_bean_collections_1_8_3.xml" />
+    <ignored path=".idea/libraries/Maven__javax_activation_activation_1_1.xml" />
+    <ignored path=".idea/libraries/Maven__com_sun_istack_istack_commons_runtime_2_16.xml" />
+    <ignored path=".idea/libraries/Maven__org_glassfish_external_management_api_3_0_0_b012.xml" />
+    <ignored path=".idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_2_Final.xml" />
+    <ignored path=".idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_12.xml" />
+    <ignored path=".idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_2_7_Final.xml" />
+    <ignored path=".idea/libraries/Maven__org_glassfish_gmbal_gmbal_api_only_3_1_0_b001.xml" />
+    <ignored path=".idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
+    <ignored path=".idea/libraries/Maven__commons_beanutils_commons_beanutils_core_1_8_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_glassfish_ha_ha_api_3_1_9.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_core_4_1_0_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__com_sun_xml_ws_policy_2_3_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_orm_4_1_0_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__javax_xml_soap_javax_xml_soap_api_1_3_5.xml" />
+    <ignored path=".idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_5.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_test_4_1_0_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_2_7.xml" />
+    <ignored path=".idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_1_Final.xml" />
+    <ignored path=".idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
+    <ignored path=".idea/libraries/Maven__javax_jws_jsr181_api_1_0_MR1.xml" />
+    <ignored path=".idea/libraries/Maven__org_aspectj_aspectjweaver_1_5_4.xml" />
+    <ignored path=".idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" />
+    <ignored path=".idea/libraries/Maven__commons_validator_commons_validator_1_4_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_jmock_jmock_2_6_0.xml" />
+    <ignored path=".idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
+    <ignored path=".idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_expression_4_1_0_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_javassist_javassist_3_18_2_GA.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_tx_4_1_0_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_hibernate_hibernate_core_4_2_7_Final.xml" />
+    <ignored path=".idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
+    <ignored path=".idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_5.xml" />
+    <ignored path=".idea/libraries/Maven__org_aspectj_aspectjrt_1_5_4.xml" />
+    <ignored path=".idea/libraries/Maven__org_jmock_jmock_legacy_2_6_0.xml" />
+    <ignored path=".idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_oxm_4_1_0_RELEASE.xml" />
+    <ignored path=".idea/dataSources.ids" />
+    <ignored path=".idea/dataSources.xml" />
+    <ignored path=".idea/libraries/Maven__joda_time_joda_time_2_3.xml" />
+    <ignored path=".idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+    <ignored path=".idea/libraries/Maven__br_com_caelum_stella_caelum_stella_core_2_0_4.xml" />
+    <ignored path=".idea/libraries/Maven__br_com_caelum_stella_caelum_stella_bean_validation_2_0_4.xml" />
+    <ignored path=".idea/libraries/Maven__mysql_mysql_connector_java_5_1_27.xml" />
+    <ignored path=".idea/compiler.xml" />
+    <ignored path=".idea/misc.xml" />
+    <ignored path=".idea/vcs.xml" />
+    <ignored path=".idea/artifacts/boleto_webservice_war_exploded.xml" />
+    <ignored path=".idea/modules.xml" />
+    <ignored path=".idea/artifacts/boleto_webservice_war.xml" />
+    <ignored path=".idea/copyright/profiles_settings.xml" />
+    <ignored path="com.pmrodrigues.iml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_data_spring_data_commons_1_8_0_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_8_0_RELEASE.xml" />
+    <ignored path=".idea/.name" />
+    <ignored path=".idea/uiDesigner.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_data_spring_data_commons_core_1_4_1_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" />
+    <ignored path=".idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" />
+    <ignored path=".idea/libraries/Maven__junit_junit_4_11.xml" />
+    <ignored path=".idea/libraries/Maven__org_jmock_jmock_junit4_2_6_0.xml" />
+    <ignored path=".idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
+    <ignored path=".idea/encodings.xml" />
+    <ignored path=".idea/libraries/Maven__br_com_caelum_iogi_0_9_2.xml" />
+    <ignored path=".idea/libraries/Maven__com_google_inject_guice_3_0.xml" />
+    <ignored path=".idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" />
+    <ignored path=".idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_3_1.xml" />
+    <ignored path=".idea/libraries/Maven__javassist_javassist_3_12_1_GA.xml" />
+    <ignored path=".idea/libraries/Maven__com_google_inject_extensions_guice_multibindings_3_0.xml" />
+    <ignored path=".idea/libraries/Maven__br_com_caelum_vraptor_3_5_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_objenesis_objenesis_1_3.xml" />
+    <ignored path=".idea/libraries/Maven__javax_xml_soap_saaj_api_1_3_4.xml" />
+    <ignored path=".idea/libraries/Maven__net_sf_scannotation_scannotation_1_0_2.xml" />
+    <ignored path=".idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
+    <ignored path=".idea/libraries/Maven__com_thoughtworks_paranamer_paranamer_2_5_2.xml" />
+    <ignored path=".idea/libraries/Maven__net_vidageek_mirror_1_6_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_jvnet_jax_ws_commons_spring_jaxws_spring_1_9.xml" />
+    <ignored path=".idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" />
+    <ignored path=".idea/libraries/Maven__com_google_code_gson_gson_2_2_4.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_xbean_xbean_spring_3_14.xml" />
+    <ignored path=".idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_1.xml" />
+    <ignored path=".idea/libraries/Maven__com_google_guava_guava_11_0_2.xml" />
+    <ignored path=".idea/libraries/Maven__org_reflections_reflections_0_9_9_RC1.xml" />
+    <ignored path=".idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
+    <ignored path="$PROJECT_DIR$/catalogo/target/" />
+    <ignored mask="*.pdf" />
+    <ignored path="$PROJECT_DIR$/io/target/" />
+    <ignored path="$PROJECT_DIR$/boleto/target/" />
+    <ignored path="$PROJECT_DIR$/xml/target/" />
+    <ignored path="$PROJECT_DIR$/varejodigital/target/" />
+    <ignored path="$PROJECT_DIR$/batch-varejodigital/target/" />
+    <ignored path="$PROJECT_DIR$/validator/target/" />
+    <ignored path=".idea/libraries/Maven__com_fasterxml_classmate_0_8_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_hibernate_hibernate_validator_5_0_1_Final.xml" />
+    <ignored path=".idea/libraries/Maven__com_google_guava_guava_12_0_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_servlet_3_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_jsp_3_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_core_3_0_3.xml" />
+    <ignored path=".idea/artifacts/varejodigital_war.xml" />
+    <ignored path=".idea/artifacts/varejodigital_war_exploded.xml" />
+    <ignored path=".idea/libraries/Maven__org_freemarker_freemarker_2_3_15.xml" />
+    <ignored path=".idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" />
+    <ignored path=".idea/libraries/Maven__com_github_spullara_mustache_java_compiler_0_8_4.xml" />
+    <ignored path=".idea/libraries/Maven__org_seleniumhq_selenium_selenium_common_2_0b1.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_ognl_3_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_mvel_3_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" />
+    <ignored path=".idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_freemarker_3_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_6.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_api_3_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_compat_3_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__javax_xml_ws_jaxws_api_2_2_8.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_request_api_1_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_request_mustache_1_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_extras_3_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_template_3_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_hamcrest_hamcrest_all_1_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_autotag_core_runtime_1_1_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_request_servlet_wildcard_1_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_seleniumhq_selenium_selenium_htmlunit_driver_2_0b1.xml" />
+    <ignored path=".idea/libraries/Maven__oro_oro_2_0_8.xml" />
+    <ignored path=".idea/libraries/Maven__net_java_dev_jna_jna_3_2_2.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_el_3_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_request_servlet_1_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_5.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_request_jsp_1_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_velocity_3_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__jboss_javassist_3_7_ga.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_commons_commons_exec_1_1.xml" />
+    <ignored path=".idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_8.xml" />
+    <ignored path=".idea/libraries/Maven__org_mvel_mvel2_2_0_11.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_request_freemarker_1_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_2_0b1.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_tiles_tiles_request_velocity_1_0_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_velocity_velocity_tools_2_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_2_37_1.xml" />
+    <ignored path=".idea/libraries/Maven__jstl_jstl_1_2.xml" />
+    <ignored path=".idea/libraries/Maven__ognl_ognl_2_7_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_2_0b1.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_security_spring_security_acl_3_1_4_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_glassfish_javax_annotation_3_1_1.xml" />
+    <ignored path=".idea/libraries/Maven__com_beust_jcommander_1_7.xml" />
+    <ignored path=".idea/libraries/Maven__org_seleniumhq_selenium_selenium_iphone_driver_2_0b1.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_security_spring_security_taglibs_3_1_4_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_w3c_css_sac_1_3.xml" />
+    <ignored path=".idea/libraries/Maven__xalan_xalan_2_7_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_2_37_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_seleniumhq_selenium_selenium_2_0b1.xml" />
+    <ignored path=".idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_2_37_1.xml" />
+    <ignored path=".idea/libraries/Maven__br_com_caelum_stella_caelum_stella_hibernate_validator_1_2.xml" />
+    <ignored path=".idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_8.xml" />
+    <ignored path=".idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
+    <ignored path=".idea/libraries/Maven__net_java_dev_jna_platform_3_4_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_json_json_20080701.xml" />
+    <ignored path=".idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_6_v20141205.xml" />
+    <ignored path=".idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" />
+    <ignored path=".idea/libraries/Maven__com_google_guava_guava_18_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_testng_testng_5_14_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_2_0b1.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_0_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_james_apache_mime4j_0_6.xml" />
+    <ignored path=".idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_client_2_0b1.xml" />
+    <ignored path=".idea/libraries/Maven__xalan_serializer_2_7_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_common_2_0b1.xml" />
+    <ignored path=".idea/libraries/Maven__net_sourceforge_nekohtml_nekohtml_1_9_14.xml" />
+    <ignored path=".idea/libraries/Maven__org_jsoup_jsoup_1_7_3.xml" />
+    <ignored path="$PROJECT_DIR$/vraptor-crud/${project.build.directory}/classes/" />
+    <ignored path="$PROJECT_DIR$/vraptor-crud/${project.build.directory}/test-classes/" />
+    <ignored path="$PROJECT_DIR$/taglib/${project.build.directory}/classes/" />
+    <ignored path="$PROJECT_DIR$/taglib/${project.build.directory}/test-classes/" />
+    <ignored path="$PROJECT_DIR$/persistence/${project.build.directory}/classes/" />
+    <ignored path="$PROJECT_DIR$/persistence/${project.build.directory}/test-classes/" />
+    <ignored path="$PROJECT_DIR$/endereco/target/" />
+    <ignored path=".idea/libraries/" />
+    <ignored path="$PROJECT_DIR$/sisgns/target/" />
+    <ignored mask="*.iml" />
+    <ignored mask="*\.idea" />
+    <ignored path="**/.idea/" />
+    <ignored path="*/.idea/" />
+    <ignored path=".idea/" />
+    <ignored path="$PROJECT_DIR$/pessoa/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - sisgns@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="sisgns" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="com.pmrodrigues" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Contrato.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Contrato.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Corretor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Corretor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="23" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Operadora.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Operadora.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Plano.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Plano.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.327869">
+              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Usuario.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/security/Usuario.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Perfil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/security/Perfil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Administradora.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Administradora.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Comissao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="25" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Comissionamento.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissionamento.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cedente.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Cedente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Jsp File" />
+        <option value="Enum" />
+        <option value="JUnit4 Test Class" />
+        <option value="SQL Script" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Marcelo da Silva Rodrigues &lt;marcelosrodrigues@globo.com&gt;" />
+      </list>
+    </option>
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/impl/UsuarioRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/endereco/pom.xml" />
+        <option value="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Instrucao.java" />
+        <option value="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/NossoNumero.java" />
+        <option value="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Agencia.java" />
+        <option value="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/ContaCorrente.java" />
+        <option value="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Cliente.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/UserAuthenticationManager.java" />
+        <option value="$PROJECT_DIR$/vraptor-crud/src/main/java/com/pmrodrigues/vraptor/crud/resolvers/TilesPathResolver.java" />
+        <option value="$PROJECT_DIR$/sisgns/pom.xml" />
+        <option value="$PROJECT_DIR$/boleto/pom.xml" />
+        <option value="$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/models/Dependente.java" />
+        <option value="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Sacado.java" />
+        <option value="$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/repository/PessoaRepository.java" />
+        <option value="$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/repository/impl/PessoaRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Endereco.java" />
+        <option value="$PROJECT_DIR$/pessoa/src/test/resources/test-applicationContext.xml" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Cliente.java" />
+        <option value="$PROJECT_DIR$/pessoa/src/test/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/pessoa/pom.xml" />
+        <option value="$PROJECT_DIR$/pessoa/src/test/resources/test-applicationContext-data.xml" />
+        <option value="$PROJECT_DIR$/pessoa/src/test/java/test/com/pmrodrigues/pessoa/repository/TestPessoaRepository.java" />
+        <option value="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Boleto.java" />
+        <option value="$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/models/Pessoa.java" />
+        <option value="$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/models/PessoaFisica.java" />
+        <option value="$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/models/PessoaJuridica.java" />
+        <option value="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/gerador/GeradorBoleto.java" />
+        <option value="$PROJECT_DIR$/boleto/src/test/java/test/com/pmrodrigues/boletos/model/TestBoleto.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/resources/db/migration/V1_CREATE_DATABASE.sql" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/EstadoRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Bairro.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Estado.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Cidade.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Logradouro.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/CidadeRepository.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/BairroRepository.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/BairroRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/CidadeRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/LogradouroRepository.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/LogradouroRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/security/Perfil.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissionamento.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissao.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Contrato.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Corretor.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/security/Usuario.java" />
+        <option value="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Cedente.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Administradora.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Operadora.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Plano.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="pessoa" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="pessoa" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="pessoa" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="hibernate3" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="pessoa" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Profiles" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProfilesNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Abstraction issuesJava</id>
+          </State>
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>FlexUnit inspections</id>
+          </State>
+          <State>
+            <id>GeneralJava</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>GeneralPHP</id>
+          </State>
+          <State>
+            <id>Google Web Toolkit issues</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>JUnit issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Method MetricsGroovy</id>
+          </State>
+          <State>
+            <id>Method metricsJava</id>
+          </State>
+          <State>
+            <id>Numeric issuesJava</id>
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+          <State>
+            <id>Packaging issuesJava</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Properties Files</id>
+          </State>
+          <State>
+            <id>Resource management issuesJava</id>
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+          <State>
+            <id>Security issuesJava</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+          <State>
+            <id>XMLSpring CoreSpring</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Production">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="security" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pessoa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pessoa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pessoa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pessoa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repositories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repositories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/boleto-webservice/src/main/java/com/pmrodrigues/boletos/imports" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sisgns" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="JavaScriptLanguageLevel" value="JSX" />
+    <property name="Console.TableResult.DefaultCopyAction" value="Comma-separated Values (CSV)" />
+    <property name="TODO_SCOPE" value="Module 'varejodigital'" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="132" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="162" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="837" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="155" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="153" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="155" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="829" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.pmrodrigues.varejodigital.models" />
+      <recent name="com.pmrodrigues.varejodigital.exceptions" />
+      <recent name="com.pmrodrigues.varejodigital.batch.rules" />
+      <recent name="com.pmrodrigues.varejodigital.batch.notifier" />
+      <recent name="com.pmrodrigues.boletos.imports.xml.dto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Marceloo\workspace\com.pmrodrigues\pessoa\src\test\resources" />
+      <recent name="C:\Users\Marceloo\workspace\com.pmrodrigues\sisgns\src\test\resources" />
+      <recent name="C:\Users\Marceloo\workspace\com.pmrodrigues\sisgns\src\main\webapp" />
+      <recent name="C:\Users\Marceloo\workspace\com.pmrodrigues\varejodigital\src\test\resources" />
+      <recent name="C:\Users\Marceloo\workspace\com.pmrodrigues\varejodigital\src\main\resources\db\migration" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marceloo\workspace\com.pmrodrigues\varejodigital\src\test\resources\test\com\pmrodrigues\varejodigital\integration\rest" />
+      <recent name="C:\Users\Marceloo\workspace\com.pmrodrigues\varejodigital\src\main\resources\db\migration" />
+      <recent name="C:\Users\Marceloo\workspace\com.pmrodrigues\varejodigital\src\main\webapp\WEB-INF\template\sistema\includes" />
+      <recent name="C:\Users\Marceloo\workspace\com.pmrodrigues\varejodigital\src\main\resources" />
+      <recent name="C:\Users\Marceloo\workspace\com.pmrodrigues\taglib\src\main\resources\META-INF" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.pmrodrigues.boletos.imports.xml.dto" />
+      <recent name="com.pmrodrigues.boletos.imports.xml" />
+      <recent name="com.pmrodrigues.utilities.email" />
+      <recent name="test.com.pmrodrigues.persistence.daos" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="test.com.pmrodrigues.varejodigital.eventlistener" />
+      <recent name="com.pmrodrigues.varejodigital.eventlistener" />
+      <recent name="com.pmrodrigues.varejodigital.services" />
+      <recent name="com.pmrodrigues.boletos.imports.xml" />
+      <recent name="com.pmrodrigues.boletos.imports" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="test.com.pmrodrigues.pessoa.repository" />
+      <recent name="test.com.pmrodrigues.varejodigital.repositories" />
+      <recent name="test.com.pmrodrigues.varejodigital.rest" />
+      <recent name="test.com.pmrodrigues.varejodigital.batch" />
+      <recent name="com.pmrodrigues.varejodigital.services" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.pmrodrigues.signs.repositories.impl" />
+      <recent name="com.pmrodrigues.signs.repositories" />
+      <recent name="com.pmrodrigues.signs.services" />
+      <recent name="com.pmrodrigues.endereco.models" />
+      <recent name="com.pmrodrigues.endereco.repositories.impl" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.pmrodrigues" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestBoleto">
+    <configuration default="false" name="TestBoleto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.com.pmrodrigues.boletos.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="boleto" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.com.pmrodrigues.boletos.model" />
+      <option name="MAIN_CLASS_NAME" value="test.com.pmrodrigues.boletos.model.TestBoleto" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestPessoaRepository" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.com.pmrodrigues.pessoa.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="pessoa" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.com.pmrodrigues.pessoa.repository" />
+      <option name="MAIN_CLASS_NAME" value="test.com.pmrodrigues.pessoa.repository.TestPessoaRepository" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JRubyCucumberRunConfigurationType" factoryName="JRuby Cucumber">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-Dforce.jruby.jit=true -Djruby.debug.fullTrace=true" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/boleto-webservice/target/com.pmrodrigues.boleto-webservice-1.0/WEB-INF/lib/taglib-1.0.jar" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="varejodigital" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="jetty:run" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/varejodigital" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="boleto-webservice [jetty:run]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="jetty:run" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/boleto-webservice" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Maven.varejodigital" />
+      <item index="1" class="java.lang.String" itemvalue="Maven.boleto-webservice [jetty:run]" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestBoleto" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestPessoaRepository" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestBoleto" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestPessoaRepository" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_PROPERTIES,ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Marceloo\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d0caf9d-1ed8-4ca4-83ab-f28ad8f58a2e" name="Default" comment="" />
+      <changelist id="67e8f95b-5763-4ff1-a6db-8cf5c8aff601" name="New changelist" comment="" />
+      <created>1429010970127</created>
+      <option name="number" value="Default" />
+      <updated>1429010970127</updated>
+      <workItem from="1429010981557" duration="3384000" />
+      <workItem from="1429014402680" duration="4659000" />
+      <workItem from="1429019103421" duration="14509000" />
+      <workItem from="1429056728370" duration="37000" />
+      <workItem from="1429100614365" duration="35906000" />
+      <workItem from="1429267839370" duration="12890000" />
+      <workItem from="1429288551606" duration="5573000" />
+      <workItem from="1429294194430" duration="251000" />
+      <workItem from="1429523754583" duration="5737000" />
+      <workItem from="1429535137878" duration="13136000" />
+      <workItem from="1429875045632" duration="371000" />
+      <workItem from="1429875596185" duration="8983000" />
+      <workItem from="1429886622058" duration="8765000" />
+      <workItem from="1430131419634" duration="1782000" />
+      <workItem from="1430134103696" duration="28830000" />
+      <workItem from="1430298824014" duration="19982000" />
+      <workItem from="1430400971184" duration="11721000" />
+      <workItem from="1430748567476" duration="11130000" />
+      <workItem from="1430822589495" duration="4348000" />
+      <workItem from="1430831772018" duration="13349000" />
+      <workItem from="1430906264039" duration="6432000" />
+      <workItem from="1431006186965" duration="2671000" />
+      <workItem from="1431429823035" duration="6941000" />
+      <workItem from="1431527505886" duration="1097000" />
+      <workItem from="1432210048080" duration="11493000" />
+      <workItem from="1432226655113" duration="6666000" />
+      <workItem from="1432293588164" duration="2837000" />
+      <workItem from="1432300351508" duration="9562000" />
+      <workItem from="1432311817319" duration="19960000" />
+      <workItem from="1432550786241" duration="16097000" />
+      <workItem from="1432639165253" duration="2808000" />
+      <workItem from="1432650972406" duration="10722000" />
+      <workItem from="1432685551918" duration="3389000" />
+      <workItem from="1432731739002" duration="15447000" />
+      <workItem from="1432813327702" duration="16208000" />
+      <workItem from="1432855391180" duration="10982000" />
+      <workItem from="1432905007358" duration="7518000" />
+      <workItem from="1433083134976" duration="11763000" />
+      <workItem from="1433107519752" duration="8155000" />
+      <workItem from="1433160292870" duration="19696000" />
+      <workItem from="1433266970516" duration="689000" />
+      <workItem from="1433336277283" duration="8074000" />
+      <workItem from="1433510247159" duration="17441000" />
+      <workItem from="1433758006071" duration="16280000" />
+      <workItem from="1433809655127" duration="6347000" />
+      <workItem from="1433854107657" duration="8103000" />
+      <workItem from="1433939160488" duration="11008000" />
+      <workItem from="1434031303243" duration="8861000" />
+      <workItem from="1434063490433" duration="12619000" />
+      <workItem from="1434115406551" duration="11073000" />
+      <workItem from="1434386483583" duration="13111000" />
+      <workItem from="1434568581999" duration="9134000" />
+      <workItem from="1434730264447" duration="18677000" />
+      <workItem from="1434755723595" duration="2497000" />
+      <workItem from="1434848633263" duration="22127000" />
+      <workItem from="1434983126371" duration="3152000" />
+      <workItem from="1435003263620" duration="35000" />
+      <workItem from="1435003432609" duration="62000" />
+      <workItem from="1435003536942" duration="12647000" />
+      <workItem from="1435252897877" duration="13400000" />
+      <workItem from="1435861501992" duration="12701000" />
+      <workItem from="1435970323134" duration="955000" />
+      <workItem from="1436133642023" duration="1829000" />
+      <workItem from="1436311310307" duration="2909000" />
+      <workItem from="1436442837578" duration="23536000" />
+      <workItem from="1437219722970" duration="6422000" />
+      <workItem from="1437392973323" duration="8404000" />
+      <workItem from="1437483056527" duration="4928000" />
+      <workItem from="1437562374541" duration="9809000" />
+      <workItem from="1438008031756" duration="3046000" />
+      <workItem from="1438078463446" duration="6968000" />
+      <workItem from="1438091304348" duration="2593000" />
+      <workItem from="1438261447408" duration="8853000" />
+      <workItem from="1438350909894" duration="8400000" />
+      <workItem from="1438601164492" duration="13783000" />
+      <workItem from="1438690319852" duration="8584000" />
+      <workItem from="1439199993278" duration="10601000" />
+      <workItem from="1439219833526" duration="111000" />
+      <workItem from="1439221884230" duration="2181000" />
+      <workItem from="1439294943116" duration="5318000" />
+      <workItem from="1439904713125" duration="3534000" />
+      <workItem from="1439942553967" duration="2957000" />
+      <workItem from="1439979435751" duration="1219000" />
+      <workItem from="1439982363335" duration="1063000" />
+      <workItem from="1439988358389" duration="1534000" />
+      <workItem from="1440028155691" duration="4482000" />
+      <workItem from="1440065848242" duration="412000" />
+      <workItem from="1440166104377" duration="1662000" />
+      <workItem from="1440171379053" duration="6280000" />
+      <workItem from="1440520085583" duration="387000" />
+      <workItem from="1440588967612" duration="9147000" />
+      <workItem from="1440671375524" duration="5113000" />
+      <workItem from="1440679658013" duration="6681000" />
+      <workItem from="1440762047266" duration="15184000" />
+      <workItem from="1441021757898" duration="12897000" />
+      <workItem from="1441280275347" duration="13590000" />
+      <workItem from="1441801839010" duration="17477000" />
+      <workItem from="1441891924682" duration="6756000" />
+      <workItem from="1441970844686" duration="10079000" />
+      <workItem from="1441996018752" duration="111000" />
+      <workItem from="1442321999491" duration="1938000" />
+      <workItem from="1442845119714" duration="8486000" />
+      <workItem from="1442926686034" duration="906000" />
+      <workItem from="1442927645951" duration="5092000" />
+      <workItem from="1442932854015" duration="6259000" />
+      <workItem from="1442942480321" duration="80000" />
+      <workItem from="1442942589188" duration="3591000" />
+    </task>
+    <task id="LOCAL-00006" summary="criando associação entre boleto e a empresa emissora.">
+      <created>1430328985276</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1430328985276</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Tornando o processo de attachment no email generico&#10;Correção no all do resultlist&#10;Correção na segurança para alguns pacotes">
+      <created>1430823950288</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1430823950288</updated>
+    </task>
+    <task id="LOCAL-00008" summary="tirando o gerenciamento do spring">
+      <created>1430824390778</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1430824390778</updated>
+    </task>
+    <task id="LOCAL-00009" summary="criando importador de arquivo xml para geração de boleto">
+      <created>1430921948905</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1430921948905</updated>
+    </task>
+    <task id="LOCAL-00010" summary="corrigido os arquivos de importação para o novo modelo xml">
+      <created>1431433376983</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1431433376983</updated>
+    </task>
+    <task id="LOCAL-00011" summary="corrigido os arquivos de importação para o novo modelo xml">
+      <created>1431438889606</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1431438889606</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Componentizando a criação de boletos&#10;Refatorando o código para que não seja necessario criar uma nova entidade para boletos&#10;">
+      <created>1432295324852</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1432295324852</updated>
+    </task>
+    <task id="LOCAL-00013" summary="mudado a implementação de segurança dos dados dos boletos e correção do log de emissão de boleto">
+      <created>1432507669586</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1432507669586</updated>
+    </task>
+    <task id="LOCAL-00014" summary="implementando tela de pesquisa de boletos e correções + adições nas taglibs do projeto">
+      <created>1432571637752</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1432571637752</updated>
+    </task>
+    <task id="LOCAL-00015" summary="correção de tag lib">
+      <created>1432651001682</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1432651001682</updated>
+    </task>
+    <task id="LOCAL-00016" summary="adição do projeto varejo digital backoffice e adequação dos fontes as bibliotecas já criadas no projeto">
+      <created>1432665296958</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1432665296958</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Acerto dos formulários para inclusão dos componentes de botão&#10;Criação da regra de validações&#10;Criação do webservice para integração com o tablet">
+      <created>1432753689843</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1432753689843</updated>
+    </task>
+    <task id="LOCAL-00018" summary="correção de taglibs e implementação de tela de cadastro de cliente">
+      <created>1432824837908</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1432824837909</updated>
+    </task>
+    <task id="LOCAL-00019" summary="logomarca da alacoro">
+      <created>1432824872741</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1432824872741</updated>
+    </task>
+    <task id="LOCAL-00020" summary="correção das validações para emissão de alertas">
+      <created>1432855583970</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1432855583970</updated>
+    </task>
+    <task id="LOCAL-00021" summary="correção e adição de novas telas">
+      <created>1433083529474</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1433083529474</updated>
+    </task>
+    <task id="LOCAL-00022" summary="implementado método para buscar o faturamento de um determinado lojista.">
+      <created>1433255843972</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1433255843972</updated>
+    </task>
+    <task id="LOCAL-00023" summary="implementação do serviço de calculo de faturamento">
+      <created>1433510625642</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1433510625642</updated>
+    </task>
+    <task id="LOCAL-00024" summary="implementado correções no serviço de faturamento">
+      <created>1433526832287</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1433526832287</updated>
+    </task>
+    <task id="LOCAL-00025" summary="implementação do cadastro de regras para validação">
+      <created>1433816045213</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1433816045213</updated>
+    </task>
+    <task id="LOCAL-00026" summary="implementação do cadastro de regras para validação">
+      <created>1433866901917</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1433866901917</updated>
+    </task>
+    <task id="LOCAL-00027" summary="implementado codigo base para emissão de alertas">
+      <created>1434040316489</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1434040316489</updated>
+    </task>
+    <task id="LOCAL-00028" summary="atualização dos serviços de faturamento e produto para integração do com android">
+      <created>1434479735367</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1434479735367</updated>
+    </task>
+    <task id="LOCAL-00029" summary="corrigindo associação entre produto e fornecedor.&#10;corrigindo associação entre departamento e lojas.&#10;alterado os teste unitários para atender a nova mudança">
+      <created>1434757630252</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1434757630252</updated>
+    </task>
+    <task id="LOCAL-00030" summary="implementando a carga do arquivo do cariocão.&#10;correção de alguns erros nos métodos de pesquisa">
+      <created>1434940174952</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1434940174952</updated>
+    </task>
+    <task id="LOCAL-00031" summary="correções encontradas na implantação no cariocão">
+      <created>1435012559088</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1435012559088</updated>
+    </task>
+    <task id="LOCAL-00032" summary="criando os serviços para inventário&#10;quebrando o faturamento por loja">
+      <created>1435869598207</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1435869598207</updated>
+    </task>
+    <task id="LOCAL-00033" summary="criando webservice de auditoria&#10;criando correção para validação do email no projeto de boletos&#10;">
+      <created>1436444714968</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1436444714968</updated>
+    </task>
+    <task id="LOCAL-00034" summary="alterações para meio de pagamento e checkout de compra">
+      <created>1437387165710</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1437387165710</updated>
+    </task>
+    <task id="LOCAL-00035" summary="correções de testes unitários">
+      <created>1437394047115</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1437394047115</updated>
+    </task>
+    <task id="LOCAL-00036" summary="criando no mvn o processo para tagear versão antes do deploy">
+      <created>1437397785532</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1437397785532</updated>
+    </task>
+    <task id="LOCAL-00037" summary="criando no mvn o processo para tagear versão antes do deploy">
+      <created>1437400291406</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1437400291406</updated>
+    </task>
+    <task id="LOCAL-00038" summary="criando no mvn o processo para tagear versão antes do deploy">
+      <created>1437402801035</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1437402801035</updated>
+    </task>
+    <task id="LOCAL-00039" summary="criando no mvn o processo para tagear versão antes do deploy">
+      <created>1438008136205</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1438008136205</updated>
+    </task>
+    <task id="LOCAL-00040" summary="implementando novos testes unitários para validação do projeto">
+      <created>1438269816285</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1438269816285</updated>
+    </task>
+    <task id="LOCAL-00041" summary="implementando novos testes unitários para validação do projeto">
+      <created>1438270435561</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1438270435561</updated>
+    </task>
+    <task id="LOCAL-00042" summary="implementando eventos para recebimento dos pedidos de pagamento">
+      <created>1438617999385</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1438617999385</updated>
+    </task>
+    <task id="LOCAL-00043" summary="adicionando o teste unitario para a tag lib de listagem de imagem">
+      <created>1438621798117</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1438621798117</updated>
+    </task>
+    <task id="LOCAL-00044" summary="melhorado cobertura dos testes do projeto varejodigital">
+      <created>1439200118521</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1439200118521</updated>
+    </task>
+    <task id="LOCAL-00045" summary="colocando obrigatóriedade no campo  de canal de comunicação">
+      <created>1439200249044</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1439200249044</updated>
+    </task>
+    <task id="LOCAL-00046" summary="criando componente para endereço">
+      <created>1439979725641</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1439979725641</updated>
+    </task>
+    <task id="LOCAL-00047" summary="criando componente para endereço">
+      <created>1439982566560</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1439982566560</updated>
+    </task>
+    <task id="LOCAL-00048" summary="criando componente para endereço">
+      <created>1439988995442</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1439988995442</updated>
+    </task>
+    <task id="LOCAL-00049" summary="correções do cadastro de produto">
+      <created>1440032611596</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1440032611596</updated>
+    </task>
+    <task id="LOCAL-00050" summary="adição de campo de cpf para cliente e listagem de ultimos pedidos">
+      <created>1440520307429</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1440520307430</updated>
+    </task>
+    <task id="LOCAL-00051" summary="correção do código para recebimento de pedidos para pagamento">
+      <created>1440779527173</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1440779527207</updated>
+    </task>
+    <task id="LOCAL-00052" summary="criando tabelas de detalhe de imposto para sped">
+      <created>1441981600788</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1441981600811</updated>
+    </task>
+    <task id="LOCAL-00053" summary="criando tabelas de detalhe de imposto para sped">
+      <created>1442845286829</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1442845286830</updated>
+    </task>
+    <task id="LOCAL-00054" summary="carregando detalhes do projeto">
+      <created>1442931796096</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1442931796098</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="879972000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6094771" sideWeight="0.5030257" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31770045" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6797386" sideWeight="0.4969743" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Log4jMonitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32352942" sideWeight="0.49546143" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.85457516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58006537" sideWeight="0.4969743" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.874183" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2708018" sideWeight="0.5169082" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2708018" sideWeight="0.4830918" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48366013" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32189542" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6094771" sideWeight="0.5030257" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31770045" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6797386" sideWeight="0.4969743" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Log4jMonitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32352942" sideWeight="0.49546143" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.85457516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58006537" sideWeight="0.4969743" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.874183" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2708018" sideWeight="0.5169082" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48366013" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2708018" sideWeight="0.4830918" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32189542" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="implementado método para buscar o faturamento de um determinado lojista." />
+    <MESSAGE value="implementação do serviço de calculo de faturamento" />
+    <MESSAGE value="implementado correções no serviço de faturamento" />
+    <MESSAGE value="implementação do cadastro de regras para validação" />
+    <MESSAGE value="implementado codigo base para emissão de alertas" />
+    <MESSAGE value="atualização dos serviços de faturamento e produto para integração do com android" />
+    <MESSAGE value="corrigindo associação entre produto e fornecedor.&#10;corrigindo associação entre departamento e lojas.&#10;alterado os teste unitários para atender a nova mudança" />
+    <MESSAGE value="implementando a carga do arquivo do cariocão.&#10;correção de alguns erros nos métodos de pesquisa" />
+    <MESSAGE value="correções encontradas na implantação no cariocão" />
+    <MESSAGE value="criando os serviços para inventário&#10;quebrando o faturamento por loja" />
+    <MESSAGE value="criando webservice de auditoria&#10;criando correção para validação do email no projeto de boletos&#10;" />
+    <MESSAGE value="alterações para meio de pagamento e checkout de compra" />
+    <MESSAGE value="correções de testes unitários" />
+    <MESSAGE value="criando no mvn o processo para tagear versão antes do deploy" />
+    <MESSAGE value="implementando novos testes unitários para validação do projeto" />
+    <MESSAGE value="implementando eventos para recebimento dos pedidos de pagamento" />
+    <MESSAGE value="adicionando o teste unitario para a tag lib de listagem de imagem" />
+    <MESSAGE value="melhorado cobertura dos testes do projeto varejodigital" />
+    <MESSAGE value="colocando obrigatóriedade no campo  de canal de comunicação" />
+    <MESSAGE value="criando componente para endereço" />
+    <MESSAGE value="correções do cadastro de produto" />
+    <MESSAGE value="adição de campo de cpf para cliente e listagem de ultimos pedidos" />
+    <MESSAGE value="correção do código para recebimento de pedidos para pagamento" />
+    <MESSAGE value="criando tabelas de detalhe de imposto para sped" />
+    <MESSAGE value="carregando detalhes do projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="carregando detalhes do projeto" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/varejodigital/src/main/java/com/pmrodrigues/varejodigital/rest/PedidoController.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="456" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pessoa/src/test/java/test/com/pmrodrigues/pessoa/repository/TestPessoaRepository.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="457" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="458" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="nomeProduto" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="nomeProduto" />
+      </configuration>
+      <configuration name="MavenRunConfiguration">
+        <watch expression="nomeProduto" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="com.pmrodrigues" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="com.pmrodrigues" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/UserAuthenticationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vraptor-crud/src/main/java/com/pmrodrigues/vraptor/crud/resolvers/TilesPathResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5207207">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/akatus/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1264367">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/models/Dependente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55308217">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/persistence/src/test/java/test/com/pmrodrigues/persistence/daos/LojaRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/persistence/src/test/java/test/com/pmrodrigues/persistence/daos/TestRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="55" selection-start-line="15" selection-start-column="7" selection-end-line="16" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/persistence/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7011495">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/repository/PessoaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pessoa/src/test/resources/test-applicationContext-security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pessoa/src/test/resources/test-applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9c07c10b-6827-4160-a93f-2baf7522b42d/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pessoa/src/test/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05821918">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/persistence/src/test/resources/test-applicationContext-data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/test/resources/test-applicationContext-data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61130136">
+          <caret line="33" column="55" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pessoa/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-51.96552">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pessoa/src/test/resources/test-applicationContext-data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2140411">
+          <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.1.0.RELEASE/spring-aop-4.1.0.RELEASE-sources.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09589041">
+          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/gerador/GeradorBoleto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="104" selection-start-line="71" selection-start-column="104" selection-end-line="71" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boleto/src/test/java/test/com/pmrodrigues/boletos/model/TestBoleto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boleto/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Boleto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0880829">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/models/PessoaJuridica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4760274">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/models/Pessoa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3681507">
+          <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/models/PessoaFisica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9315069">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pessoa/src/main/java/com/pmrodrigues/pessoa/repository/impl/PessoaRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23287672">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/EstadoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11643836">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Bairro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24315068">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Estado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59246576">
+          <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Cidade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15582192">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Endereco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Logradouro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.07705479">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/EstadoRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/CidadeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/BairroRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/BairroRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/CidadeRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/impl/LogradouroRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.494863">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/repositories/LogradouroRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29109588">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/resources/db/migration/V1_CREATE_DATABASE.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/security/Perfil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissionamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/security/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Contrato.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Cedente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Administradora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="25" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Corretor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="23" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Operadora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Plano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.327869">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>sisgns:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>actionmailer (v3.2.18, ruby-1.9.3-p545) [gem]</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>boleto</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="$PROJECT_DIR$/varejodigital" />
+    <option value="clean test" />
+    <option value="cobertura:cobertura" />
+    <option value="clean install" />
+    <option value="clean compile" />
+    <option value="clean package" />
+    <option value="clean cobertura:cobertura" />
+    <option value="clean install cobertura:cobertura" />
+    <option value="scm:tag" />
+    <option value="versions:set" />
+    <option value="clean" />
+    <option value="install" />
+    <option value="compile" />
+    <option value="clean flyway:repair compile flyway:migrate" />
+    <option value="clean jetty:run-war" />
+  </component>
+</project>

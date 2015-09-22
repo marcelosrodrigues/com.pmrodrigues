@@ -27,6 +27,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -71,6 +72,12 @@
         <dependency>
             <groupId>com.pmrodrigues</groupId>
             <artifactId>xml</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.pmrodrigues</groupId>
+            <artifactId>pessoa</artifactId>
             <version>${parent.version}</version>
         </dependency>
 

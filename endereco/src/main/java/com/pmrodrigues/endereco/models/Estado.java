@@ -1,5 +1,7 @@
 package com.pmrodrigues.endereco.models;
 
+import lombok.*;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,7 +11,10 @@ import java.io.Serializable;
 
 @Entity
 @Table
-public class Estado implements Serializable {
+@EqualsAndHashCode(exclude = {"id" , "nome"})
+@ToString()
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
+public @Data class Estado implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -24,30 +29,6 @@ public class Estado implements Serializable {
     @NotNull
     @Column(insertable = true, updatable = true, nullable = false)
     private String nome;
-
-    public String getUF() {
-        return uf;
-    }
-
-    public void setUF(final String uf) {
-        this.uf = uf;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(final String nome) {
-        this.nome = nome;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(final Long id) {
-        this.id = id;
-    }
 
     public Estado comUF(final String uf) {
         this.uf = uf;

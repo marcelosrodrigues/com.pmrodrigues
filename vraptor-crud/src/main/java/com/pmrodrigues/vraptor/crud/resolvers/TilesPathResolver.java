@@ -7,6 +7,8 @@ import br.com.caelum.vraptor.view.DefaultPathResolver;
 import com.pmrodrigues.vraptor.crud.annotations.CRUD;
 import com.pmrodrigues.vraptor.crud.annotations.Tiles;
 
+import static java.lang.String.format;
+
 @Component
 public class TilesPathResolver extends DefaultPathResolver {
 

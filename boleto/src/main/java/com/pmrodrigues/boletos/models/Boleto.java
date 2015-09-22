@@ -1,6 +1,7 @@
 package com.pmrodrigues.boletos.models;
 
 import com.pmrodrigues.boletos.gerador.GeradorBoleto;
+import com.pmrodrigues.pessoa.models.Pessoa;
 import com.pmrodrigues.xml.adapters.BigDecimalTypeAdapter;
 import com.pmrodrigues.xml.adapters.DateTypeAdapter;
 import lombok.*;
@@ -23,6 +24,8 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import static java.lang.String.format;
 
 /**
  * Created by Marceloo on 15/04/2015.
@@ -122,7 +125,7 @@ public class Boleto implements Serializable {
     @Cascade(CascadeType.SAVE_UPDATE)
     @Setter
     @Getter
-    private Sacado sacado;
+    private Pessoa sacado;
 
     @XmlElement(name = "banco",
             namespace = "http://data.pmrodrigues.biz/boleto/emissor/1.0",
@@ -213,7 +216,7 @@ public class Boleto implements Serializable {
         return instrucoes.toArray(new String[0]);
     }
 
-    public Boleto comCliente(final Sacado sacado) {
+    public Boleto comCliente(final Pessoa sacado) {
         this.sacado = sacado;
         return this;
     }
