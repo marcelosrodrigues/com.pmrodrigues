@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/akatus/akatus.iml" filepath="$PROJECT_DIR$/akatus/akatus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boleto/boleto.iml" filepath="$PROJECT_DIR$/boleto/boleto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.pmrodrigues.iml" filepath="$PROJECT_DIR$/com.pmrodrigues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/endereco/endereco.iml" filepath="$PROJECT_DIR$/endereco/endereco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/io/io.iml" filepath="$PROJECT_DIR$/io/io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pagamento/pagamento.iml" filepath="$PROJECT_DIR$/pagamento/pagamento.iml" />
+      <module fileurl="file://$PROJECT_DIR$/persistence/persistence.iml" filepath="$PROJECT_DIR$/persistence/persistence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security/security.iml" filepath="$PROJECT_DIR$/security/security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sms/sms.iml" filepath="$PROJECT_DIR$/sms/sms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/taglib/taglib.iml" filepath="$PROJECT_DIR$/taglib/taglib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utilities/utilities.iml" filepath="$PROJECT_DIR$/utilities/utilities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vraptor-crud/vraptor-crud.iml" filepath="$PROJECT_DIR$/vraptor-crud/vraptor-crud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xml/xml.iml" filepath="$PROJECT_DIR$/xml/xml.iml" />
+    </modules>
+  </component>
+</project>

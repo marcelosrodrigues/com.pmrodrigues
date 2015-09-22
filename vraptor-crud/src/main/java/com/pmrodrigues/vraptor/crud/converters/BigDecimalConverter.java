@@ -1,0 +1,40 @@
+package com.pmrodrigues.vraptor.crud.converters;
+
+import br.com.caelum.vraptor.Convert;
+import br.com.caelum.vraptor.Converter;
+import br.com.caelum.vraptor.ioc.RequestScoped;
+
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+import static org.apache.commons.validator.GenericValidator.isBlankOrNull;
+
+/**
+ * Created by Marceloo on 06/02/2015.
+ */
+@Convert(BigDecimal.class)
+@RequestScoped
+public class BigDecimalConverter implements Converter<BigDecimal> {
+
+    private static final DecimalFormat FORMAT =
+            new DecimalFormat("#.##", DecimalFormatSymbols.getInstance(new Locale("pt", "BR")));
+
+    @Override
+    public BigDecimal convert(final String value, final Class<? extends BigDecimal> type, final ResourceBundle bundle) {
+        try {
+            if (!isBlankOrNull(value)) {
+                final Number formatted = FORMAT.parse(value);
+                return new BigDecimal(formatted.doubleValue());
+            }
+            return null;
+        } catch (ParseException e) {
+            return null;
+        }
+
+
+    }
+}

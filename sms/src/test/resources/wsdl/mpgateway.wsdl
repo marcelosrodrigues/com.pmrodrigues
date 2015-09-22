@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:tns="MobileProntoMPGateway" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  targetNamespace="MobileProntoMPGateway" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:types>
+        <xsd:schema elementFormDefault="qualified" targetNamespace="MobileProntoMPGateway">
+            <xsd:element name="MPG_Calculate_Message_Length_UTF8_or_UTF16">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Credencial" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Token" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Message" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_Calculate_Message_Length_UTF8_or_UTF16Response">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="MPG_Calculate_Message_Length_UTF8_or_UTF16Result"
+                                     type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_SendSimple_SMS">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Credencial" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Token" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Mobile" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Message" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_SendSimple_SMSResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="MPG_SendSimple_SMSResult" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_SendandFollowUp_SMS">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Credencial" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Token" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Principal_User" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Aux_User" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Mobile" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Send_Project" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Message" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_SendandFollowUp_SMSResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="MPG_SendandFollowUp_SMSResult"
+                                     type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_Send_SMS">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Credencial" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Token" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Principal_User" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Aux_User" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Mobile" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Send_Project" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Message" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_Send_SMSResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="MPG_Send_SMSResult" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_Query01">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Credencial" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Token" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Start_Date" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="End_Date" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Aux_User" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Mobile" type="xsd:string"/>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="Status_Code" type="xsd:int"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Status" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_Credits">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Credencial" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Token" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="v_st_Status" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_CreditsResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="MPG_CreditsResult" type="xsd:decimal"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="v_st_Status" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_Send_LMS">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Credencial" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Token" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Principal_User" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Aux_User" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Mobile" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Message" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_Send_LMSResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="MPG_Send_LMSResult" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_Send_Long_SMS">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Credencial" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Token" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Principal_User" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Aux_User" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Mobile" type="xsd:string"/>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Message" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MPG_Send_Long_SMSResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="MPG_Send_Long_SMSResult" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="MPG_Calculate_Message_Length_UTF8_or_UTF16SoapIn">
+        <wsdl:part name="parameters" element="tns:MPG_Calculate_Message_Length_UTF8_or_UTF16"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_Calculate_Message_Length_UTF8_or_UTF16SoapOut">
+        <wsdl:part name="parameters" element="tns:MPG_Calculate_Message_Length_UTF8_or_UTF16Response"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_SendSimple_SMSSoapIn">
+        <wsdl:part name="parameters" element="tns:MPG_SendSimple_SMS"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_SendSimple_SMSSoapOut">
+        <wsdl:part name="parameters" element="tns:MPG_SendSimple_SMSResponse"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_SendandFollowUp_SMSSoapIn">
+        <wsdl:part name="parameters" element="tns:MPG_SendandFollowUp_SMS"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_SendandFollowUp_SMSSoapOut">
+        <wsdl:part name="parameters" element="tns:MPG_SendandFollowUp_SMSResponse"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_Send_SMSSoapIn">
+        <wsdl:part name="parameters" element="tns:MPG_Send_SMS"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_Send_SMSSoapOut">
+        <wsdl:part name="parameters" element="tns:MPG_Send_SMSResponse"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_CreditsSoapIn">
+        <wsdl:part name="parameters" element="tns:MPG_Credits"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_CreditsSoapOut">
+        <wsdl:part name="parameters" element="tns:MPG_CreditsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_Send_LMSSoapIn">
+        <wsdl:part name="parameters" element="tns:MPG_Send_LMS"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_Send_LMSSoapOut">
+        <wsdl:part name="parameters" element="tns:MPG_Send_LMSResponse"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_Send_Long_SMSSoapIn">
+        <wsdl:part name="parameters" element="tns:MPG_Send_Long_SMS"/>
+    </wsdl:message>
+    <wsdl:message name="MPG_Send_Long_SMSSoapOut">
+        <wsdl:part name="parameters" element="tns:MPG_Send_Long_SMSResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="MPGatewaySoap">
+        <wsdl:operation name="MPG_Calculate_Message_Length_UTF8_or_UTF16">
+            <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br&gt;Calculo do Tamanho de uma
+                Mensagem em UTF-8 ou UTF_16 (hexa) - v_3_00.&lt;br&gt;&lt;br&gt;ATENÇÃO: Recomendamos utilizar a
+                documentação do site:
+                http://www.mobipronto.com/pt-br/SMS-MT-API/documentacao-sms-mt-api-web-service-v3-00&lt;br&gt;</wsdl:documentation>
+            <wsdl:input message="tns:MPG_Calculate_Message_Length_UTF8_or_UTF16SoapIn"/>
+            <wsdl:output message="tns:MPG_Calculate_Message_Length_UTF8_or_UTF16SoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_SendSimple_SMS">
+            <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br&gt;&lt;br&gt;ATENÇÃO: Este método
+                será descontinuado na próxima versão.&lt;br&gt;&lt;br&gt;Parâmetros da MPG_SendSimple_SMS: Versão:
+                v_3_00&lt;br&gt;
+                ----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                Credencial - Obrigatório - Chave de 40 posições para acesso ao Mobile Pronto Gateway. Esta chave é única&lt;br&gt;
+                Mobile - Obrigatório - Celular que receberá o SMS. Formato mundial: +99(999)99999999, sendo pais,ddd e
+                mobile&lt;br&gt; Message - Obrigatório - Mensagem que será enviada ao mobile. Tamanho máximo por país.&lt;br&gt;&lt;br&gt;Observação:
+                O Aux_User será sempre igual a MPG_SendSimple_SMS e a Mensagem será enviada sem o Nome do Projeto na
+                frente&lt;br&gt;&lt;br&gt;Tipos de Retorno:&lt;br&gt;
+                ----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                000 - Mensagem enviada com Sucesso/Message sent successfully.&lt;br&gt;
+                ----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                001 - Credencial Inválida/Invalid Credential&lt;br&gt; 005 - Mobile fora do formato-Formato
+                +999(9999)99999999/Invalid phone number - non-standard&lt;br&gt; 007 - Flag Send_Project tem que ser S,s
+                or Y,y or N,n/Flag Send_Project must be S,s or Y,y or N,n&lt;br&gt; 008 - Mensagem ou Nome_Projeto+Msg
+                maior que máximo no Pais/Message or Project+Msg higher maximun in Country&lt;br&gt; 009 - Sem crédito
+                para envio de SMS. Favor repor/Account without funds. Please purchase more credits&lt;br&gt; 010 -
+                Gateway Bloqueado/Gateway locked for use&lt;br&gt; 012 - Mobile no formato padrão, mas incorreto/Invalid
+                mobile&lt;br&gt; 013 - Mensagem Vazia ou Corpo Inválido/Message Body Blank or Invalid&lt;br&gt; 015 -
+                Pais sem operação/Country without operation&lt;br&gt; 016 - Mobile com tamanho do código de área
+                inválido/Size of area code invalid&lt;br&gt; 017 - Operadora não autorizada para esta
+                Credencial/Operator not allowed for this Credential&lt;br&gt; 018 - Mobile está na Lista Negra/Mobile is
+                in the Black List&lt;br&gt;-----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;&lt;br&gt;-----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                De 800 a 899 - Falha no MPGateway.Contate Mobile Pronto/Failure MPGateway.Call MobilePronto&lt;br&gt;
+                900 - Erro de autenticação ou Limite de Segurança excedido/Authentication Error or Security Limitation&lt;br&gt;
+                De 901 a 999 - Erro no acesso as operadoras.Contate Equipe MobilePronto/Contact customer center&lt;br&gt;-----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;</wsdl:documentation>
+            <wsdl:input message="tns:MPG_SendSimple_SMSSoapIn"/>
+            <wsdl:output message="tns:MPG_SendSimple_SMSSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_SendandFollowUp_SMS">
+            <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br&gt;&lt;br&gt;ATENÇÃO: Este método
+                será descontinuado na próxima versão.&lt;br&gt;&lt;br&gt;Envio de SMS Síncrono.&lt;br&gt;&lt;br&gt;Parâmetros
+                da MPG_SendandFollowUp_SMS: Versão: v_3_00&lt;br&gt;
+                ----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                Credencial - Obrigatório - 40 posições para acesso ao Mobile Pronto Gateway.&lt;br&gt; Token -
+                Obrigatório - 06 posições para acesso ao Mobile Pronto Gateway.&lt;br&gt; Principal_User - Obrigatório -
+                Código do Usuário Principal para autenticar no Gateway. Normalmente o CNPJ ou CPF. Pode se Vazio.&lt;br&gt;
+                Aux_User - Obrigatório - Código do Usuário Auxiliar/Qualificar da Mensagem. Máx.=20 posições. Se &gt; 20
+                será truncado.&lt;br&gt; Mobile - Obrigatório - Celular que receberá o SMS. Formato mundial:
+                +99(999)99999999, sendo pais,ddd e mobile&lt;br&gt; Send_Project - Obrigatório - Se (S)im a sigla da
+                mensagem vem no início.&lt;br&gt; Se (N)ão não vem. Tamanho máximo=9 (XXXXXXXX:).&lt;br&gt; Exemplo:
+                MPG:&lt;mensagem&gt;&lt;br&gt; Message - Obrigatório - Mensagem que será enviada ao mobile. Tamanho
+                máximo de 160 posições.&lt;br&gt;&lt;br&gt;Tipos de Retorno: &lt;br&gt;Em caso de Sucesso o retorno é:
+                XXX:IDMPG, sendo XXX sempre igual a 000Em caso de Erro o retorno pode ser: XXX ou XXX:IDERR, sendo XXX o
+                código de erro
+                ----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                000 - Mensagem enviada com Sucesso/Message sent successfully.&lt;br&gt;
+                ----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                001 - Credencial Inválida/Invalid Credencial&lt;br&gt; 005 - Mobile fora do formato-Formato
+                +999(9999)99999999/Invalid phone number - non-standard&lt;br&gt; 007 - Flag Send_Project tem que ser S,s
+                or Y,y or N,n/Flag Send_Project must be S,s or Y,y or N,n&lt;br&gt; 008 - Mensagem ou Nome_Projeto+Msg
+                maior que máximo no Pais/Message or Project+Msg higher maximun in Country&lt;br&gt; 009 - Sem crédito
+                para envio de SMS. Favor repor/Account without funds. Please purchase more credits&lt;br&gt; 010 -
+                Gateway Bloqueado/Gateway locked for use&lt;br&gt; 012 - Mobile no formato padrão, mas incorreto/Invalid
+                mobile&lt;br&gt; 013 - Mensagem Vazia ou Corpo Inválido/Message Body Blank or Invalid&lt;br&gt; 015 -
+                Pais sem operação/Country without operation&lt;br&gt; 016 - Mobile com tamanho do código de área
+                inválido/Size of area code invalid&lt;br&gt; 017 - Operadora não autorizada para esta
+                Credencial/Operator not allowed for this Credential&lt;br&gt; 018 - Mobile está na Lista Negra/Mobile is
+                in the Black List&lt;br&gt; 019 - Token Inválido/Invalid Token&lt;br&gt;-----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                De 800 a 899 - Falha no MPGateway.Contate Mobile Pronto/Failure MPGateway.Call MobilePronto&lt;br&gt;
+                900 - Erro de autenticação ou Limite de Segurança excedido/Authentication Error or Security Limitation&lt;br&gt;
+                De 901 a 999 - Erro no acesso as operadoras.Contate Equipe MobilePronto/Contact customer center&lt;br&gt;-----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;</wsdl:documentation>
+            <wsdl:input message="tns:MPG_SendandFollowUp_SMSSoapIn"/>
+            <wsdl:output message="tns:MPG_SendandFollowUp_SMSSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_Send_SMS">
+            <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br&gt;&lt;br&gt;ATENÇÃO: Este método
+                será descontinuado na próxima versão.&lt;br&gt;&lt;br&gt;Parâmetros da MPG_Send_SMS: Versão: v_3_00&lt;br&gt;
+                ----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                Credencial - Obrigatório - 40 posições para acesso ao Mobile Pronto Gateway.&lt;br&gt; Token -
+                Obrigatório - 06 posições para acesso ao Mobile Pronto Gateway.&lt;br&gt; Principal_User - Obrigatório -
+                Código do Usuário Principal para autenticar no Gateway. Normalmente o CNPJ ou CPF. Pode ser Vazio.&lt;br&gt;
+                Aux_User - Obrigatório - Código do Usuário Auxiliar/Qualificar da Mensagem. Máx.=20 posições. Se &gt; 20
+                será truncado.&lt;br&gt; Mobile - Obrigatório - Celular que receberá o SMS. Formato mundial:
+                +99(999)99999999, sendo pais,ddd e mobile&lt;br&gt; Send_Project - Obrigatório - Se (S)im a sigla da
+                mensagem vem no início.&lt;br&gt; Se (N)ão não vem. Tamanho máximo=9 (XXXXXXXX:).&lt;br&gt; Exemplo:
+                MPG:&lt;mensagem&gt;&lt;br&gt; Message - Obrigatório - Mensagem que será enviada ao mobile. Tamanho
+                máximo de 160 posições.&lt;br&gt;&lt;br&gt;Tipos de Retorno:&lt;br&gt;
+                ----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                000 - Mensagem enviada com Sucesso/Message sent successfully.&lt;br&gt;
+                ----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                001 - Credencial Inválida/Invalid Credencial.&lt;br&gt; 005 - Mobile fora do formato-Formato
+                +999(9999)99999999/Invalid phone number - non-standard&lt;br&gt; 007 - Flag Send_Project tem que ser S,s
+                or Y,y or N,n/Flag Send_Project must be S,s or Y,y or N,n&lt;br&gt; 008 - Mensagem ou Nome_Projeto+Msg
+                maior que máximo no Pais/Message or Project+Msg higher maximun in Country&lt;br&gt; 009 - Sem crédito
+                para envio de SMS. Favor repor/Account without funds. Please purchase more credits&lt;br&gt; 010 -
+                Gateway Bloqueado/Gateway locked for use&lt;br&gt; 012 - Mobile no formato padrão, mas incorreto/Invalid
+                mobile&lt;br&gt; 013 - Mensagem Vazia ou Corpo Inválido/Message Body Blank or Invalid&lt;br&gt; 015 -
+                Pais sem operação/Country without operation&lt;br&gt; 016 - Mobile com tamanho do código de área
+                inválido/Size of area code invalid&lt;br&gt; 017 - Operadora não autorizada para esta
+                Credencial/Operator not allowed for this Credential&lt;br&gt; 018 - Mobile está na Lista Negra/Mobile is
+                in the Black List&lt;br&gt; 019 - Token Inválido/Invalid Token&lt;br&gt;-----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                De 800 a 899 - Falha no MPGateway.Contate Mobile Pronto/Failure MPGateway.Call MobilePronto&lt;br&gt;
+                900 - Erro de autenticação ou Limite de Segurança excedido/Authentication Error or Security Limitation&lt;br&gt;
+                De 901 a 999 - Erro no acesso as operadoras.Contate Equipe MobilePronto/Contact customer center&lt;br&gt;-----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;</wsdl:documentation>
+            <wsdl:input message="tns:MPG_Send_SMSSoapIn"/>
+            <wsdl:output message="tns:MPG_Send_SMSSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_Credits">
+            <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br&gt;Obtendo créditos da conta -
+                v_3_00.&lt;br&gt;&lt;br&gt;ATENÇÃO: Recomendamos utilizar a documentação do site:
+                http://www.mobipronto.com/pt-br/SMS-MT-API/documentacao-sms-mt-api-web-service-v3-00&lt;br&gt;</wsdl:documentation>
+            <wsdl:input message="tns:MPG_CreditsSoapIn"/>
+            <wsdl:output message="tns:MPG_CreditsSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_Send_LMS">
+            <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br&gt;Enviando SMS (de 160 a 15300
+                caracteres) - v_3_00.&lt;br&gt;&lt;br&gt;ATENÇÃO: Recomendamos utilizar a documentação do site:
+                http://www.mobipronto.com/pt-br/SMS-MT-API/documentacao-sms-mt-api-web-service-v3-00&lt;br&gt;</wsdl:documentation>
+            <wsdl:input message="tns:MPG_Send_LMSSoapIn"/>
+            <wsdl:output message="tns:MPG_Send_LMSSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_Send_Long_SMS">
+            <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br&gt;&lt;br&gt;ATENÇÃO: Este método
+                será descontinuado na próxima versão.&lt;br&gt;&lt;br&gt;Parâmetros da MPG_Send_Long_SMS: Versão: v_3_00&lt;br&gt;
+                ----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                Credencial - Obrigatório - 40 posições para acesso ao Mobile Pronto Gateway.&lt;br&gt; Token -
+                Obrigatório - 06 posições para acesso ao Mobile Pronto Gateway.&lt;br&gt; Principal_User - Obrigatório -
+                Código do Usuário Principal para autenticar no Gateway. Normalmente o CNPJ ou CPF. Pode ser Vazio.&lt;br&gt;
+                Aux_User - Obrigatório - Código do Usuário Auxiliar/Qualificar da Mensagem. Máx.=20 posições. Se &gt; 20
+                será truncado.&lt;br&gt; Mobile - Obrigatório - Celular que receberá o SMS. Formato mundial:
+                +99(999)99999999, sendo pais,ddd e mobile&lt;br&gt; Message - Obrigatório - Mensagem que será enviada ao
+                mobile. Tamanho máximo de 15.300 posições.&lt;br&gt;&lt;br&gt;Tipos de Retorno:&lt;br&gt;
+                ----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                000:ID1:000:ID1:000:ID1: - Mensagem LMS enviada com Sucesso.&lt;br&gt;
+                ----------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                001 - Credencial Inválida/Invalid Credencial.&lt;br&gt; 005 - Mobile fora do formato-Formato
+                +999(9999)99999999.Valido somente no Brasil.&lt;br&gt; 008 - Mensagem maior que máximo (15.300).&lt;br&gt;
+                009 - Sem crédito para envio de SMS. Favor repor.&lt;br&gt; 010 - Gateway Bloqueado.&lt;br&gt; 012 -
+                Mobile no formato padrão, mas incorreto.&lt;br&gt; 013 - Mensagem Vazia ou Corpo Inválido.&lt;br&gt; 015
+                - Pais sem operação.País não aceita LMS.&lt;br&gt; 016 - Mobile com tamanho do código de área inválido.&lt;br&gt;
+                017 - Operadora não autorizada para esta Credencial.&lt;br&gt; 018 - Mobile está na Lista Negra.&lt;br&gt;
+                019 - Token Inválido.&lt;br&gt;------------------------------------------------------------------------------------------------------------------&lt;br&gt;
+                De 800 a 899 - Falha no MPGateway.Contate Mobile Pronto/Failure MPGateway.Call MobilePronto&lt;br&gt;
+                900 - Erro de autenticação ou Limite de Segurança excedido/Authentication Error or Security Limitation&lt;br&gt;
+                De 901 a 999 - Erro no acesso as operadoras.Contate Equipe MobilePronto/Contact customer center&lt;br&gt;------------------------------------------------------------------------------------------------------------------&lt;br&gt;</wsdl:documentation>
+            <wsdl:input message="tns:MPG_Send_Long_SMSSoapIn"/>
+            <wsdl:output message="tns:MPG_Send_Long_SMSSoapOut"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="MPGatewaySoap" type="tns:MPGatewaySoap">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="MPG_Calculate_Message_Length_UTF8_or_UTF16">
+            <soap:operation soapAction="MobileProntoMPGateway/MPG_Calculate_Message_Length_UTF8_or_UTF16"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_SendSimple_SMS">
+            <soap:operation soapAction="MobileProntoMPGateway/MPG_SendSimple_SMS" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_SendandFollowUp_SMS">
+            <soap:operation soapAction="MobileProntoMPGateway/MPG_SendandFollowUp_SMS" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_Send_SMS">
+            <soap:operation soapAction="MobileProntoMPGateway/MPG_Send_SMS" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_Credits">
+            <soap:operation soapAction="MobileProntoMPGateway/MPG_Credits" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_Send_LMS">
+            <soap:operation soapAction="MobileProntoMPGateway/MPG_Send_LMS" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_Send_Long_SMS">
+            <soap:operation soapAction="MobileProntoMPGateway/MPG_Send_Long_SMS" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="MPGatewaySoap12" type="tns:MPGatewaySoap">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="MPG_Calculate_Message_Length_UTF8_or_UTF16">
+            <soap12:operation soapAction="MobileProntoMPGateway/MPG_Calculate_Message_Length_UTF8_or_UTF16"
+                              style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_SendSimple_SMS">
+            <soap12:operation soapAction="MobileProntoMPGateway/MPG_SendSimple_SMS" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_SendandFollowUp_SMS">
+            <soap12:operation soapAction="MobileProntoMPGateway/MPG_SendandFollowUp_SMS" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_Send_SMS">
+            <soap12:operation soapAction="MobileProntoMPGateway/MPG_Send_SMS" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_Credits">
+            <soap12:operation soapAction="MobileProntoMPGateway/MPG_Credits" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_Send_LMS">
+            <soap12:operation soapAction="MobileProntoMPGateway/MPG_Send_LMS" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="MPG_Send_Long_SMS">
+            <soap12:operation soapAction="MobileProntoMPGateway/MPG_Send_Long_SMS" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="MPGateway">
+        <wsdl:port name="MPGatewaySoap" binding="tns:MPGatewaySoap">
+            <soap:address location="http://www.mpgateway.com/v_3_00/sms/service.asmx"/>
+        </wsdl:port>
+        <wsdl:port name="MPGatewaySoap12" binding="tns:MPGatewaySoap12">
+            <soap12:address location="http://www.mpgateway.com/v_3_00/sms/service.asmx"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
