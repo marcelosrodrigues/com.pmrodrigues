@@ -3,6 +3,7 @@ package com.pmrodrigues.sisgns.models;
 import lombok.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 /**
  * Created by Marceloo on 21/09/2015.
@@ -17,10 +18,27 @@ public class Comissionamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
+    @Setter
     private Long id;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "plano_id")
     @Getter
+    @Setter
     private Plano plano;
+
+    @Column
+    @Getter
+    @Setter
+    private String nome;
+
+    @Column
+    @Getter
+    @Setter
+    private BigDecimal percentual;
+
+    @Column
+    @Getter
+    @Setter
+    private Integer ordem;
 }

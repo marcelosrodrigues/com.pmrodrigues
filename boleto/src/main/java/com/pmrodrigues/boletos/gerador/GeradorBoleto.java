@@ -71,14 +71,14 @@ public class GeradorBoleto {
 
         final Sacado sacado = new Sacado(boleto.getSacado().getNome(), boleto.getSacado().getDocumento());
         final Endereco endereco = new Endereco();
-        endereco.setBairro(boleto.getSacado().getEndereco().getLogradouro().getBairro().getNome());
-        endereco.setCep(boleto.getSacado().getEndereco().getLogradouro().getCep());
-        endereco.setLocalidade(boleto.getSacado().getEndereco().getLogradouro().getBairro().getCidade().getNome());
-        if (!isBlankOrNull(boleto.getSacado().getEndereco().getLogradouro().getBairro().getCidade().getEstado().getUF())) {
-            endereco.setUF(UnidadeFederativa.valueOfSigla(boleto.getSacado().getEndereco().getLogradouro().getBairro().getCidade().getEstado().getUF()));
+        endereco.setBairro(boleto.getSacado().getEndereco().getBairro().getNome());
+        endereco.setCep(boleto.getSacado().getEndereco().getCep());
+        endereco.setLocalidade(boleto.getSacado().getEndereco().getCidade().getNome());
+        if (!isBlankOrNull(boleto.getSacado().getEndereco().getEstado().getUf())) {
+            endereco.setUF(UnidadeFederativa.valueOfSigla(boleto.getSacado().getEndereco().getEstado().getUf()));
         }
         endereco.setLocalidade(format("%s %s %s",
-                boleto.getSacado().getEndereco().getLogradouro().getLogradouro(),
+                boleto.getSacado().getEndereco().getLogradouro(),
                 boleto.getSacado().getEndereco().getNumero(),
                 boleto.getSacado().getEndereco().getComplemento()));
         sacado.addEndereco(endereco);

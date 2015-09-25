@@ -2,6 +2,7 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setBundle basename="messages" scope="application" var="messages"/>
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
@@ -11,7 +12,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<c:url value='/index.do' />"><fmt:message bundle="messages" key="sistema" /></a>
+        <a class="navbar-brand" href="<c:url value='/index.do' />"><fmt:message bundle="${messages}" key="sistema"/></a>
     </div>
     <!-- /.navbar-header -->
 

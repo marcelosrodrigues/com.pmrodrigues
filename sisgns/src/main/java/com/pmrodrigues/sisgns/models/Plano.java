@@ -30,4 +30,6 @@ public class Plano {
     @Getter
     @Setter
     private Operadora operadora;
+
+
 }

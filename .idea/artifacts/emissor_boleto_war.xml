@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="emissor-boleto:war">
-    <output-path>$PROJECT_DIR$/emissor-boleto/target</output-path>
-    <root id="archive" name="com.pmrodrigues.emissor-boleto-1.0.war">
-      <element id="artifact" artifact-name="emissor-boleto:war exploded" />
-    </root>
-  </artifact>
-</component>

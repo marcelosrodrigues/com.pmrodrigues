@@ -2,7 +2,10 @@ package test.com.pmrodrigues.boletos.model;
 
 import com.pmrodrigues.boletos.gerador.GeradorBoleto;
 import com.pmrodrigues.boletos.models.*;
-import com.pmrodrigues.endereco.models.*;
+import com.pmrodrigues.endereco.models.Bairro;
+import com.pmrodrigues.endereco.models.Cidade;
+import com.pmrodrigues.endereco.models.Endereco;
+import com.pmrodrigues.endereco.models.Estado;
 import com.pmrodrigues.pessoa.models.PessoaFisica;
 import org.joda.time.DateTime;
 import org.junit.Test;
@@ -56,16 +59,11 @@ public class TestBoleto {
                 .comEndereco(new Endereco()
                         .comNumero("84")
                         .comComplemento("apto 206")
-                        .comLogradouro(
-                                new Logradouro()
-                                        .comCEP("22743310")
-                                        .comLogradouro("Estrada do Campo da Areia")
-                                        .comBairro(new Bairro()
-                                                .comNome("Pechincha")
-                                                .comCidade(new Cidade().comNome("RIO DE JANEIRO").comEstado(new Estado().comUF("RJ"))))
-
-
-                        )))
+                        .comLogradouro("Estrada do Campo da Areia")
+                        .comCEP("22743310")
+                        .comBairro(new Bairro().comNome("Pechincha"))
+                        .comCidade(new Cidade().comNome("RIO DE JANEIRO"))
+                        .comEstado(new Estado().comUF("RJ"))))
                 .comCedente(new Cedente()
                         .comNome("ALACORO CLUB CASF")
                         .comNumeroDocumento("04769697000110"))

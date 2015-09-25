@@ -1,15 +1,21 @@
 package com.pmrodrigues.pessoa.models;
 
+import com.pmrodrigues.endereco.models.Celular;
 import com.pmrodrigues.endereco.models.Endereco;
+import com.pmrodrigues.endereco.models.Telefone;
 import lombok.*;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.HashSet;
 
 /**
  * Created by Marceloo on 22/09/2015.
  */
-@MappedSuperclass
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 @EqualsAndHashCode(exclude = {"id","nome", "endereco", "password"})
 @ToString(exclude = "password")
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
@@ -36,6 +42,25 @@ public abstract class Pessoa implements Serializable {
     @Setter
     @Getter
     private Endereco endereco;
+
+    @Getter
+    @Setter
+    @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
+    @JoinTable(name = "telefone_pessoa",
+            joinColumns = {@JoinColumn(name = "pessoa_id")},
+            inverseJoinColumns = {@JoinColumn(name = "telefone_id")})
+    @Where(clause = "tipo = 'R'")
+    private Collection<Telefone> residenciais = new HashSet<>();
+
+    @Getter
+    @Setter
+    @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
+    @JoinTable(name = "telefone_pessoa",
+            joinColumns = {@JoinColumn(name = "pessoa_id")},
+            inverseJoinColumns = {@JoinColumn(name = "telefone_id")})
+    @Where(clause = "tipo = 'C'")
+    private Collection<Celular> celulares = new HashSet<>();
+
 
     public abstract String getDocumento();
 

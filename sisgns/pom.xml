@@ -3,10 +3,11 @@
     <parent>
         <artifactId>com.pmrodrigues</artifactId>
         <groupId>com.pmrodrigues</groupId>
-        <version>1.0</version>
+        <version>1.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sisgns</artifactId>
+    <version>1.0</version>
     <packaging>war</packaging>
     <name>Gestor de Negócios Seguradores</name>
     <url>http://maven.apache.org</url>
@@ -124,6 +125,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
         </dependency>
 
         <dependency>
@@ -301,10 +307,16 @@
             <version>1.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.pmrodrigues</groupId>
+            <artifactId>endereco</artifactId>
+            <version>1.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
-        <finalName>ibws</finalName>
+        <finalName>sisgns</finalName>
         <plugins>
             <plugin>
                 <groupId>org.flywaydb</groupId>
@@ -339,10 +351,11 @@
                 <configuration>
                     <useTestClasspath>true</useTestClasspath>
                     <scanIntervalSeconds>0</scanIntervalSeconds>
-                    <daemon>true</daemon>
+                    <daemon>
                     <webApp>
-                        <contextPath>/</contextPath>
+                        <contextPath>/sisgns</contextPath>
                     </webApp>
+                    </daemon>
                     <stopKey>foo</stopKey>
                     <stopPort>9999</stopPort>
                     <httpConnector>

@@ -3,6 +3,7 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setBundle basename="messages" scope="application" var="messages"/>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +18,7 @@
     <!-- default header name is X-CSRF-TOKEN -->
     <meta name="_csrf_header" content="${_csrf.headerName}"/>
 
-    <title>Alacoro Corretora de Saúde</title>
+    <title><fmt:message bundle="${messages}" key="sistema"/></title>
 
 
     <link href="<c:url value='/css/treeview.css' />" rel="stylesheet">

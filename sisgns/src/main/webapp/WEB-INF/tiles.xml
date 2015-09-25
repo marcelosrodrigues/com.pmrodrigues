@@ -9,5 +9,14 @@
         <put-attribute name="conteudo" value=""/>
     </definition>
 
+    <definition name="index-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/principal.jsp"/>
+        <put-attribute name="conteudo" value=""/>
+    </definition>
+
+    <definition name="administradora/formulario-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/administradora/formulario.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/administradora/formulario.jsp"/>
+    </definition>
 
 </tiles-definitions>

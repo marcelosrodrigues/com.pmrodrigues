@@ -17,8 +17,8 @@ import static com.pmrodrigues.security.Constante.NUMERO_MAXIMO_TENTATIVAS_FALHAS
 @Entity
 @Table
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@EqualsAndHashCode()
-@ToString()
+@EqualsAndHashCode(exclude = {"password", "perfis"})
+@ToString(exclude = {"password"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class Usuario implements com.pmrodrigues.security.models.Usuario {
 
@@ -53,7 +53,7 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
             inverseJoinColumns = @JoinColumn(name = "perfil_id"),
             uniqueConstraints = @UniqueConstraint(columnNames = {"usuario_id", "perfil_id"}))
     @Getter
-    private Collection<? extends GrantedAuthority> perfis = new HashSet<>();
+    private Collection<Perfil> perfis = new HashSet<>();
 
     @Column
     @Getter

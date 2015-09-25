@@ -6,15 +6,14 @@ import com.pmrodrigues.xml.adapters.BigDecimalTypeAdapter;
 import com.pmrodrigues.xml.adapters.DateTypeAdapter;
 import lombok.*;
 import org.apache.log4j.Logger;
-import org.hibernate.annotations.*;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
+import org.hibernate.annotations.DynamicUpdate;
 import org.joda.time.DateTime;
 import org.jrimum.bopepo.view.BoletoViewer;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.ByteArrayInputStream;
@@ -36,9 +35,6 @@ import static java.lang.String.format;
 @Table
 @Inheritance(strategy = InheritanceType.JOINED)
 @DynamicUpdate
-@Filters({
-        @Filter(name = "boletos_por_emissor")
-})
 @EqualsAndHashCode()
 @ToString(exclude = "password")
 @NoArgsConstructor(access = AccessLevel.PUBLIC)

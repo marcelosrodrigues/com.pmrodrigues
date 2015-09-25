@@ -20,14 +20,35 @@ public @Data class Endereco implements Serializable {
     private Long id;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "logradouro_id")
-    private Logradouro logradouro;
+    @JoinColumn(name = "bairro_id")
+    private Bairro bairro;
 
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "cidade_id")
+    private Cidade cidade;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "estado_id")
+    private Estado estado;
+
+    @Column
     private String numero;
 
+    @Column
     private String complemento;
 
-    public Endereco comLogradouro(final Logradouro logradouro) {
+    @Column
+    private String logradouro;
+
+    @Column
+    private String cep;
+
+    public Endereco comCEP(final String cep) {
+        this.cep = cep;
+        return this;
+    }
+
+    public Endereco comLogradouro(final String logradouro) {
         this.logradouro = logradouro;
         return this;
     }
@@ -39,6 +60,21 @@ public @Data class Endereco implements Serializable {
 
     public Endereco comComplemento(final String complemento) {
         this.complemento = complemento;
+        return this;
+    }
+
+    public Endereco comCidade(final Cidade cidade) {
+        this.cidade = cidade;
+        return this;
+    }
+
+    public Endereco comEstado(final Estado estado) {
+        this.estado = estado;
+        return this;
+    }
+
+    public Endereco comBairro(final Bairro bairro) {
+        this.bairro = bairro;
         return this;
     }
 }

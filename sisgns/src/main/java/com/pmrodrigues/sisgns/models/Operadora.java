@@ -10,7 +10,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table
-@EqualsAndHashCode()
+@EqualsAndHashCode(exclude = {"nome"})
 @ToString()
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class Operadora implements Serializable{

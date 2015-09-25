@@ -5586,7 +5586,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 
 .panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
-    border-top: 1px solid #ccc
+    border-top: 1px solid #ddd
 }
 
 .panel-group .panel-footer {
@@ -5603,7 +5603,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 .panel-default > .panel-heading {
     color: #333;
-    background-color: #ffffff;
+    background-color: #f5f5f5;
     border-color: #ddd
 }
 

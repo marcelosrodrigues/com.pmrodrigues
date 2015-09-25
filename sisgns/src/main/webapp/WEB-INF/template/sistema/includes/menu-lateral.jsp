@@ -48,6 +48,17 @@
                 </ul>
             </li>
 
+                <li>
+                    <a href="#"><i class="fa fa-edit fa-fw"></i> Administração<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+
+                        <li>
+                            <a href="<c:url value='/administradora/index.do' />">Administradoras</a>
+                        </li>
+
+                    </ul>
+                </li>
+
         </ul>
     </div>
 

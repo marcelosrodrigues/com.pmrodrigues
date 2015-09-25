@@ -8,13 +8,11 @@ import lombok.ToString;
 import org.hibernate.annotations.DiscriminatorFormula;
 
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 /**
  * Created by Marceloo on 21/09/2015.
  */
 @Entity
-@Table
 @DiscriminatorFormula("exists ( select 1 from usuario u " +
                          " inner join membros m on u.id = m.usuario_id " +
                          " inner join perfil p on m.perfil_id = p.id " +

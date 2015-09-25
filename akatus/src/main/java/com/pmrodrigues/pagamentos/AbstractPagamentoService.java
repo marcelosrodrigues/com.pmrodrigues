@@ -64,7 +64,7 @@ public abstract class AbstractPagamentoService implements PagamentoService {
         address.setCountry(Address.Country.BRA);
         address.setNeighbourhood(pagamento.getPortador().getEndereco().getBairro());
         address.setNumber(pagamento.getPortador().getEndereco().getNumero());
-        address.setState(Address.State.valueOf(pagamento.getPortador().getEndereco().getEstado().getUF()));
+        address.setState(Address.State.valueOf(pagamento.getPortador().getEndereco().getEstado().getUf()));
         address.setStreet(pagamento.getPortador().getEndereco().getLogradouro());
         address.setType(Address.Type.SHIPPING);
         address.setZip(pagamento.getPortador().getEndereco().getCEP());
