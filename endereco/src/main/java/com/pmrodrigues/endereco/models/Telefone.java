@@ -14,6 +14,7 @@ import java.io.Serializable;
 @DiscriminatorColumn(name = "tipo", discriminatorType = DiscriminatorType.STRING)
 @DiscriminatorValue("R")
 @NoArgsConstructor()
+@RequiredArgsConstructor(access = AccessLevel.PUBLIC)
 @EqualsAndHashCode
 @ToString
 public class Telefone implements Serializable {
@@ -27,11 +28,13 @@ public class Telefone implements Serializable {
     @Setter
     @Getter
     @Column
+    @NonNull
     private String ddd;
 
     @Setter
     @Getter
-    @Column
+    @Column(name = "telefone")
+    @NonNull
     private String numero;
 
 }

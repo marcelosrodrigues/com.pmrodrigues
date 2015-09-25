@@ -24,7 +24,7 @@ public class LogradouroController {
     }
 
     @Get
-    @Path("/endereco/{cep}/logradouro.json")
+    @Path("/endereco/logradouro/{cep}.json")
     public Logradouro buscarLogradouroPorCEP(final String cep) {
 
         final Logradouro logradouro = repository.getByCEP(cep);

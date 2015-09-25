@@ -14,9 +14,19 @@
         <put-attribute name="conteudo" value=""/>
     </definition>
 
+    <definition name="administradora/index-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/administradora/index.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/administradora/index.jsp"/>
+    </definition>
+
     <definition name="administradora/formulario-template" extends="principal">
         <put-attribute name="header" value="/WEB-INF/breadcump/administradora/formulario.jsp"/>
         <put-attribute name="conteudo" value="/WEB-INF/template/administradora/formulario.jsp"/>
     </definition>
+
+    <definition name="administradora/*/show-template" extends="administradora/formulario-template"/>
+
+    <definition name="administradora/reabrir-template" extends="administradora/formulario-template"/>
+
 
 </tiles-definitions>

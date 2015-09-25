@@ -41,6 +41,7 @@ public class Cedente implements Serializable {
             , required = true)
     @Column(unique = true)
     @NonNull
+    @NotEmpty(message = "Nome é obrigatório")
     @Setter
     @Getter
     private String nome;
@@ -49,7 +50,7 @@ public class Cedente implements Serializable {
             , namespace = "http://data.pmrodrigues.biz/boleto/emissor/1.0"
             , required = true)
     @Column(nullable = false, unique = true)
-    @CNPJ(formatted = false, message = "CNPJ inválido")
+    @CNPJ(formatted = true, message = "CNPJ inválido")
     @NotEmpty(message = "CNPJ do cedente é obrigatório")
     @NonNull
     @Setter
@@ -64,7 +65,7 @@ public class Cedente implements Serializable {
     @Getter
     private String convenio;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, cascade = CascadeType.ALL)
     @JoinColumn(name = "endereco_id")
     @Getter
     @Setter

@@ -7,13 +7,14 @@ import com.pmrodrigues.vraptor.crud.annotations.Insert;
 import com.pmrodrigues.vraptor.crud.annotations.Update;
 import org.apache.log4j.Logger;
 
-import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
 
 import static java.lang.String.format;
+import static org.apache.commons.beanutils.BeanUtils.getProperty;
+import static org.apache.commons.validator.GenericValidator.isBlankOrNull;
 
 /**
  * Created by Marceloo on 28/03/2015.
@@ -69,10 +70,14 @@ class CRUDUtils<E> {
 
     public Long getId(final E object) {
         try {
-            final Field id = object.getClass().getDeclaredField("id");
-            id.setAccessible(true);
-            return (Long) id.get(object);
-        } catch (NoSuchFieldException | IllegalAccessException e) {
+            final String value = getProperty(object, "id");
+            if (!isBlankOrNull(value)) {
+                return Long.parseLong(value);
+            } else {
+                return 0L;
+            }
+
+        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
             throw new RuntimeException(e);
         }
     }

@@ -44,18 +44,18 @@
             <div class="row">
 
                 <div class="col-lg-1">
-                    <input type="hidden" name="telefone1.id" id="telefone1.id" value="${telefone1.id}"/>
+                    <input type="hidden" name="object.residenciais[0].id" id="object.residenciais[0].id" value=""/>
                     <bootstrap:textfield label="DDD"
-                                         value="${telefone1.ddd}"
-                                         id="telefone1.ddd"
-                                         errorField="telefone1.ddd"/>
+                                         value=""
+                                         id="object.residenciais[0].ddd"
+                                         errorField="object.residenciais[0].ddd"/>
                 </div>
 
                 <div class="col-lg-4">
                     <bootstrap:textfield label="Telefone"
-                                         value="${telefone1.numero}"
-                                         id="telefone1.numero"
-                                         errorField="telefone1.numero"/>
+                                         value=""
+                                         id="object.residenciais[0].numero"
+                                         errorField="object.residenciais[0].numero"/>
                 </div>
 
             </div>
@@ -63,18 +63,18 @@
             <div class="row">
 
                 <div class="col-lg-1">
-                    <input type="hidden" name="telefone2.id" id="telefone2.id" value="${telefone2.id}"/>
+                    <input type="hidden" name="object.residenciais[1].id" id="object.residenciais[1].id" value=""/>
                     <bootstrap:textfield label="DDD"
-                                         value="${telefone2.ddd}"
-                                         id="telefone2.ddd"
-                                         errorField="telefone2.ddd"/>
+                                         value=""
+                                         id="object.residenciais[1].ddd"
+                                         errorField="object.residenciais[1].ddd"/>
                 </div>
 
                 <div class="col-lg-4">
                     <bootstrap:textfield label="Telefone"
-                                         value="${telefone2.numero}"
-                                         id="telefone2.numero"
-                                         errorField="telefone2.numero"/>
+                                         value=""
+                                         id="object.residenciais[1].numero"
+                                         errorField="object.residenciais[1].numero"/>
                 </div>
 
             </div>
@@ -82,18 +82,18 @@
             <div class="row">
 
                 <div class="col-lg-1">
-                    <input type="hidden" name="telefone3.id" id="telefone3.id" value="${telefone3.id}"/>
+                    <input type="hidden" name="object.residenciais[2].id" id="object.residenciais[2].id" value=""/>
                     <bootstrap:textfield label="DDD"
-                                         value="${telefone3.ddd}"
-                                         id="telefone3.ddd"
-                                         errorField="telefone3.ddd"/>
+                                         value=""
+                                         id="object.residenciais[2].ddd"
+                                         errorField="object.residenciais[2].ddd"/>
                 </div>
 
                 <div class="col-lg-4">
                     <bootstrap:textfield label="Telefone"
-                                         value="${telefone3.numero}"
-                                         id="telefone3.numero"
-                                         errorField="telefone3.numero"/>
+                                         value=""
+                                         id="object.residenciais[2].numero"
+                                         errorField="object.residenciais[2].numero"/>
                 </div>
 
             </div>

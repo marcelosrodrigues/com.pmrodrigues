@@ -1,8 +1,10 @@
 package com.pmrodrigues.endereco.models;
 
 import lombok.*;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
@@ -19,27 +21,33 @@ public @Data class Endereco implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull(message = "Bairro é obrigatório")
     @ManyToOne(optional = false)
     @JoinColumn(name = "bairro_id")
     private Bairro bairro;
 
+    @NotNull(message = "Cidade é obrigatório")
     @ManyToOne(optional = false)
     @JoinColumn(name = "cidade_id")
     private Cidade cidade;
 
+    @NotNull(message = "Estado é obrigatório")
     @ManyToOne(optional = false)
     @JoinColumn(name = "estado_id")
     private Estado estado;
 
+    @NotEmpty(message = "Número é obrigatório")
     @Column
     private String numero;
 
     @Column
     private String complemento;
 
+    @NotEmpty(message = "Logradouro é obrigatório")
     @Column
     private String logradouro;
 
+    @NotEmpty(message = "CEP é obrigatório")
     @Column
     private String cep;
 
