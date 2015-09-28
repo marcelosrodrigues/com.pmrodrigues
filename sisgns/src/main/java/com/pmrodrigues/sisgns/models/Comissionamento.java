@@ -27,6 +27,13 @@ public class Comissionamento {
     @Setter
     private Plano plano;
 
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "administradora_id")
+    @Getter
+    @Setter
+    private Administradora administradora;
+
     @Column
     @Getter
     @Setter

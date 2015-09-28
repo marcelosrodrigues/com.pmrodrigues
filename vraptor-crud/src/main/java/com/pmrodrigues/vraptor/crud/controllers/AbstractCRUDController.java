@@ -47,7 +47,7 @@ public abstract class AbstractCRUDController<E> { //NOPMD
 
         validator.validate(object);
         final Long idValue = crudutils.getId(object);
-        validator.onErrorForwardTo(this.getClass()).reabrir(object);
+        validator.onErrorForwardTo(this.getClass()).formulario();
 
         logging.debug(format("iniciando a operação de inclusão de %s", object));
 
@@ -69,13 +69,8 @@ public abstract class AbstractCRUDController<E> { //NOPMD
             result.forwardTo(this.getClass()).index();
         } catch (UniqueException ex) {
             validator.add(new ValidationMessage(ex.getMessage(), ex.getMessage()));
-            validator.onErrorForwardTo(this.getClass()).reabrir(object);
+            validator.onErrorForwardTo(this.getClass()).formulario();
         }
-    }
-
-    public void reabrir(final E e) {
-        crudutils.preExecute();
-        result.include(Constante.OBJECT, e);
     }
 
     @Get
@@ -116,7 +111,9 @@ public abstract class AbstractCRUDController<E> { //NOPMD
                 }
             }
 
-            result.include(Constante.OBJECT, e);
+            if (result.included().get(Constante.OBJECT) == null) {
+                result.include(Constante.OBJECT, e);
+            }
         } catch (InstantiationException | IllegalAccessException ex) {
             throw new RuntimeException(ex);
         }

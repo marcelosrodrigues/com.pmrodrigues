@@ -1,7 +1,9 @@
 package com.pmrodrigues.sisgns.models.security;
 
 
+import com.pmrodrigues.security.utilities.MD5;
 import lombok.*;
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.security.core.GrantedAuthority;
 
@@ -33,6 +35,7 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
     @Column
     public String nome;
 
+    @Email(message = "E-mail é inválido")
     @NotBlank(message = "E-mail é obrigatório")
     @Column(unique = true, nullable = false)
     @Setter
@@ -107,11 +110,15 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
+    }
+
+    public void setPassword(final String password) {
+        this.password = MD5.encrypt(password);
     }
 }

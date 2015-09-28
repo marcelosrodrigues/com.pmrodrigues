@@ -1,6 +1,7 @@
 package com.pmrodrigues.endereco.models;
 
 import lombok.*;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,7 +27,7 @@ public @Data class Estado implements Serializable {
     @Column(columnDefinition = "char(2)", nullable = false, unique = true)
     private String uf;
 
-    @NotNull
+    @NotEmpty(message = "Estado é obrigatória")
     @Column(insertable = true, updatable = true, nullable = false)
     private String nome;
 

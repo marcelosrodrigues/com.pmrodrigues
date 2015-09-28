@@ -1,6 +1,7 @@
 package com.pmrodrigues.endereco.models;
 
 import lombok.*;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -23,6 +24,7 @@ public @Data class Cidade implements Serializable {
     @JoinColumn(name = "estado_id")
     private Estado estado;
 
+    @NotEmpty(message = "Cidade é obrigatória")
     @Column(nullable = false)
     private String nome;
 

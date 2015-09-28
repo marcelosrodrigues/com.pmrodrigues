@@ -19,6 +19,8 @@
         <put-attribute name="conteudo" value="/WEB-INF/template/administradora/index.jsp"/>
     </definition>
 
+    <definition name="administradora/search-template" extends="administradora/index-template"/>
+
     <definition name="administradora/formulario-template" extends="principal">
         <put-attribute name="header" value="/WEB-INF/breadcump/administradora/formulario.jsp"/>
         <put-attribute name="conteudo" value="/WEB-INF/template/administradora/formulario.jsp"/>
@@ -26,7 +28,18 @@
 
     <definition name="administradora/*/show-template" extends="administradora/formulario-template"/>
 
-    <definition name="administradora/reabrir-template" extends="administradora/formulario-template"/>
+    <definition name="operadora/index-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/operadora/index.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/operadora/index.jsp"/>
+    </definition>
 
+    <definition name="operadora/search-template" extends="operadora/index-template"/>
+
+    <definition name="operadora/formulario-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/operadora/formulario.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/operadora/formulario.jsp"/>
+    </definition>
+
+    <definition name="operadora/*/show-template" extends="operadora/formulario-template"/>
 
 </tiles-definitions>

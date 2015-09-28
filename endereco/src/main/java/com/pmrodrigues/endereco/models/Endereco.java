@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
@@ -21,16 +22,19 @@ public @Data class Endereco implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Valid
     @NotNull(message = "Bairro é obrigatório")
     @ManyToOne(optional = false)
     @JoinColumn(name = "bairro_id")
     private Bairro bairro;
 
+    @Valid
     @NotNull(message = "Cidade é obrigatório")
     @ManyToOne(optional = false)
     @JoinColumn(name = "cidade_id")
     private Cidade cidade;
 
+    @Valid
     @NotNull(message = "Estado é obrigatório")
     @ManyToOne(optional = false)
     @JoinColumn(name = "estado_id")

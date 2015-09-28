@@ -363,6 +363,7 @@
                         <name>org.mortbay.jetty.nio.SelectChannelConnector</name>
                     </httpConnector>
                     <jettyXml>src/test/resources/jetty-env.xml</jettyXml>
+                    <jvmArgs>-g</jvmArgs>
                 </configuration>
                 <dependencies>
                     <dependency>

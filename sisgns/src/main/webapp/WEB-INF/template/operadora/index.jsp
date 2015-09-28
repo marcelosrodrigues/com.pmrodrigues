@@ -6,15 +6,8 @@
 
 <bootstrap:summary text="${sucesso}"/>
 
-<form action="<c:url value="/administradora/pesquisar.do" />" method="get" role="form">
+<form action="<c:url value="/operadora/pesquisar.do" />" method="get" role="form">
     <div class="row">
-        <div class="col-lg-4">
-            <bootstrap:textfield label="CNPJ"
-                                 value="${object.numeroDocumento}"
-                                 id="object.numeroDocumento"
-                                 errorField="object.numeroDocumento"/>
-
-        </div>
         <div class="col-lg-5">
             <bootstrap:textfield label="Nome" value="${object.nome}" id="object.nome" errorField="object.nome"/>
         </div>
@@ -29,7 +22,6 @@
     <thead>
     <tr>
         <th style="width:10%">#</th>
-        <th>CNPJ</th>
         <th>Nome</th>
         <th style="width:5%"></th>
     </tr>
@@ -37,8 +29,7 @@
     <tbody>
     <c:forEach items="${resultlist.consulta}" var="object">
         <tr>
-            <td><a href='<c:url value="/administradora/${object.id}/abrir.do" />'>${object.id}</a></td>
-            <td>${object.numeroDocumento}</td>
+            <td><a href='<c:url value="/operadora/${object.id}/abrir.do" />'>${object.id}</a></td>
             <td>${object.nome}</td>
             <td align="center">
                 <button type="button" class="btn btn-danger btn-circle">
@@ -49,10 +40,10 @@
     </c:forEach>
     </tbody>
 </table>
-<bootstrap:paginate url="/administradora/pesquisar.do" resultList="${resultlist}"/>
+<bootstrap:paginate url="/operadora/pesquisar.do" resultList="${resultlist}"/>
 
 <div class="row">
     <div class="col-sm-6">
-        <a href="<c:url value='/administradora/novo.do' />" class="btn btn-info">Adicionar</a>
+        <a href="<c:url value='/operadora/novo.do' />" class="btn btn-info">Adicionar</a>
     </div>
 </div>

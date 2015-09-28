@@ -513,6 +513,9 @@
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
+                    <compilerArgument>
+                        -g
+                    </compilerArgument>
                 </configuration>
             </plugin>
 

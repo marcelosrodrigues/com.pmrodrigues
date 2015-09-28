@@ -21,8 +21,11 @@
             com.pmrodrigues.endereco,
             com.pmrodrigues.endereco.controllers,
             com.pmrodrigues.endereco.converters,
+            com.pmrodrigues.endereco.models,
             com.pmrodrigues.pessoa,
-            com.pmrodrigues.pessoa.converters
+            com.pmrodrigues.pessoa.converters,
+            com.pmrodrigues.pessoa.models,
+            com.pmrodrigues.boletos.models
         </param-value>
     </context-param>
     <context-param>

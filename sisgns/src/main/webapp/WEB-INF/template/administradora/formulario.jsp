@@ -5,7 +5,7 @@
 <%@ taglib prefix="bootstrap" uri="http://com.pmrodrigues.biz/taglib/bootstrap" %>
 
 
-<bootstrap:summary text="Não foi possível importar o boleto"/>
+<bootstrap:summary text="Não foi possível salvar a administradora de planos de saúde"/>
 <div class="panel panel-default">
 
     <div class="panel-heading">
@@ -24,11 +24,11 @@
                     <bootstrap:textfield label="CNPJ"
                                          value="${object.numeroDocumento}"
                                          id="object.numeroDocumento"
-                                         errorField="object.numeroDocumento"/>
+                                         errorField="numeroDocumento"/>
 
                 </div>
                 <div class="col-lg-7">
-                    <bootstrap:textfield label="Nome" value="${object.nome}" id="object.nome" errorField="object.nome"/>
+                    <bootstrap:textfield label="Nome" value="${object.nome}" id="object.nome" errorField="nome"/>
                 </div>
             </div>
 
@@ -44,59 +44,45 @@
             <div class="row">
 
                 <div class="col-lg-1">
-                    <input type="hidden" name="object.residenciais[0].id" id="object.residenciais[0].id" value=""/>
                     <bootstrap:textfield label="DDD"
                                          value=""
-                                         id="object.residenciais[0].ddd"
-                                         errorField="object.residenciais[0].ddd"/>
+                                         id="residencial.ddd"
+                                         errorField="residencial.ddd"/>
                 </div>
 
                 <div class="col-lg-4">
                     <bootstrap:textfield label="Telefone"
                                          value=""
-                                         id="object.residenciais[0].numero"
-                                         errorField="object.residenciais[0].numero"/>
+                                         id="residencial.numero"
+                                         errorField="residencial.numero"/>
                 </div>
-
-            </div>
-
-            <div class="row">
 
                 <div class="col-lg-1">
-                    <input type="hidden" name="object.residenciais[1].id" id="object.residenciais[1].id" value=""/>
-                    <bootstrap:textfield label="DDD"
-                                         value=""
-                                         id="object.residenciais[1].ddd"
-                                         errorField="object.residenciais[1].ddd"/>
-                </div>
-
-                <div class="col-lg-4">
-                    <bootstrap:textfield label="Telefone"
-                                         value=""
-                                         id="object.residenciais[1].numero"
-                                         errorField="object.residenciais[1].numero"/>
+                    <button id="adicionar-telefone" class="btn btn-success btn-circle" style="margin-top:25px;"
+                            type="button">
+                        <i class="fa fa-plus"></i>
+                    </button>
                 </div>
 
             </div>
 
-            <div class="row">
 
-                <div class="col-lg-1">
-                    <input type="hidden" name="object.residenciais[2].id" id="object.residenciais[2].id" value=""/>
-                    <bootstrap:textfield label="DDD"
-                                         value=""
-                                         id="object.residenciais[2].ddd"
-                                         errorField="object.residenciais[2].ddd"/>
-                </div>
+            <ul id="telefones" class="list-group">
 
-                <div class="col-lg-4">
-                    <bootstrap:textfield label="Telefone"
-                                         value=""
-                                         id="object.residenciais[2].numero"
-                                         errorField="object.residenciais[2].numero"/>
-                </div>
+                <c:forEach items="${object.residenciais}" var="telefone" varStatus="loop">
+                    <li class=list-group-item>(${telefone.ddd}) ${telefone.numero}
+                        <input type="hidden" name="object.residenciais[${loop.index}].id" value="${telefone.id}"/>
+                        <input type="hidden" name="object.residenciais[${loop.index}].ddd" value="${telefone.ddd}"/>
+                        <input type="hidden" name="object.residenciais[${loop.index}].numero"
+                               value="${telefone.numero}"/>
+                        <button id="remover-telefone" onclick='javascript:removerTelefone(this);'
+                                class="btn btn-danger btn-circle" style='float: right; margin-top: -5px;' type="button">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                    </li>
+                </c:forEach>
 
-            </div>
+            </ul>
 
 
             <bootstrap:salvar label="Salvar"/>

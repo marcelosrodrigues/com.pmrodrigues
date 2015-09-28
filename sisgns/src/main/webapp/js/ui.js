@@ -3,9 +3,34 @@ $('[id*="cep"]').mask("99999-999");
 $('[id*="cnpj"]').mask("99.999.999/9999-99");
 $('[id*="numeroDocumento"]').mask("99.999.999/9999-99");
 $('[id*="ddd"]').mask("999");
-$('[id*="object.residenciais*.numero"]').mask("9999-9999");
-$('[id*="object.celulares*.numero"]').mask("99999-9999");
+$('[id*="residencial.numero"]').mask("9999-9999");
+$('[id*="celular.numero"]').mask("99999-9999");
 
+
+$('[id="adicionar-telefone"]').click(function () {
+
+
+    if ($('[id*="residencial.ddd"]').val() != "" && $('[id*="residencial.numero"]').val() != null) {
+
+        $("ul#telefones").append("<li class=\"list-group-item\">(" + $('[id*="residencial.ddd"]').val() + ") "
+            + $('[id*="residencial.numero"]').val()
+            + "<input type=\"hidden\" name=\"object.residenciais[" + $("ul#telefones > li").length + "].id\" value=\"\" />"
+            + "<input type=\"hidden\" name=\"object.residenciais[" + $("ul#telefones > li").length + "].ddd\" value=\"" + $('[id*="residencial.ddd"]').val() + "\" />"
+            + "<input type=\"hidden\" name=\"object.residenciais[" + $("ul#telefones > li").length + "].numero\" value=\"" + $('[id*="residencial.numero"]').val() + "\" />"
+            + "<button id=\"remover-telefone\" onclick='javascript:removerTelefone(this);' class=\"btn btn-danger btn-circle\" style='float: right; margin-top: -5px;' type=\"button\">"
+            + "<i class=\"fa fa-minus\"></i>"
+            + "</button>"
+            + "</li>");
+
+        $('[id*="residencial.ddd"]').val("");
+        $('[id*="residencial.numero"]').val("");
+
+    }
+});
+
+function removerTelefone(element) {
+    $(element).parent().remove();
+}
 
 $('[id*="cep"]').blur(function () {
 

@@ -53,7 +53,11 @@
                     <ul class="nav nav-second-level">
 
                         <li>
-                            <a href="<c:url value='/administradora/index.do' />">Administradoras</a>
+                            <a href="<c:url value='/administradora/index.do' />">Administradoras de plano de saúde</a>
+                        </li>
+
+                        <li>
+                            <a href="<c:url value='/operadora/index.do' />">Operadoras de plano de saúde</a>
                         </li>
 
                     </ul>
