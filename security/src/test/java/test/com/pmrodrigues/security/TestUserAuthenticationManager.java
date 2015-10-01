@@ -89,6 +89,7 @@ public class TestUserAuthenticationManager {
             will(returnValue(MD5.encrypt("asdfghj")));
 
             oneOf(user).realizouTentativaInvalida();
+            oneOf(service).update(with(aNonNull(Usuario.class)));
         }});
 
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken("marcelosrodrigues@globo.com", "12345678"));

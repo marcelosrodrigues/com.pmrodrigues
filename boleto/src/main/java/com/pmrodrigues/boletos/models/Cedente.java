@@ -91,4 +91,9 @@ public class Cedente implements Serializable {
         this.id = id;
         return this;
     }
+
+    public Cedente comEndereco(final Endereco endereco) {
+        this.endereco = endereco;
+        return this;
+    }
 }

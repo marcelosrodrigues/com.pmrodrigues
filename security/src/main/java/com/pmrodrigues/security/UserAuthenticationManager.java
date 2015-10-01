@@ -41,6 +41,7 @@ public class UserAuthenticationManager implements AuthenticationManager {
                 return new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword(), user.getAuthorities());
             } else {
                 user.realizouTentativaInvalida();
+                service.update(user);
                 throw new BadCredentialsException(format("Usuario %s não encontrado ou senha invalida", authentication.getPrincipal()));
             }
         } else {

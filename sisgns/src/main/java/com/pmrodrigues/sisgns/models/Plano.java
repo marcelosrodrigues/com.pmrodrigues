@@ -37,7 +37,7 @@ public class Plano {
     @JoinColumn(name = "plano_id")
     @Getter
     @Setter
-    @OrderBy("order")
+    @OrderBy("ordem")
     private Collection<Comissionamento> regra = new ArrayList<>();
 
     @ManyToOne(optional = false)

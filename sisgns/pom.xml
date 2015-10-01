@@ -313,6 +313,13 @@
             <version>1.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.pmrodrigues</groupId>
+            <artifactId>pageobjects</artifactId>
+            <version>1.0</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>

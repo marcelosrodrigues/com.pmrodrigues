@@ -137,6 +137,13 @@
         <processorPath useClasspath="true" />
         <module name="pessoa" />
       </profile>
+      <profile default="false" name="Annotation profile for pageobjects" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="pageobjects" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
       <module name="akatus" target="1.7" />
@@ -145,6 +152,7 @@
       <module name="endereco" target="1.7" />
       <module name="io" target="1.7" />
       <module name="pagamento" target="1.7" />
+      <module name="pageobjects" target="1.7" />
       <module name="persistence" target="1.7" />
       <module name="pessoa" target="1.7" />
       <module name="security" target="1.7" />

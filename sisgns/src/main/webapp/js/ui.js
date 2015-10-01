@@ -6,6 +6,32 @@ $('[id*="ddd"]').mask("999");
 $('[id*="residencial.numero"]').mask("9999-9999");
 $('[id*="celular.numero"]').mask("99999-9999");
 
+$('[id*="comissionamento.percentual"]').mask("999");
+$('[id*="comissionamento.ordem"]').mask("9");
+
+
+$('[id="adicionar-regra"]').click(function () {
+
+    if ($('[id*="comissionamento.nome"]').val() != null && $('[id*="comissionamento.percentual"]').val() != null && $('[id*="comissionamento.ordem"]').val() != null) {
+        $("#regras-de-comissionamento > table > tbody").append("<tr>"
+            + "<td>" + $('[id*="comissionamento.nome"]').val()
+            + "<input type=\"hidden\" name=\"object.regra[" + $("#regras-de-comissionamento > table > tbody > tr ").length + "].id\" value=\"\" />"
+            + "<input type=\"hidden\" name=\"object.regra[" + $("#regras-de-comissionamento > table > tbody > tr ").length + "].nome\" value=\"" + $('[id*="comissionamento.nome"]').val() + "\" />"
+            + "<input type=\"hidden\" name=\"object.regra[" + $("#regras-de-comissionamento > table > tbody > tr ").length + "].percentual\" value=\"" + $('[id*="comissionamento.percentual"]').val() + "\" />"
+            + "<input type=\"hidden\" name=\"object.regra[" + $("#regras-de-comissionamento > table > tbody > tr ").length + "].ordem\" value=\"" + $('[id*="comissionamento.ordem"]').val() + "\" />"
+            + "</td>"
+            + "<td align=\"center\" width=\"5%\">" + $('[id*="comissionamento.percentual"]').val() + "</td>"
+            + "<td align=\"center\" width=\"5%\">" + $('[id*="comissionamento.ordem"]').val() + "</td>"
+            + "<td align=\"center\" width=\"5%\">"
+            + "<button onclick=\"javascript:removerTR(this)\" type=\"button\" class=\"btn btn-danger btn-circle\">"
+            + "<i class=\"fa fa-times\"></i></button></td></tr>");
+
+        $('[id*="comissionamento.nome"]').val("");
+        $('[id*="comissionamento.percentual"]').val("")
+        $('[id*="comissionamento.ordem"]').val("")
+    }
+
+});
 
 $('[id="adicionar-telefone"]').click(function () {
 
@@ -17,7 +43,7 @@ $('[id="adicionar-telefone"]').click(function () {
             + "<input type=\"hidden\" name=\"object.residenciais[" + $("ul#telefones > li").length + "].id\" value=\"\" />"
             + "<input type=\"hidden\" name=\"object.residenciais[" + $("ul#telefones > li").length + "].ddd\" value=\"" + $('[id*="residencial.ddd"]').val() + "\" />"
             + "<input type=\"hidden\" name=\"object.residenciais[" + $("ul#telefones > li").length + "].numero\" value=\"" + $('[id*="residencial.numero"]').val() + "\" />"
-            + "<button id=\"remover-telefone\" onclick='javascript:removerTelefone(this);' class=\"btn btn-danger btn-circle\" style='float: right; margin-top: -5px;' type=\"button\">"
+            + "<button id=\"remover-telefone\" onclick='javascript:removerLI(this);' class=\"btn btn-danger btn-circle\" style='float: right; margin-top: -5px;' type=\"button\">"
             + "<i class=\"fa fa-minus\"></i>"
             + "</button>"
             + "</li>");
@@ -28,7 +54,13 @@ $('[id="adicionar-telefone"]').click(function () {
     }
 });
 
-function removerTelefone(element) {
+function removerTR(element) {
+    $(element).parent()
+        .parent()
+        .remove();
+}
+
+function removerLI(element) {
     $(element).parent().remove();
 }
 
@@ -48,85 +80,6 @@ $('[id*="cep"]').blur(function () {
             });
     }
 })
-
-$('[id*="estado.nome"]').autocomplete({
-    source: function (request, response) {
-        $.ajax("/endereco/estado/" + $('[id*="estado.nome"]').val() + ".json")
-            .done(function (data) {
-                response(data.list);
-            });
-    },
-    minLength: 2,
-    select: function (event, ui) {
-        $('[id*="bairro"]').val("");
-        $('[id*="cidade"]').val("");
-        $('[id*="logradouro"]').val("");
-        $('[id*="bairro.nome"]').val("");
-        $('[id*="cidade.nome"]').val("");
-        $('[id*="estado"]').val(ui.item.id);
-        $('[id*="estado.nome"]').val(ui.item.nome);
-        return false;
-    },
-    focus: function (event, ui) {
-        $('[id*="estado"]').val(ui.item.id);
-        $('[id*="estado.nome"]').val(ui.item.nome);
-        return false;
-    }
-}).data("ui-autocomplete")._renderItem = function (ul, item) {
-    return $("<li>")
-        .append("<a>" + item.nome + "</a>")
-        .appendTo(ul);
-};
-
-$('[id*="cidade.nome"]').autocomplete({
-    source: function (request, response) {
-        $.ajax("/endereco/cidade/" + $('[id*="estado"]').val() + "/" + $('[id*="cidade.nome"]').val() + ".json")
-            .done(function (data) {
-                response(data.list);
-            });
-    },
-    minLength: 3,
-    select: function (event, ui) {
-        $('[id*="cidade"]').val(ui.item.id);
-        $('[id*="cidade.nome"]').val(ui.item.nome);
-        return false;
-    },
-    focus: function (event, ui) {
-        $('[id*="cidade"]').val(ui.item.id);
-        $('[id*="cidade.nome"]').val(ui.item.nome);
-        return false;
-    }
-}).data("ui-autocomplete")._renderItem = function (ul, item) {
-    return $("<li>")
-        .append("<a>" + item.nome + "</a>")
-        .appendTo(ul);
-};
-
-$('[id*="bairro.nome"]').autocomplete({
-    source: function (request, response) {
-        $.ajax("/endereco/bairro/" + $('[id*="cidade"]').val() + "/" + $('[id*="bairro.nome"]').val() + ".json")
-            .done(function (data) {
-                response(data.list);
-            });
-    },
-    minLength: 3,
-    select: function (event, ui) {
-        $('[id*="bairro"]').val(ui.item.id);
-        $('[id*="bairro.nome"]').val(ui.item.nome);
-        return false;
-    },
-    focus: function (event, ui) {
-        $('[id*="bairro"]').val(ui.item.id);
-        $('[id*="bairro.nome"]').val(ui.item.nome);
-        return false;
-    }
-}).data("ui-autocomplete")._renderItem = function (ul, item) {
-    return $("<li>")
-        .append("<a>" + item.nome + "</a>")
-        .appendTo(ul);
-};
-
-
 
 function doDelete(button) {
 

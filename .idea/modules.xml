@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/endereco/endereco.iml" filepath="$PROJECT_DIR$/endereco/endereco.iml" />
       <module fileurl="file://$PROJECT_DIR$/io/io.iml" filepath="$PROJECT_DIR$/io/io.iml" />
       <module fileurl="file://$PROJECT_DIR$/pagamento/pagamento.iml" filepath="$PROJECT_DIR$/pagamento/pagamento.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pageobjects/pageobjects.iml" filepath="$PROJECT_DIR$/pageobjects/pageobjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/persistence/persistence.iml" filepath="$PROJECT_DIR$/persistence/persistence.iml" />
       <module fileurl="file://$PROJECT_DIR$/pessoa/pessoa.iml" filepath="$PROJECT_DIR$/pessoa/pessoa.iml" />
       <module fileurl="file://$PROJECT_DIR$/security/security.iml" filepath="$PROJECT_DIR$/security/security.iml" />

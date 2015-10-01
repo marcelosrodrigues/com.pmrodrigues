@@ -38,7 +38,7 @@ public class SuccessHandler implements AuthenticationSuccessHandler {
 
         final Usuario usuario = (Usuario) service.loadUserByUsername(email);
         usuario.desbloquear();
-
+        service.update(usuario);
         String context = "";
         if (!isBlankOrNull(request.getContextPath())) {
             context = request.getContextPath();

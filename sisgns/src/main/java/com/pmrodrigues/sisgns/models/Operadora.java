@@ -26,4 +26,8 @@ public class Operadora implements Serializable{
     @Column
     private String nome;
 
+    public Operadora comNome(final String nome) {
+        this.nome = nome;
+        return this;
+    }
 }

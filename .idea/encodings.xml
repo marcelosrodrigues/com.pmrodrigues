@@ -7,6 +7,7 @@
     <file url="file://$PROJECT_DIR$/endereco" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/io" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pagamento" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pageobjects" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/persistence" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/persistence/src/main/java/com/pmrodrigues/persistence/daos/Repository.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/persistence/src/main/java/com/pmrodrigues/persistence/daos/ResultList.java" charset="windows-1252" />

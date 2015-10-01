@@ -5,7 +5,7 @@
 <%@ taglib prefix="bootstrap" uri="http://com.pmrodrigues.biz/taglib/bootstrap" %>
 
 
-<bootstrap:summary text="Não foi possível salvar a administradora de planos de saúde"/>
+<bootstrap:summary text="Não foi possível salvar a operadora de planos de saúde"/>
 <div class="panel panel-default">
 
     <div class="panel-heading">

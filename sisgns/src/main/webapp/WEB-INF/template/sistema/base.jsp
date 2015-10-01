@@ -87,6 +87,8 @@
 <script type="text/javascript" src="<c:url value='/js/jquery.fileupload-ui.js' />"></script>
 <script type="text/javascript" src="<c:url value='/js/jquery.fileupload-validate.js' />"></script>
 <script type="text/javascript" src="<c:url value='/js/ui.js' />"></script>
+<script type="text/javascript" src="<c:url value='/js/autocomplete.js' />"></script>
+
 
 </body>
 

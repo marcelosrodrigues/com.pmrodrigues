@@ -41,6 +41,8 @@ public class TestSuccessHandler {
 
             oneOf(usuario).desbloquear();
 
+            oneOf(service).update(with(aNonNull(Usuario.class)));
+
             oneOf(request).getContextPath();
             will(returnValue(null));
 
@@ -67,6 +69,7 @@ public class TestSuccessHandler {
             will(returnValue(usuario));
 
             oneOf(usuario).desbloquear();
+            oneOf(service).update(with(aNonNull(Usuario.class)));
 
             allowing(request).getContextPath();
             will(returnValue("/teste"));

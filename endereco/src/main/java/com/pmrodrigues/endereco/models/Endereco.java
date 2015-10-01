@@ -89,4 +89,9 @@ public @Data class Endereco implements Serializable {
         this.bairro = bairro;
         return this;
     }
+
+    public Endereco comId(final Long id) {
+        this.id = id;
+        return this;
+    }
 }

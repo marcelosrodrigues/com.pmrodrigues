@@ -22,6 +22,7 @@
         <module>endereco</module>
         <module>sisgns</module>
         <module>pessoa</module>
+        <module>pageobjects</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -482,6 +483,26 @@
                 <version>3.1</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium</artifactId>
+                <version>2.0b1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-chrome-driver</artifactId>
+                <version>2.44.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>18.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.reflections</groupId>
+                <artifactId>reflections</artifactId>
+                <version>0.9.9-RC1</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

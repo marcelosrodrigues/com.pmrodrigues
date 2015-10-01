@@ -42,4 +42,19 @@
 
     <definition name="operadora/*/show-template" extends="operadora/formulario-template"/>
 
+
+    <definition name="plano/index-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/plano/index.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/plano/index.jsp"/>
+    </definition>
+
+    <definition name="plano/search-template" extends="plano/index-template"/>
+
+    <definition name="plano/formulario-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/plano/formulario.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/plano/formulario.jsp"/>
+    </definition>
+
+    <definition name="plano/*/show-template" extends="plano/formulario-template"/>
+
 </tiles-definitions>
