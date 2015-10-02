@@ -2,68 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d0caf9d-1ed8-4ca4-83ab-f28ad8f58a2e" name="Default" comment="implementando testes de aceitação automatizados">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/AbstractPageObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/Action.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/ByClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/ById.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/ByName.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/ByXPath.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/CheckBoxTag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/DashboardPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/ITestLoginPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/InputTag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/LoginPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/controllers/PlanoController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/PlanoRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/impl/PlanoRepositoryImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/RadioButtonTag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/SelectTag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/Tag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/TagFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/controllers/TestOperadoraController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/URL.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/autocomplete.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/breadcump/plano/formulario.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/plano/formulario.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/breadcump/plano/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/plano/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/pom.xml" />
-      <change type="DELETED" beforePath="C:\Users\Marceloo\workspace\com.pmrodrigues\.idea\libraries\Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Marceloo\workspace\com.pmrodrigues\.idea\libraries\Maven__com_google_guava_guava_11_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Marceloo\workspace\com.pmrodrigues\.idea\libraries\Maven__com_google_guava_guava_12_0_1.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/AdministradoraPlanosSaudePage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/ITestAdministradoraPlanoSaudePage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/ListAdministradoraPlanosSaudePage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/PageObjectFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/URLs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/AbstractPageObject.java" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/AbstractPageObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Administradora.java" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Administradora.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/impl/AdministradoraRepositoryImpl.java" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/impl/AdministradoraRepositoryImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/controllers/AdminstradoraController.java" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/controllers/AdminstradoraController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Cedente.java" afterPath="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Cedente.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Bairro.java" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Bairro.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Cidade.java" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Cidade.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissionamento.java" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissionamento.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Endereco.java" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Endereco.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Operadora.java" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Operadora.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/controllers/OperadoraController.java" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/controllers/OperadoraController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/impl/OperadoraRepositoryImpl.java" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/impl/OperadoraRepositoryImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Estado.java" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Estado.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/InputTag.java" afterPath="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/InputTag.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Logradouro.java" afterPath="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Logradouro.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Plano.java" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Plano.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/SuccessHandler.java" afterPath="$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/SuccessHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/controllers/TestAdminstradoraController.java" afterPath="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/controllers/TestAdminstradoraController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security/src/test/java/test/com/pmrodrigues/security/TestSuccessHandler.java" afterPath="$PROJECT_DIR$/security/src/test/java/test/com/pmrodrigues/security/TestSuccessHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security/src/test/java/test/com/pmrodrigues/security/TestUserAuthenticationManager.java" afterPath="$PROJECT_DIR$/security/src/test/java/test/com/pmrodrigues/security/TestUserAuthenticationManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/UserAuthenticationManager.java" afterPath="$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/UserAuthenticationManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/services/UserService.java" afterPath="$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/services/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/services/UsuarioService.java" afterPath="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/services/UsuarioService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/akatus/akatus.iml" afterPath="$PROJECT_DIR$/akatus/akatus.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/sistema/base.jsp" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/sistema/base.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boleto/boleto.iml" afterPath="$PROJECT_DIR$/boleto/boleto.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/endereco/endereco.iml" afterPath="$PROJECT_DIR$/endereco/endereco.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/operadora/formulario.jsp" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/operadora/formulario.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagamento/pagamento.iml" afterPath="$PROJECT_DIR$/pagamento/pagamento.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/pom.xml" afterPath="$PROJECT_DIR$/sisgns/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/sisgns_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/sisgns_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taglib/taglib.iml" afterPath="$PROJECT_DIR$/taglib/taglib.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/tiles.xml" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/tiles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/resources/db/migration/V1__CREATE_DATABASE.sql" afterPath="$PROJECT_DIR$/sisgns/src/main/resources/db/migration/V1__CREATE_DATABASE.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_larger.scss" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/js/autocomplete.js" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/autocomplete.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/css/font-awesome.css" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/administradora/formulario.jsp" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/administradora/formulario.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/plano/formulario.jsp" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/plano/formulario.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/larger.less" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/font-awesome-4.1.0/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/test/resources/log4j.properties" afterPath="$PROJECT_DIR$/sisgns/src/test/resources/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/login.jsp" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/sistema/includes/menu-lateral.jsp" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/sistema/includes/menu-lateral.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/js/ui.js" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/js/ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vraptor-crud/vraptor-crud.iml" afterPath="$PROJECT_DIR$/vraptor-crud/vraptor-crud.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sisgns/src/main/webapp/css/variables.less" afterPath="$PROJECT_DIR$/sisgns/src/main/webapp/css/variables.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="67e8f95b-5763-4ff1-a6db-8cf5c8aff601" name="New changelist" comment="" />
@@ -403,88 +370,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserAuthenticationManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/UserAuthenticationManager.java">
+      <file leaf-file-name="Administradora.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Administradora.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SuccessHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/SuccessHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestSuccessHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security/src/test/java/test/com/pmrodrigues/security/TestSuccessHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestUserAuthenticationManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security/src/test/java/test/com/pmrodrigues/security/TestUserAuthenticationManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestAdminstradoraController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/controllers/TestAdminstradoraController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="94" selection-start-line="75" selection-start-column="94" selection-end-line="75" selection-end-column="94" />
-              <folding>
-                <marker date="1443703421079" expanded="true" signature="1769:1835" placeholder="select * fro..cedente..." />
-                <marker date="1443703421079" expanded="true" signature="2464:2538" placeholder="select telef..telefone_administrador..." />
-                <marker date="1443703421079" expanded="true" signature="2941:2997" placeholder="delete from ..." />
-                <marker date="1443703421079" expanded="true" signature="3052:3085" placeholder="delete from ..." />
-                <marker date="1443703421079" expanded="true" signature="3146:3191" placeholder="delete from ..." />
-                <marker date="1443703421079" expanded="true" signature="3241:3273" placeholder="delete from ..." />
-                <marker date="1443703421079" expanded="true" signature="3323:3356" placeholder="delete from ..." />
-                <marker date="1443703421079" expanded="true" signature="4634:4994" placeholder="select count..cedente..." />
-                <marker date="1443703421079" expanded="true" signature="6408:6461" placeholder="select count..cedente..." />
-                <marker date="1443703421079" expanded="true" signature="6673:6750" placeholder="select count..cedente..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestOperadoraController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/controllers/TestOperadoraController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.7580645">
-              <caret line="33" column="125" selection-start-line="33" selection-start-column="125" selection-end-line="33" selection-end-column="125" />
-              <folding>
-                <marker date="1443703421120" expanded="true" signature="1220:1313" placeholder="delete from ..." />
-                <marker date="1443703421120" expanded="true" signature="1262:1312" placeholder="select id fr..operadora..." />
-                <marker date="1443703421120" expanded="true" signature="1346:1393" placeholder="delete from ..." />
-                <marker date="1443703421120" expanded="true" signature="1426:1473" placeholder="insert into ..." />
-                <marker date="1443703421120" expanded="true" signature="1810:1866" placeholder="select count..operadora..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/services/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+            <state vertical-scroll-proportion="5.854839">
+              <caret line="42" column="21" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -492,38 +382,122 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FailureHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/FailureHandler.java">
+      <file leaf-file-name="NotEmpty.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/5.0.1.Final/hibernate-validator-5.0.1.Final-sources.jar!/org/hibernate/validator/constraints/NotEmpty.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ITestAdministradoraPlanoSaudePage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/ITestAdministradoraPlanoSaudePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#limparBaseDeDados#0;class#ITestAdministradoraPlanoSaudePage#0" expanded="false" />
+                <element signature="e#2022#2589#0" expanded="true" />
+                <element signature="e#2588#2589#0" expanded="true" />
+                <element signature="e#2725#3025#0" expanded="true" />
+                <element signature="e#3024#3025#0" expanded="true" />
+                <marker date="1443796439666" expanded="true" signature="1770:1848" placeholder="select count..cedente..." />
+                <marker date="1443796439666" expanded="true" signature="1953:2019" placeholder="select * fro..cedente..." />
+                <marker date="1443796439666" expanded="true" signature="2648:2722" placeholder="select telef..telefone_administrador..." />
+                <marker date="1443796439666" expanded="true" signature="3125:3181" placeholder="delete from ..." />
+                <marker date="1443796439666" expanded="true" signature="3236:3269" placeholder="delete from ..." />
+                <marker date="1443796439666" expanded="true" signature="3330:3375" placeholder="delete from ..." />
+                <marker date="1443796439666" expanded="true" signature="3425:3457" placeholder="delete from ..." />
+                <marker date="1443796439666" expanded="true" signature="3507:3540" placeholder="delete from ..." />
+                <marker date="1443796439666" expanded="true" signature="3982:4016" placeholder="select * fro..cedente..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/services/UsuarioService.java">
+      <file leaf-file-name="FrameworkMethod.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#1511#1512#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDetailsService.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.2.5.RELEASE/spring-security-core-3.2.5.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetailsService.java">
+      <file leaf-file-name="ReflectiveCallable.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListAdministradoraPlanosSaudePage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/ListAdministradoraPlanosSaudePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
               <folding>
-                <element signature="e#0#2104#0" expanded="false" />
+                <element signature="e#643#644#0" expanded="true" />
+                <element signature="e#672#673#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdministradoraPlanosSaudePage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/AdministradoraPlanosSaudePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractPageObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/AbstractPageObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7896#7897#0" expanded="true" />
+                <element signature="e#7925#7926#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageObjectFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/PageObjectFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding>
+                <element signature="e#927#1793#0" expanded="true" />
+                <element signature="e#1792#1793#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="formulario.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/administradora/formulario.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.4615383">
+              <caret line="60" column="50" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -534,7 +508,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Enum" />
         <option value="SQL Script" />
         <option value="Jsp File" />
         <option value="JUnit4 Test Class" />
@@ -542,6 +515,7 @@
         <option value="Interface" />
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -568,32 +542,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/converters/OperadoraConveter.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/converters/AdministradoraConverter.java" />
-        <option value="$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Cedente.java" />
-        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Endereco.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Operadora.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/controllers/OperadoraController.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/OperadoraRepository.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/impl/OperadoraRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Administradora.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/controllers/AdminstradoraController.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissionamento.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/controllers/PlanoController.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/PlanoRepository.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/impl/PlanoRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/tiles.xml" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/breadcump/plano/index.jsp" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/plano/index.jsp" />
         <option value="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/breadcump/plano/formulario.jsp" />
         <option value="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/operadora/formulario.jsp" />
         <option value="$PROJECT_DIR$/sisgns/src/main/webapp/js/autocomple.js" />
         <option value="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/sistema/base.jsp" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/webapp/js/autocomplete.js" />
         <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/repositories/impl/AdministradoraRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Plano.java" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/plano/formulario.jsp" />
-        <option value="$PROJECT_DIR$/sisgns/src/main/webapp/js/ui.js" />
         <option value="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/Tag.java" />
         <option value="$PROJECT_DIR$/sisgns/pom.xml" />
         <option value="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/LoginPage.java" />
@@ -607,10 +560,8 @@
         <option value="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/Button.java" />
         <option value="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/Action.java" />
         <option value="$PROJECT_DIR$/pageobjects/pom.xml" />
-        <option value="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/DashboardPage.java" />
         <option value="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/LoginPage.java" />
         <option value="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/ITestLoginPage.java" />
-        <option value="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/AbstractPageObject.java" />
         <option value="$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/services/UserService.java" />
         <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/services/UsuarioService.java" />
         <option value="$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/UserAuthenticationManager.java" />
@@ -619,6 +570,29 @@
         <option value="$PROJECT_DIR$/security/src/test/java/test/com/pmrodrigues/security/TestUserAuthenticationManager.java" />
         <option value="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/controllers/TestAdminstradoraController.java" />
         <option value="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/controllers/TestOperadoraController.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/DashboardPage.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/PageObjectFactory.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/webapp/js/autocomplete.js" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/sistema/includes/menu-lateral.jsp" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Estado.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Cidade.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Bairro.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Logradouro.java" />
+        <option value="$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Endereco.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/administradora/formulario.jsp" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissionamento.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/webapp/js/ui.js" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/plano/formulario.jsp" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/resources/db/migration/V1__CREATE_DATABASE.sql" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Plano.java" />
+        <option value="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/InputTag.java" />
+        <option value="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/URLs.java" />
+        <option value="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/PageObjectFactory.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/ListAdministradoraPlanosSaudePage.java" />
+        <option value="$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/AbstractPageObject.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/AdministradoraPlanosSaudePage.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/ITestAdministradoraPlanoSaudePage.java" />
+        <option value="$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Administradora.java" />
       </list>
     </option>
   </component>
@@ -716,8 +690,8 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -726,8 +700,12 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="com.pmrodrigues" />
+          <option name="myItemId" value="Gestor de Negócios Seguradores" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -868,6 +846,18 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Production">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1111,40 +1101,6 @@
               <option name="myItemId" value="sisgns" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.pmrodrigues" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.pmrodrigues" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisgns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisgns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1176,7 +1132,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="acceptables" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1211,6 +1167,230 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="acceptables" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="administradora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sisgns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1228,7 +1408,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sisgns" />
+              <option name="myItemId" value="pageobjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pageobjects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1250,41 +1448,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sisgns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisgns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.pmrodrigues" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.pmrodrigues" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisgns" />
+              <option name="myItemId" value="pageobjects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1300,7 +1464,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sisgns" />
+              <option name="myItemId" value="pageobjects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1314,21 +1478,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.pmrodrigues" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.pmrodrigues" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
+              <option name="myItemId" value="pageobjects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1336,7 +1486,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1344,7 +1494,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
+              <option name="myItemId" value="pageobjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tags" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1358,7 +1512,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
+              <option name="myItemId" value="pageobjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pageobjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="annotations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1380,7 +1600,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
+              <option name="myItemId" value="endereco" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1396,7 +1616,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
+              <option name="myItemId" value="endereco" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1410,7 +1630,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
+              <option name="myItemId" value="endereco" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1426,28 +1646,168 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
+              <option name="myItemId" value="endereco" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endereco" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boleto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boleto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boleto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boleto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boletos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.pmrodrigues" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boleto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boletos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Production">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1496,11 +1856,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="test.com.pmrodrigues.sisgns.acceptables.pageobjects" />
       <recent name="com.pmodrigues.pageobjects.annotations" />
       <recent name="com.pmrodrigues.sisgns.repositories.impl" />
       <recent name="com.pmrodrigues.sisgns.repositories" />
       <recent name="com.pmrodrigues.varejodigital.models" />
-      <recent name="com.pmrodrigues.varejodigital.exceptions" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Marceloo\workspace\com.pmrodrigues\pageobjects\src\main\java\com\pmodrigues\pageobjects" />
@@ -1550,8 +1910,8 @@
       <recent name="com.pmrodrigues" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestAdminstradoraController">
-    <configuration default="false" name="ITestLoginPage.doLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ITestAdministradoraPlanoSaudePage.deveAdicionarInformandoUmCEPQueNaoEstaCadastrado">
+    <configuration default="false" name="ITestAdministradoraPlanoSaudePage.devePesquisarAdministradora" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="test.com.pmrodrigues.sisgns.acceptables.*" />
@@ -1562,8 +1922,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="test.com.pmrodrigues.sisgns.acceptables" />
-      <option name="MAIN_CLASS_NAME" value="test.com.pmrodrigues.sisgns.acceptables.ITestLoginPage" />
-      <option name="METHOD_NAME" value="doLogin" />
+      <option name="MAIN_CLASS_NAME" value="test.com.pmrodrigues.sisgns.acceptables.ITestAdministradoraPlanoSaudePage" />
+      <option name="METHOD_NAME" value="devePesquisarAdministradora" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1577,7 +1937,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ITestLoginPage.doNotLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ITestAdministradoraPlanoSaudePage.deveAdicionarAdministradora" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="test.com.pmrodrigues.sisgns.acceptables.*" />
@@ -1588,8 +1948,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="test.com.pmrodrigues.sisgns.acceptables" />
-      <option name="MAIN_CLASS_NAME" value="test.com.pmrodrigues.sisgns.acceptables.ITestLoginPage" />
-      <option name="METHOD_NAME" value="doNotLogin" />
+      <option name="MAIN_CLASS_NAME" value="test.com.pmrodrigues.sisgns.acceptables.ITestAdministradoraPlanoSaudePage" />
+      <option name="METHOD_NAME" value="deveAdicionarAdministradora" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1603,72 +1963,20 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TestSuccessHandler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ITestAdministradoraPlanoSaudePage.deveAdicionarInformandoUmCEPQueNaoEstaCadastrado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="test.com.pmrodrigues.security.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="security" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test.com.pmrodrigues.security" />
-      <option name="MAIN_CLASS_NAME" value="test.com.pmrodrigues.security.TestSuccessHandler" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestUserAuthenticationManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.com.pmrodrigues.security.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="security" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test.com.pmrodrigues.security" />
-      <option name="MAIN_CLASS_NAME" value="test.com.pmrodrigues.security.TestUserAuthenticationManager" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestAdminstradoraController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.com.pmrodrigues.sisgns.controllers.*" />
+          <option name="PATTERN" value="test.com.pmrodrigues.sisgns.acceptables.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="sisgns" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test.com.pmrodrigues.sisgns.controllers" />
-      <option name="MAIN_CLASS_NAME" value="test.com.pmrodrigues.sisgns.controllers.TestAdminstradoraController" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="test.com.pmrodrigues.sisgns.acceptables" />
+      <option name="MAIN_CLASS_NAME" value="test.com.pmrodrigues.sisgns.acceptables.ITestAdministradoraPlanoSaudePage" />
+      <option name="METHOD_NAME" value="deveAdicionarInformandoUmCEPQueNaoEstaCadastrado" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -2025,6 +2333,30 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <configuration default="false" name="Sisgns" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="jetty:run" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/sisgns" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
     <configuration default="false" name="varejodigital" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -2074,22 +2406,19 @@
       </MavenSettings>
       <method />
     </configuration>
-    <list size="7">
-      <item index="0" class="java.lang.String" itemvalue="Maven.varejodigital" />
-      <item index="1" class="java.lang.String" itemvalue="Maven.boleto-webservice [jetty:run]" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ITestLoginPage.doLogin" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ITestLoginPage.doNotLogin" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestSuccessHandler" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.TestUserAuthenticationManager" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.TestAdminstradoraController" />
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Maven.Sisgns" />
+      <item index="1" class="java.lang.String" itemvalue="Maven.varejodigital" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.boleto-webservice [jetty:run]" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ITestAdministradoraPlanoSaudePage.devePesquisarAdministradora" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ITestAdministradoraPlanoSaudePage.deveAdicionarAdministradora" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ITestAdministradoraPlanoSaudePage.deveAdicionarInformandoUmCEPQueNaoEstaCadastrado" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestAdminstradoraController" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestUserAuthenticationManager" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestSuccessHandler" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ITestLoginPage.doNotLogin" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ITestLoginPage.doLogin" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ITestAdministradoraPlanoSaudePage.deveAdicionarInformandoUmCEPQueNaoEstaCadastrado" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ITestAdministradoraPlanoSaudePage.deveAdicionarAdministradora" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ITestAdministradoraPlanoSaudePage.devePesquisarAdministradora" />
       </list>
     </recent_temporary>
   </component>
@@ -2225,13 +2554,8 @@
       <workItem from="1443458831725" duration="1123000" />
       <workItem from="1443523346778" duration="13603000" />
       <workItem from="1443607951306" duration="15265000" />
-      <workItem from="1443702874757" duration="525000" />
-    </task>
-    <task id="LOCAL-00009" summary="criando importador de arquivo xml para geração de boleto">
-      <created>1430921948905</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1430921948905</updated>
+      <workItem from="1443702874757" duration="13431000" />
+      <workItem from="1443787592806" duration="10529000" />
     </task>
     <task id="LOCAL-00010" summary="corrigido os arquivos de importação para o novo modelo xml">
       <created>1431433376983</created>
@@ -2521,11 +2845,17 @@
       <option name="project" value="LOCAL" />
       <updated>1443454119607</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="implementando testes de aceitação automatizados">
+      <created>1443703429846</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1443703429848</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="981974000" />
+    <option name="totallyTimeSpent" value="1005409000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -2541,38 +2871,38 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57679737" sideWeight="0.5060514" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20877458" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.85318106" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.872549" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2708018" sideWeight="0.53807104" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20877458" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2708018" sideWeight="0.46192893" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.67320263" sideWeight="0.43040848" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Log4jMonitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31973898" sideWeight="0.49546143" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.85294116" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5751634" sideWeight="0.49394855" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.872549" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2708018" sideWeight="0.53807104" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2708018" sideWeight="0.46192893" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32189542" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6764706" sideWeight="0.43040848" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32026145" sideWeight="0.49546143" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5751634" sideWeight="0.49394855" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48202613" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32189542" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2582,7 +2912,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57679737" sideWeight="0.5060514" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20877458" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20877458" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
@@ -2590,20 +2920,20 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6764706" sideWeight="0.43040848" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.67320263" sideWeight="0.43040848" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Log4jMonitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32026145" sideWeight="0.49546143" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31973898" sideWeight="0.49546143" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.85457516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5751634" sideWeight="0.49394855" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.85318106" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5751634" sideWeight="0.49394855" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.872549" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2708018" sideWeight="0.53807104" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48202613" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2708018" sideWeight="0.46192893" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2708018" sideWeight="0.46192893" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32189542" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -2683,24 +3013,6 @@
           <option name="timeStamp" value="494" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/vraptor-crud/src/main/java/com/pmrodrigues/vraptor/crud/controllers/AbstractCRUDController.java</url>
-          <line>47</line>
-          <properties />
-          <option name="timeStamp" value="498" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/AbstractPageObject.java</url>
-          <line>104</line>
-          <properties />
-          <option name="timeStamp" value="508" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/AbstractPageObject.java</url>
-          <line>68</line>
-          <properties />
-          <option name="timeStamp" value="510" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/ITestLoginPage.java</url>
           <line>35</line>
           <properties />
@@ -2718,11 +3030,29 @@
           <properties />
           <option name="timeStamp" value="515" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/ITestAdministradoraPlanoSaudePage.java</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="516" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/ITestAdministradoraPlanoSaudePage.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="530" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/ITestAdministradoraPlanoSaudePage.java</url>
+          <line>135</line>
+          <properties />
+          <option name="timeStamp" value="531" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="516" />
+      <option name="time" value="532" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -2753,373 +3083,40 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/administradora/formulario.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="64" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Plano.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sisgns/src/main/webapp/js/ui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/plano/formulario.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="46" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vraptor-crud/src/main/java/com/pmrodrigues/vraptor/crud/controllers/AbstractCRUDController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4377#4378#0" expanded="false" />
-            <element signature="e#4406#4407#0" expanded="false" />
-            <element signature="e#4450#4451#0" expanded="false" />
-            <element signature="e#4483#4484#0" expanded="false" />
-            <element signature="e#4522#4523#0" expanded="false" />
-            <element signature="e#4554#4555#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/controllers/AdminstradoraController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/ByXPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/CheckBoxTag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sisgns/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.379311">
-          <caret line="319" column="23" selection-start-line="319" selection-start-column="23" selection-end-line="319" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-firefox-driver/2.47.1/selenium-firefox-driver-2.47.1-sources.jar!/org/openqa/selenium/firefox/internal/Executable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-firefox-driver/2.47.1/selenium-firefox-driver-2.47.1-sources.jar!/org/openqa/selenium/firefox/FirefoxDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3321918">
-          <caret line="123" column="9" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-firefox-driver/2.47.1/selenium-firefox-driver-2.47.1-sources.jar!/org/openqa/selenium/firefox/FirefoxBinary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32941177">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.896552">
-          <caret line="501" column="16" selection-start-line="501" selection-start-column="16" selection-end-line="502" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/reflections/reflections/0.9.9-RC1/reflections-0.9.9-RC1-sources.jar!/org/reflections/Reflections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="23" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/ById.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/ByName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/ByClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.206896">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vraptor-crud/src/main/java/com/pmrodrigues/vraptor/crud/resolvers/crud/CRUDRouteConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20376712">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vraptor-crud/src/main/java/com/pmrodrigues/vraptor/crud/resolvers/crud/CRUDRoutes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar!/org/apache/commons/collections/CollectionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0172415">
-          <caret line="485" column="13" selection-start-line="485" selection-start-column="7" selection-end-line="485" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.44.0/selenium-api-2.44.0-sources.jar!/org/openqa/selenium/WebDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3321918">
-          <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/DashboardPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37842464">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/Tag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/TagFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.44.0/selenium-api-2.44.0-sources.jar!/org/openqa/selenium/By.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/18.0/guava-18.0-sources.jar!/com/google/common/collect/ImmutableMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.44.0/selenium-remote-driver-2.44.0-sources.jar!/org/openqa/selenium/remote/RemoteWebDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="571" column="0" selection-start-line="571" selection-start-column="0" selection-end-line="571" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.44.0/selenium-remote-driver-2.44.0-sources.jar!/org/openqa/selenium/remote/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.44.0/selenium-remote-driver-2.44.0-sources.jar!/org/openqa/selenium/remote/service/DriverCommandExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.44.0/selenium-remote-driver-2.44.0-sources.jar!/org/openqa/selenium/remote/HttpCommandExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/models/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26198632">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sisgns/src/test/resources/seguranca.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9c07c10b-6827-4160-a93f-2baf7522b42d/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/security/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/AbstractPageObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1750#1751#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/ITestLoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.2.5.RELEASE/spring-security-core-3.2.5.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.7671233">
           <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#2104#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/FailureHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.23287672">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/security/src/main/java/com/pmrodrigues/security/services/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.26198632">
           <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/services/UsuarioService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.7089041">
           <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -3139,7 +3136,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3147,7 +3143,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3155,39 +3150,375 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/controllers/TestOperadoraController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69863015">
+          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/DashboardPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#397#398#0" expanded="false" />
+            <element signature="e#426#427#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/ITestLoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="16" selection-start-column="4" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/persistence/src/main/java/com/pmrodrigues/persistence/daos/ResultList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/sistema/includes/menu-lateral.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0625">
+          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/controllers/PlanoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9">
+          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taglib/src/main/java/com/pmrodrigues/taglib/InputNumberTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14554794">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taglib/src/main/resources/META-INF/bootstrap-taglib.tld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39041096">
+          <caret line="151" column="47" selection-start-line="151" selection-start-column="47" selection-end-line="151" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.6/lombok-1.16.6-sources.jar!/lombok/ToString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4178082">
+          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Cidade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Bairro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Estado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Logradouro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endereco/src/main/java/com/pmrodrigues/endereco/models/Endereco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="103" selection-start-line="16" selection-start-column="103" selection-end-line="16" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boleto/src/main/java/com/pmrodrigues/boletos/models/Cedente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Operadora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/webapp/js/autocomplete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="144" column="38" selection-start-line="144" selection-start-column="38" selection-end-line="144" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Comissionamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/webapp/js/ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <marker date="1443719841710" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/plano/formulario.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="73" column="118" selection-start-line="73" selection-start-column="118" selection-end-line="73" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/resources/db/migration/V1__CREATE_DATABASE.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="199" column="46" selection-start-line="199" selection-start-column="46" selection-end-line="199" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.1.0.RELEASE/spring-aop-4.1.0.RELEASE-sources.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Plano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.44.0/selenium-api-2.44.0-sources.jar!/org/openqa/selenium/WebElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/Tag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/tags/InputTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/controllers/TestAdminstradoraController.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58219177">
+          <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vraptor-crud/src/main/java/com/pmrodrigues/vraptor/crud/controllers/AbstractCRUDController.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="94" selection-start-line="75" selection-start-column="94" selection-end-line="75" selection-end-column="94" />
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/URL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/annotations/URLs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar!/org/apache/commons/collections/CollectionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="370" column="0" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/webapp/WEB-INF/template/administradora/formulario.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4615383">
+          <caret line="60" column="50" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/ListAdministradoraPlanosSaudePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
           <folding>
-            <marker date="1443703421079" expanded="true" signature="1769:1835" placeholder="select * fro..cedente..." />
-            <marker date="1443703421079" expanded="true" signature="2464:2538" placeholder="select telef..telefone_administrador..." />
-            <marker date="1443703421079" expanded="true" signature="2941:2997" placeholder="delete from ..." />
-            <marker date="1443703421079" expanded="true" signature="3052:3085" placeholder="delete from ..." />
-            <marker date="1443703421079" expanded="true" signature="3146:3191" placeholder="delete from ..." />
-            <marker date="1443703421079" expanded="true" signature="3241:3273" placeholder="delete from ..." />
-            <marker date="1443703421079" expanded="true" signature="3323:3356" placeholder="delete from ..." />
-            <marker date="1443703421079" expanded="true" signature="4634:4994" placeholder="select count..cedente..." />
-            <marker date="1443703421079" expanded="true" signature="6408:6461" placeholder="select count..cedente..." />
-            <marker date="1443703421079" expanded="true" signature="6673:6750" placeholder="select count..cedente..." />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/controllers/TestOperadoraController.java">
+    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/PageObjectFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.7580645">
-          <caret line="33" column="125" selection-start-line="33" selection-start-column="125" selection-end-line="33" selection-end-column="125" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <marker date="1443703421120" expanded="true" signature="1220:1313" placeholder="delete from ..." />
-            <marker date="1443703421120" expanded="true" signature="1262:1312" placeholder="select id fr..operadora..." />
-            <marker date="1443703421120" expanded="true" signature="1346:1393" placeholder="delete from ..." />
-            <marker date="1443703421120" expanded="true" signature="1426:1473" placeholder="insert into ..." />
-            <marker date="1443703421120" expanded="true" signature="1810:1866" placeholder="select count..operadora..." />
+            <element signature="e#927#1793#0" expanded="true" />
+            <element signature="e#1792#1793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/pageobjects/AdministradoraPlanosSaudePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobjects/src/main/java/com/pmodrigues/pageobjects/AbstractPageObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7896#7897#0" expanded="true" />
+            <element signature="e#7925#7926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#1511#1512#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/5.0.1.Final/hibernate-validator-5.0.1.Final-sources.jar!/org/hibernate/validator/constraints/NotEmpty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/test/java/test/com/pmrodrigues/sisgns/acceptables/ITestAdministradoraPlanoSaudePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#limparBaseDeDados#0;class#ITestAdministradoraPlanoSaudePage#0" expanded="false" />
+            <element signature="e#2022#2589#0" expanded="true" />
+            <element signature="e#2588#2589#0" expanded="true" />
+            <element signature="e#2725#3025#0" expanded="true" />
+            <element signature="e#3024#3025#0" expanded="true" />
+            <marker date="1443796439666" expanded="true" signature="1770:1848" placeholder="select count..cedente..." />
+            <marker date="1443796439666" expanded="true" signature="1953:2019" placeholder="select * fro..cedente..." />
+            <marker date="1443796439666" expanded="true" signature="2648:2722" placeholder="select telef..telefone_administrador..." />
+            <marker date="1443796439666" expanded="true" signature="3125:3181" placeholder="delete from ..." />
+            <marker date="1443796439666" expanded="true" signature="3236:3269" placeholder="delete from ..." />
+            <marker date="1443796439666" expanded="true" signature="3330:3375" placeholder="delete from ..." />
+            <marker date="1443796439666" expanded="true" signature="3425:3457" placeholder="delete from ..." />
+            <marker date="1443796439666" expanded="true" signature="3507:3540" placeholder="delete from ..." />
+            <marker date="1443796439666" expanded="true" signature="3982:4016" placeholder="select * fro..cedente..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sisgns/src/main/java/com/pmrodrigues/sisgns/models/Administradora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.854839">
+          <caret line="42" column="21" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

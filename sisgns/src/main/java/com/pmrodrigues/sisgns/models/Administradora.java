@@ -5,11 +5,10 @@ import com.pmrodrigues.endereco.models.Celular;
 import com.pmrodrigues.endereco.models.Telefone;
 import lombok.*;
 import org.hibernate.annotations.Where;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -18,20 +17,9 @@ import java.util.List;
 @Entity
 @Table
 @EqualsAndHashCode(callSuper = true, exclude = {"planos", "nome"})
-@ToString(callSuper = true)
+@ToString(callSuper = true, exclude = {"planos", "comissionamento"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class Administradora extends Cedente {
-
-    @Getter
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "administradora_id")
-    private Collection<Plano> planos = new HashSet<>();
-
-    @Getter
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "administradora_id")
-    private Collection<Comissionamento> comissionamentos = new HashSet<>();
-
 
     @Getter
     @Setter
@@ -40,6 +28,7 @@ public class Administradora extends Cedente {
             joinColumns = {@JoinColumn(name = "administradora_id")},
             inverseJoinColumns = {@JoinColumn(name = "telefone_id")})
     @Where(clause = "tipo = 'R'")
+    @NotEmpty(message = "Deve existir pelo menos um telefone cadastrado para a Administradora")
     private List<Telefone> residenciais = new ArrayList<>();
 
 

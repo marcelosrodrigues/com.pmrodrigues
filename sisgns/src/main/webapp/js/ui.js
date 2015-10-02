@@ -6,10 +6,6 @@ $('[id*="ddd"]').mask("999");
 $('[id*="residencial.numero"]').mask("9999-9999");
 $('[id*="celular.numero"]').mask("99999-9999");
 
-$('[id*="comissionamento.percentual"]').mask("999");
-$('[id*="comissionamento.ordem"]').mask("9");
-
-
 $('[id="adicionar-regra"]').click(function () {
 
     if ($('[id*="comissionamento.nome"]').val() != null && $('[id*="comissionamento.percentual"]').val() != null && $('[id*="comissionamento.ordem"]').val() != null) {

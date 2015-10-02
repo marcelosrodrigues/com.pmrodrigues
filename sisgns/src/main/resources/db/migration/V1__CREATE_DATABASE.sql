@@ -196,13 +196,8 @@ CREATE TABLE `comissionamento` (
   `nome`              VARCHAR(45)    NOT NULL,
   `percentual`        DECIMAL(15, 3) NOT NULL,
   `ordem`             INT(11)        NOT NULL,
-  `administradora_id` BIGINT(20)     NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_plano_comissionamento` (`plano_id`),
-  KEY `fk_administradora_comissionamento_idx` (`administradora_id`),
-  CONSTRAINT `fk_administradora_comissionamento` FOREIGN KEY (`administradora_id`) REFERENCES `cedente` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_plano_comissionamento` FOREIGN KEY (`plano_id`) REFERENCES `plano` (`id`)
 )
   ENGINE = InnoDB
@@ -364,6 +359,7 @@ CREATE TABLE `logradouro` (
   `bairro_id`  BIGINT(20)   NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_BAIRRO_LOGRADOURO` (`bairro_id`),
+  INDEX `IX_CEP` USING BTREE (`cep` ASC),
   CONSTRAINT `FK_BAIRRO_LOGRADOURO` FOREIGN KEY (`bairro_id`) REFERENCES `bairro` (`id`)
 )
   ENGINE = InnoDB

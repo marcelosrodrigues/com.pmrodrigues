@@ -14,11 +14,6 @@ $('[id*="estado.nome"]').each(function (i, item) {
         },
         minLength: 2,
         select: function (event, ui) {
-            $('[id*="bairro"]').val("");
-            $('[id*="cidade"]').val("");
-            $('[id*="logradouro"]').val("");
-            $('[id*="bairro.nome"]').val("");
-            $('[id*="cidade.nome"]').val("");
             $('[id*="estado"]').val(ui.item.id);
             $('[id*="estado.nome"]').val(ui.item.nome);
             return false;
@@ -27,6 +22,13 @@ $('[id*="estado.nome"]').each(function (i, item) {
             $('[id*="estado"]').val(ui.item.id);
             $('[id*="estado.nome"]').val(ui.item.nome);
             return false;
+        },
+        response: function (event, ui) {
+            if (ui.content.length == 1) {
+                $('[id*="estado"]').val(ui.content[0].id);
+                $('[id*="estado.nome"]').val(ui.content[0].nome);
+                $(this).autocomplete("close");
+            }
         }
     }).data("ui-autocomplete")._renderItem = renderAutocomple;
 });
@@ -49,6 +51,13 @@ $('[id*="cidade.nome"]').each(function (i, item) {
             $('[id*="cidade"]').val(ui.item.id);
             $('[id*="cidade.nome"]').val(ui.item.nome);
             return false;
+        },
+        response: function (event, ui) {
+            if (ui.content.length == 1) {
+                $('[id*="cidade"]').val(ui.content[0].id);
+                $('[id*="cidade.nome"]').val(ui.content[0].nome);
+                $(this).autocomplete("close");
+            }
         }
     }).data("ui-autocomplete")._renderItem = renderAutocomple;
 });
@@ -71,6 +80,13 @@ $('[id*="bairro.nome"]').each(function (i, item) {
             $('[id*="bairro"]').val(ui.item.id);
             $('[id*="bairro.nome"]').val(ui.item.nome);
             return false;
+        },
+        response: function (event, ui) {
+            if (ui.content.length == 1) {
+                $('[id*="bairro"]').val(ui.content[0].id);
+                $('[id*="bairro.nome"]').val(ui.content[0].nome);
+                $(this).autocomplete("close");
+            }
         }
     }).data("ui-autocomplete")._renderItem = renderAutocomple;
 });
@@ -93,6 +109,13 @@ $('[id*="administradora.nome"]').each(function (i, item) {
             $('[id*="administradora"]').val(ui.item.id);
             $('[id*="administradora.nome"]').val(ui.item.nome);
             return false;
+        },
+        response: function (event, ui) {
+            if (ui.content.length == 1) {
+                $('[id*="administradora"]').val(ui.content[0].id);
+                $('[id*="administradora.nome"]').val(ui.content[0].nome);
+                $(this).autocomplete("close");
+            }
         }
     }).data("ui-autocomplete")._renderItem = renderAutocomple;
 });
@@ -116,6 +139,13 @@ $('[id*="operadora.nome"]').each(function (i, item) {
                 $('[id*="operadora.nome"]').val(ui.item.nome);
                 return false;
             },
+            response: function (event, ui) {
+                if (ui.content.length == 1) {
+                    $('[id*="operadora"]').val(ui.content[0].id);
+                    $('[id*="operadora.nome"]').val(ui.content[0].nome);
+                    $(this).autocomplete("close");
+                }
+            }
         }
     ).data("ui-autocomplete")._renderItem = renderAutocomple;
 })

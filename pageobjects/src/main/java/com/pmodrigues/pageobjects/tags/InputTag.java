@@ -20,6 +20,11 @@ public class InputTag implements Tag {
 
     @Override
     public void setValue(final Object value) {
+
+        for (int i = 0; i < value.toString().length(); i++) {
+            element.sendKeys("\u0008");
+        }
+
         element.sendKeys(value.toString());
     }
 }

@@ -3,20 +3,15 @@ package com.pmodrigues.pageobjects;
 import com.pmodrigues.pageobjects.annotations.*;
 import com.pmodrigues.pageobjects.tags.Tag;
 import com.pmodrigues.pageobjects.tags.TagFactory;
-import org.apache.commons.collections.Predicate;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.reflections.Reflections;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
-import java.util.Set;
 
-import static org.apache.commons.collections.CollectionUtils.find;
 import static org.apache.commons.validator.GenericValidator.isBlankOrNull;
 import static org.reflections.ReflectionUtils.getAllFields;
 import static org.reflections.ReflectionUtils.withAnnotation;
@@ -24,9 +19,6 @@ import static org.reflections.ReflectionUtils.withAnnotation;
 public abstract class AbstractPageObject {
 
     private WebDriver driver;
-    private final Reflections reflections = new Reflections();
-    private final Set<Class<? extends AbstractPageObject>> pages =
-            (Set<Class<? extends AbstractPageObject>>) reflections.getSubTypesOf(AbstractPageObject.class);
 
     public AbstractPageObject() {
         URL url = this.getClass().getAnnotation(URL.class);
@@ -70,60 +62,42 @@ public abstract class AbstractPageObject {
         return page;
     }
 
-    private AbstractPageObject clickByXpath(String xpath) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+    private AbstractPageObject clickByXpath(String xpath) throws Exception {
         driver.findElement(By.xpath(xpath)).click();
-        return getNext();
+        return PageObjectFactory.create(driver);
     }
 
-    private AbstractPageObject clickByClass(final String aClass) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    private AbstractPageObject clickByClass(final String aClass) throws Exception {
         driver.findElement(By.className(aClass)).click();
-        return getNext();
+        return PageObjectFactory.create(driver);
     }
 
 
-    public AbstractPageObject clickById(final String id) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    public AbstractPageObject clickById(final String id) throws Exception {
         driver.findElement(By.id(id)).click();
-        return getNext();
+        return PageObjectFactory.create(driver);
     }
 
-    public AbstractPageObject clickByName(final String name) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+    public AbstractPageObject clickByName(final String name) throws Exception {
         driver.findElement(By.name(name)).click();
-        return getNext();
+        return PageObjectFactory.create(driver);
     }
 
-    private AbstractPageObject getNext() throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-        final Class<? extends AbstractPageObject> next = (Class<? extends AbstractPageObject>) find(pages, new Predicate() {
-            @Override
-            public boolean evaluate(final Object object) {
-                Class<AbstractPageObject> clazz = (Class<AbstractPageObject>) object;
-                final URL url = clazz.getAnnotation(URL.class);
-                return url != null && driver.getCurrentUrl().equals(url.url());
-            }
-        });
-
-        if (next != null) {
-            return next.getConstructor(WebDriver.class)
-                    .newInstance(this.driver);
-        } else {
-            return this;
-        }
-    }
-
-    public AbstractPageObject to(final String url) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    public AbstractPageObject goTo(final String url) throws Exception {
         this.driver.navigate().to(url);
-        AbstractPageObject next = this.getNext();
+        AbstractPageObject next = PageObjectFactory.create(driver);
         next.populate();
         return next;
     }
 
-    public AbstractPageObject to(final AbstractPageObject to) throws IllegalAccessException {
+    public AbstractPageObject goTo(final AbstractPageObject to) throws IllegalAccessException {
         URL url = to.getClass().getAnnotation(URL.class);
         this.driver.navigate().to(url.url());
         to.populate();
         return to;
     }
 
-    public AbstractPageObject to(Class<? extends AbstractPageObject> toPage) throws Exception {
+    public AbstractPageObject goTo(Class<? extends AbstractPageObject> toPage) throws Exception {
         final AbstractPageObject page = toPage.getConstructor(WebDriver.class)
                 .newInstance(this.driver);
         page.url(toPage.getAnnotation(URL.class).url());
@@ -239,5 +213,7 @@ public abstract class AbstractPageObject {
         return this.driver.getPageSource();
     }
 
-
+    public WebDriver getDriver() {
+        return driver;
+    }
 }

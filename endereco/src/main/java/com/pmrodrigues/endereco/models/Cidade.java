@@ -12,7 +12,7 @@ import java.io.Serializable;
 @Entity
 @Table
 @EqualsAndHashCode()
-@ToString()
+@ToString(of = {"id", "nome"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public @Data class Cidade implements Serializable {
 

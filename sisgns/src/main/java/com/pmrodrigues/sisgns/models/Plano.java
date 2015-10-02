@@ -4,16 +4,16 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by Marceloo on 21/09/2015.
  */
 @Entity
 @Table
-@EqualsAndHashCode()
-@ToString()
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
+@EqualsAndHashCode()
+@ToString(of = {"id", "nome", "comissionamento"})
 public class Plano {
 
     @Id
@@ -33,12 +33,12 @@ public class Plano {
     @Setter
     private Operadora operadora;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "plano_id")
     @Getter
     @Setter
+    @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
+    @JoinColumn(name = "plano_id", nullable = false)
     @OrderBy("ordem")
-    private Collection<Comissionamento> regra = new ArrayList<>();
+    private List<Comissionamento> regra = new ArrayList<>();
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "administradora_id")

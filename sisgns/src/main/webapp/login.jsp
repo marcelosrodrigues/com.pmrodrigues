@@ -66,7 +66,7 @@
                             <bootstrap:password label="Senha" value="" id="j_password" errorField="j_password"
                                                 showLabel="false"/>
 
-                            <!-- Change this to a button or input when using this as a form -->
+                            <!-- Change this goTo a button or input when using this as a form -->
                             <bootstrap:login label="Acessar"/>
                         </fieldset>
                     </form>

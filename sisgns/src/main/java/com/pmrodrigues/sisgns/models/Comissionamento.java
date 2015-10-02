@@ -10,8 +10,8 @@ import java.math.BigDecimal;
  */
 @Entity
 @Table
-@EqualsAndHashCode()
-@ToString()
+@EqualsAndHashCode(of = {"id"})
+@ToString(of = {"id", "nome", "ordem", "percentual"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class Comissionamento {
 

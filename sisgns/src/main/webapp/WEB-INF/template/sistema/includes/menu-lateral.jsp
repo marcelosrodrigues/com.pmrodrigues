@@ -42,6 +42,10 @@
                 <ul class="nav nav-second-level">
 
                     <li>
+                        <a href="<c:url value='/plano/index.do' />">Planos de saúde</a>
+                    </li>
+
+                    <li>
                         <a href="<c:url value='/cliente/index.do' />">Clientes</a>
                     </li>
 
@@ -59,6 +63,7 @@
                         <li>
                             <a href="<c:url value='/operadora/index.do' />">Operadoras de plano de saúde</a>
                         </li>
+
 
                     </ul>
                 </li>

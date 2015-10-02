@@ -13,7 +13,7 @@ import java.io.Serializable;
 @Entity
 @Table
 @EqualsAndHashCode(exclude = {"id" , "nome"})
-@ToString()
+@ToString(of = {"id", "uf", "nome"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public @Data class Estado implements Serializable {
 

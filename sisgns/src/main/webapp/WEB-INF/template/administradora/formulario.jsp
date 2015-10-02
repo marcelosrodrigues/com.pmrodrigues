@@ -75,7 +75,7 @@
                         <input type="hidden" name="object.residenciais[${loop.index}].ddd" value="${telefone.ddd}"/>
                         <input type="hidden" name="object.residenciais[${loop.index}].numero"
                                value="${telefone.numero}"/>
-                        <button id="remover-telefone" onclick='javascript:removerTelefone(this);'
+                        <button id="remover-telefone" onclick='javascript:removerLI(this);'
                                 class="btn btn-danger btn-circle" style='float: right; margin-top: -5px;' type="button">
                             <i class="fa fa-minus"></i>
                         </button>

@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Entity
 @Table
 @EqualsAndHashCode()
-@ToString()
+@ToString(of = {"id", "logradouro", "cep"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public @Data class Logradouro implements Serializable {
 

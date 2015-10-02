@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Entity
 @Table
 @EqualsAndHashCode()
-@ToString()
+@ToString(of = {"id", "logradouro", "numero", "complemento", "cep", "bairro", "cidade", "estado"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public @Data class Endereco implements Serializable {
 
