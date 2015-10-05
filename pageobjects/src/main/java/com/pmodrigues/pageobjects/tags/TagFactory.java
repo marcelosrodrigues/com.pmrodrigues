@@ -23,7 +23,7 @@ public final class TagFactory {
         return instance;
     }
 
-    public Tag createById(final String id) {
+    public Tag byId(final String id) {
 
         final WebElement element = driver.findElement(By.id(id));
         return createTag(element);
@@ -47,17 +47,17 @@ public final class TagFactory {
         return null;
     }
 
-    public Tag createByXPath(String xpath) {
+    public Tag byXPath(final String xpath) {
         final WebElement element = driver.findElement(By.xpath(xpath));
         return createTag(element);
     }
 
-    public Tag createByClass(String css) {
+    public Tag byClass(String css) {
         final WebElement element = driver.findElement(By.cssSelector(css));
         return createTag(element);
     }
 
-    public Tag createByName(String name) {
+    public Tag byName(String name) {
         final WebElement element = driver.findElement(By.name(name));
         return createTag(element);
     }

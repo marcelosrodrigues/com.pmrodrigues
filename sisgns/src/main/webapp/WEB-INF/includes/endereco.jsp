@@ -50,6 +50,8 @@
     <div class="col-lg-4">
         <input type="hidden" id="object.endereco.cidade" name="object.endereco.cidade"
                value="${object.endereco.cidade.id}"/>
+        <input type="hidden" id="object.endereco.cidade.estado" name="object.endereco.cidade.estado"
+               value="${object.endereco.cidade.estado.id}"/>
         <bootstrap:textfield label="Cidade"
                              value="${object.endereco.cidade.nome}"
                              id="object.endereco.cidade.nome"
@@ -59,6 +61,8 @@
     <div class="col-lg-4">
         <input type="hidden" id="object.endereco.bairro" name="object.endereco.bairro"
                value="${object.endereco.bairro.id}"/>
+        <input type="hidden" id="object.endereco.bairro.cidade" name="object.endereco.bairro.cidade"
+               value="${object.endereco.bairro.cidade.id}"/>
         <bootstrap:textfield label="Bairro"
                              value="${object.endereco.bairro.nome}"
                              id="object.endereco.bairro.nome"

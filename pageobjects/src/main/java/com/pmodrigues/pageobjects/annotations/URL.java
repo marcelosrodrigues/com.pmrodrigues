@@ -6,5 +6,5 @@ import java.lang.annotation.*;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface URL {
-    String url() default "http://localhost:8080";
+    String value() default "http://localhost:8080";
 }

@@ -69,7 +69,7 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
 
     public void incrementarTentativasFalhas() {
         tentativas++;
-        if (tentativas == NUMERO_MAXIMO_TENTATIVAS_FALHAS) {
+        if (tentativas >= NUMERO_MAXIMO_TENTATIVAS_FALHAS) {
             bloquear();
         }
     }

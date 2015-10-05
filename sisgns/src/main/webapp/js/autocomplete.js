@@ -14,18 +14,24 @@ $('[id*="estado.nome"]').each(function (i, item) {
         },
         minLength: 2,
         select: function (event, ui) {
-            $('[id*="estado"]').val(ui.item.id);
-            $('[id*="estado.nome"]').val(ui.item.nome);
+            $('[id="object.endereco.estado"]').val(ui.item.id);
+            $('[id="object.endereco.cidade.estado"]').val(ui.item.id);
+            $('[id="object.endereco.bairro.cidade.estado"]').val(ui.item.id);
+            $('[id="estado.nome"]').val(ui.item.nome);
             return false;
         },
         focus: function (event, ui) {
-            $('[id*="estado"]').val(ui.item.id);
+            $('[id="object.endereco.estado"]').val(ui.item.id);
+            $('[id="object.endereco.cidade.estado"]').val(ui.item.id);
+            $('[id="object.endereco.bairro.cidade.estado"]').val(ui.item.id);
             $('[id*="estado.nome"]').val(ui.item.nome);
             return false;
         },
         response: function (event, ui) {
             if (ui.content.length == 1) {
-                $('[id*="estado"]').val(ui.content[0].id);
+                $('[id="object.endereco.estado"]').val(ui.content[0].id);
+                $('[id="object.endereco.cidade.estado"]').val(ui.content[0].id);
+                $('[id="object.endereco.bairro.cidade.estado"]').val(ui.content[0].id);
                 $('[id*="estado.nome"]').val(ui.content[0].nome);
                 $(this).autocomplete("close");
             }
@@ -43,18 +49,21 @@ $('[id*="cidade.nome"]').each(function (i, item) {
         },
         minLength: 3,
         select: function (event, ui) {
-            $('[id*="cidade"]').val(ui.item.id);
+            $('[id="object.endereco.cidade"]').val(ui.item.id);
+            $('[id="object.endereco.bairro.cidade"]').val(ui.item.id);
             $('[id*="cidade.nome"]').val(ui.item.nome);
             return false;
         },
         focus: function (event, ui) {
-            $('[id*="cidade"]').val(ui.item.id);
+            $('[id="object.endereco.cidade"]').val(ui.item.id);
+            $('[id="object.endereco.bairro.cidade"]').val(ui.item.id);
             $('[id*="cidade.nome"]').val(ui.item.nome);
             return false;
         },
         response: function (event, ui) {
             if (ui.content.length == 1) {
-                $('[id*="cidade"]').val(ui.content[0].id);
+                $('[id="object.endereco.cidade"]').val(ui.content[0].id);
+                $('[id="object.endereco.bairro.cidade"]').val(ui.content[0].id);
                 $('[id*="cidade.nome"]').val(ui.content[0].nome);
                 $(this).autocomplete("close");
             }

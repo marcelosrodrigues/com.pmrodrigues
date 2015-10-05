@@ -1,35 +1,45 @@
 package test.com.pmrodrigues.sisgns.acceptables.pageobjects;
 
 import com.pmodrigues.pageobjects.AbstractPageObject;
-import com.pmodrigues.pageobjects.annotations.Action;
-import com.pmodrigues.pageobjects.annotations.ByName;
 import com.pmodrigues.pageobjects.annotations.URL;
+import com.pmodrigues.pageobjects.tags.TagFactory;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 /**
  * Created by Marceloo on 30/09/2015.
  */
-@Action(byName = "acao")
-@URL(url = "http://localhost:8080")
+@URL("http://localhost:8080")
 public class LoginPage extends AbstractPageObject {
 
-    @ByName("j_username")
-    private String login;
-
-    @ByName("j_password")
-    private String password;
-
-    public LoginPage() {
-        super();
+    public LoginPage(final WebDriver driver) {
+        super(driver);
     }
 
     public LoginPage email(final String email) {
-        this.login = email;
+        TagFactory.getInstance(this.getDriver())
+                .byName("j_username")
+                .setValue(email);
         return this;
     }
 
     public LoginPage password(final String password) {
-        this.password = password;
+        TagFactory.getInstance(this.getDriver())
+                .byName("j_password")
+                .setValue(password);
+
         return this;
     }
 
+    @Override
+    public AbstractPageObject submit() {
+        this.getDriver().findElement(By.name("acao"))
+                .click();
+
+        if ("http://localhost:8080/index.do".equals(this.getDriver().getCurrentUrl())) {
+            return new DashboardPage(this.getDriver());
+        } else {
+            return this;
+        }
+    }
 }

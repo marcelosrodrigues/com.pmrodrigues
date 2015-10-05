@@ -16,24 +16,12 @@ public class SelectTag implements Tag {
     @Override
     public Object getValue() {
         final Select select = new Select(element);
-
-        for (final WebElement option : select.getOptions()) {
-            if (option.isSelected()) {
-                return option.getAttribute("value");
-            }
-        }
-        return null;
+        return select.getFirstSelectedOption().getAttribute("value");
     }
 
     @Override
-    public void setValue(Object value) {
+    public void setValue(final Object value) {
         final Select select = new Select(element);
-
-        for (final WebElement option : select.getOptions()) {
-            if (value.equals(option.getAttribute("value"))) {
-                option.click();
-                break;
-            }
-        }
+        select.selectByValue(String.valueOf(value));
     }
 }

@@ -1,12 +1,15 @@
 package test.com.pmrodrigues.sisgns.acceptables;
 
+import com.pmodrigues.pageobjects.factory.WebDriverFactory;
 import com.pmrodrigues.boletos.models.Cedente;
 import com.pmrodrigues.endereco.models.Endereco;
 import com.pmrodrigues.endereco.models.Telefone;
 import com.pmrodrigues.sisgns.models.Administradora;
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
@@ -31,10 +34,17 @@ public class ITestAdministradoraPlanoSaudePage extends AbstractTransactionalJUni
 
     private DashboardPage dashboard;
 
+    private static WebDriver webdriver = WebDriverFactory.createWebDriver();
+
+    @AfterClass
+    public static void finaliza() {
+        webdriver.close();
+    }
+
     @Before
     public void before() throws Exception {
 
-        dashboard = (DashboardPage) new LoginPage()
+        dashboard = (DashboardPage) new LoginPage(webdriver)
                 .email("marcelosrodrigues@globo.com")
                 .password("12345678")
                 .submit();
@@ -43,7 +53,6 @@ public class ITestAdministradoraPlanoSaudePage extends AbstractTransactionalJUni
 
     @After
     public void after() {
-        dashboard.close();
         limparBaseDeDados();
     }
 
@@ -93,7 +102,7 @@ public class ITestAdministradoraPlanoSaudePage extends AbstractTransactionalJUni
     public void devePesquisarAdministradora() throws Exception {
 
         final ListAdministradoraPlanosSaudePage page = (ListAdministradoraPlanosSaudePage) dashboard
-                .goTo(ListAdministradoraPlanosSaudePage.class);
+                .navigateTo(ListAdministradoraPlanosSaudePage.class);
 
         final List<Administradora> administradoras = jdbcTemplate.query("select * from cedente limit 0 , 20", new RowMapper<Administradora>() {
             @Override
@@ -115,7 +124,7 @@ public class ITestAdministradoraPlanoSaudePage extends AbstractTransactionalJUni
     @Test
     public void deveAdicionarAdministradora() throws Exception {
 
-        AdministradoraPlanosSaudePage page = (AdministradoraPlanosSaudePage) dashboard.goTo(AdministradoraPlanosSaudePage.class);
+        AdministradoraPlanosSaudePage page = (AdministradoraPlanosSaudePage) dashboard.navigateTo(AdministradoraPlanosSaudePage.class);
 
         ListAdministradoraPlanosSaudePage administradoras = (ListAdministradoraPlanosSaudePage) page.nome("TESTE")
                 .cnpj("99619274000120")
@@ -131,7 +140,7 @@ public class ITestAdministradoraPlanoSaudePage extends AbstractTransactionalJUni
     @Test
     public void deveAdicionarInformandoUmCEPQueNaoEstaCadastrado() throws Exception {
 
-        AdministradoraPlanosSaudePage page = (AdministradoraPlanosSaudePage) dashboard.goTo(AdministradoraPlanosSaudePage.class);
+        AdministradoraPlanosSaudePage page = (AdministradoraPlanosSaudePage) dashboard.navigateTo(AdministradoraPlanosSaudePage.class);
 
         ListAdministradoraPlanosSaudePage administradoras = (ListAdministradoraPlanosSaudePage) page.nome("TESTE")
                 .cnpj("99619274000120")
