@@ -5,6 +5,8 @@ import com.pmodrigues.pageobjects.annotations.URL;
 import com.pmodrigues.pageobjects.tags.TagFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by Marceloo on 01/10/2015.
@@ -58,20 +60,46 @@ public class AdministradoraPlanosSaudePage extends AbstractPageObject {
         TagFactory.getInstance(super.getDriver())
                 .byId("object.endereco.estado.nome")
                 .setValue(estado);
+
         return this;
     }
 
     public AdministradoraPlanosSaudePage cidade(final String cidade) {
-        TagFactory.getInstance(super.getDriver())
-                .byId("object.endereco.cidade.nome")
-                .setValue(cidade);
+
+        boolean atualizouEstado = new WebDriverWait(this.getDriver(), 10)
+                .until(new ExpectedCondition<Boolean>() {
+                    @Override
+                    public Boolean apply(final WebDriver input) {
+                        return "19".equals(TagFactory.getInstance(input).byId("object.endereco.estado").getValue()) &&
+                                "19".equals(TagFactory.getInstance(input).byId("object.endereco.cidade.estado").getValue());
+                    }
+                });
+
+        if (atualizouEstado) {
+            TagFactory.getInstance(super.getDriver())
+                    .byId("object.endereco.cidade.nome")
+                    .setValue(cidade);
+        }
+
         return this;
     }
 
     public AdministradoraPlanosSaudePage bairro(final String bairro) {
-        TagFactory.getInstance(super.getDriver())
-                .byId("object.endereco.bairro.nome")
-                .setValue(bairro);
+
+        boolean atualizouCidade = new WebDriverWait(this.getDriver(), 10)
+                .until(new ExpectedCondition<Boolean>() {
+                    @Override
+                    public Boolean apply(final WebDriver input) {
+                        return "7043".equals(TagFactory.getInstance(input).byId("object.endereco.cidade").getValue()) &&
+                                "7043".equals(TagFactory.getInstance(input).byId("object.endereco.bairro.cidade").getValue());
+                    }
+                });
+
+        if (atualizouCidade) {
+            TagFactory.getInstance(super.getDriver())
+                    .byId("object.endereco.bairro.nome")
+                    .setValue(bairro);
+        }
         return this;
     }
 

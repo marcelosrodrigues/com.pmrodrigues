@@ -1,17 +1,12 @@
 package test.com.pmrodrigues.sisgns.acceptables;
 
 import com.pmodrigues.pageobjects.factory.WebDriverFactory;
-import com.pmrodrigues.boletos.models.Cedente;
-import com.pmrodrigues.endereco.models.Endereco;
-import com.pmrodrigues.endereco.models.Telefone;
 import com.pmrodrigues.sisgns.models.Administradora;
 import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
@@ -32,17 +27,18 @@ import static org.junit.Assert.assertTrue;
 @ContextConfiguration(locations = {"classpath:test-applicationContext.xml"})
 public class ITestAdministradoraPlanoSaudePage extends AbstractTransactionalJUnit4SpringContextTests {
 
-    private DashboardPage dashboard;
+    private static DashboardPage dashboard;
 
     private static WebDriver webdriver = WebDriverFactory.createWebDriver();
 
     @AfterClass
     public static void finaliza() {
         webdriver.close();
+        webdriver.quit();
     }
 
-    @Before
-    public void before() throws Exception {
+    @BeforeClass
+    public static void before() throws Exception {
 
         dashboard = (DashboardPage) new LoginPage(webdriver)
                 .email("marcelosrodrigues@globo.com")
@@ -58,41 +54,20 @@ public class ITestAdministradoraPlanoSaudePage extends AbstractTransactionalJUni
 
     private void limparBaseDeDados() {
 
-        if (!jdbcTemplate.queryForObject("select count(1) > 0  from cedente where numeroDocumento = '99.619.274/0001-20'", Boolean.class)) {
-            return;
-        }
 
-        final Cedente cedente = jdbcTemplate.query("select * from cedente where numeroDocumento = '99.619.274/0001-20'", new ResultSetExtractor<Cedente>() {
-            @Override
-            public Cedente extractData(ResultSet rs) throws SQLException, DataAccessException {
-                rs.next();
-                final Cedente cedente = Cedente.novoCedente(rs.getString("nome"), rs.getString("numeroDocumento"));
-                cedente.setId(rs.getLong("id"));
-                final Endereco endereco = new Endereco();
-                endereco.setId(rs.getLong("endereco_id"));
-                cedente.setEndereco(endereco);
+        jdbcTemplate.update("DELETE FROM telefone_administrador " +
+                " WHERE administradora_id IN ( " +
+                "       SELECT ID FROM CEDENTE where numeroDocumento = '99.619.274/0001-20')");
+        jdbcTemplate.update(" DELETE FROM telefone " +
+                " where not exists ( select 1 from telefone_Administrador where telefone_id = id )  " +
+                " and not exists ( select 1 from telefone_pessoa where telefone_id = id ) ");
 
-                return cedente;
-
-            }
-        });
-
-        List<Telefone> telefones = jdbcTemplate.query("select telefone_id from telefone_administrador where administradora_id = ?", new RowMapper<Telefone>() {
-            @Override
-            public Telefone mapRow(ResultSet rs, int rowNum) throws SQLException {
-                Telefone telefone = new Telefone();
-                telefone.setId(rs.getLong("telefone_id"));
-                return telefone;
-            }
-        }, cedente.getId());
-
-        for (Telefone telefone : telefones) {
-            jdbcTemplate.update("delete from telefone_administrador where telefone_id = ?", telefone.getId());
-            jdbcTemplate.update("delete from telefone where id = ?", telefone.getId());
-        }
-        jdbcTemplate.update("delete from plano where administradora_id = ?", cedente.getId());
-        jdbcTemplate.update("delete from cedente where id = ?", cedente.getId());
-        jdbcTemplate.update("delete from endereco where id = ?", cedente.getEndereco().getId());
+        jdbcTemplate.update("DELETE FROM CEDENTE where numeroDocumento = '99.619.274/0001-20'");
+        jdbcTemplate.update("DELETE FROM ENDERECO  WHERE bairro_id = (select id from bairro where nome like 'Pechincha%' and cidade_id = 7043  and id > 12258)");
+        jdbcTemplate.update("DELETE FROM BAIRRO WHERE nome like 'Pechincha%' and cidade_id = 7043 and id > 12258");
+        jdbcTemplate.update("DELETE FROM telefone " +
+                " where not exists ( select 1 from telefone_Administrador where telefone_id = id ) " +
+                " and not exists(select 1 from telefone_pessoa where telefone_id = id )");
 
         jdbcTemplate.update("commit");
     }
@@ -146,7 +121,7 @@ public class ITestAdministradoraPlanoSaudePage extends AbstractTransactionalJUni
                 .cnpj("99619274000120")
                 .cep("22222222")
                 .estado("RIO DE JANEIRO")
-                .cidade("RIO DE JANEIRO")
+                .cidade("Rio de Janeiro")
                 .bairro("PECHINCHA")
                 .logradouro("Estrada campo da Areia")
                 .complemento("APTO 206")

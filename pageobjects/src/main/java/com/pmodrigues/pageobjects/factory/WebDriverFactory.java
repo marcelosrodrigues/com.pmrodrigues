@@ -16,6 +16,7 @@ public final class WebDriverFactory {
                 "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("test-type");
+        options.addArguments("start-maximized");
         WebDriver driver = new ChromeDriver(options);
         return driver;
 
