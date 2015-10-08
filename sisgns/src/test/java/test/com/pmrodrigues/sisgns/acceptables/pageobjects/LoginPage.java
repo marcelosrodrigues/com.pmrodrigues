@@ -42,4 +42,9 @@ public class LoginPage extends AbstractPageObject {
             return this;
         }
     }
+
+    @Override
+    public AbstractPageObject abrir(String value) {
+        return null;
+    }
 }

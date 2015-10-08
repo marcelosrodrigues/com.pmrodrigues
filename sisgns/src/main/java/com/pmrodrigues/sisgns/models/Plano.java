@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -34,7 +35,6 @@ public class Plano {
     private Operadora operadora;
 
     @Getter
-    @Setter
     @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(name = "plano_id", nullable = false)
     @OrderBy("ordem")
@@ -46,5 +46,9 @@ public class Plano {
     @Setter
     private Administradora administradora;
 
+    public void setRegra(final Collection<Comissionamento> regras) {
+        this.regra.clear();
+        this.regra.addAll(regras);
+    }
 
 }

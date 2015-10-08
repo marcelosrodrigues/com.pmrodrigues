@@ -18,4 +18,9 @@ public class DashboardPage extends AbstractPageObject {
     public AbstractPageObject submit() {
         return null;
     }
+
+    @Override
+    public AbstractPageObject abrir(String value) {
+        return null;
+    }
 }

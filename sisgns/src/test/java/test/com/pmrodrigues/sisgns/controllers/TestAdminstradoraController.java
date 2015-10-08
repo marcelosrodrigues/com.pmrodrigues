@@ -2,7 +2,6 @@ package test.com.pmrodrigues.sisgns.controllers;
 
 import br.com.caelum.vraptor.util.test.MockResult;
 import br.com.caelum.vraptor.util.test.MockValidator;
-import com.pmrodrigues.boletos.models.Cedente;
 import com.pmrodrigues.endereco.models.Endereco;
 import com.pmrodrigues.endereco.models.Logradouro;
 import com.pmrodrigues.endereco.models.Telefone;
@@ -15,15 +14,8 @@ import org.hibernate.SessionFactory;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.ResultSetExtractor;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -45,37 +37,22 @@ public class TestAdminstradoraController extends AbstractTransactionalJUnit4Spri
     @Before
     public void setup() {
 
-        final Cedente cedente = jdbcTemplate.query("select * from cedente where numeroDocumento = '04.769.697/0001-10'", new ResultSetExtractor<Cedente>() {
-            @Override
-            public Cedente extractData(ResultSet rs) throws SQLException, DataAccessException {
-                rs.next();
-                final Cedente cedente = Cedente.novoCedente(rs.getString("nome"), rs.getString("numeroDocumento"));
-                cedente.setId(rs.getLong("id"));
-                final Endereco endereco = new Endereco();
-                endereco.setId(rs.getLong("endereco_id"));
-                cedente.setEndereco(endereco);
+        jdbcTemplate.update("DELETE FROM telefone_administrador " +
+                " WHERE administradora_id IN ( " +
+                "       SELECT ID FROM CEDENTE where numeroDocumento = '04.769.697/0001-10')");
+        jdbcTemplate.update(" DELETE FROM telefone " +
+                " where not exists ( select 1 from telefone_Administrador where telefone_id = id )  " +
+                " and not exists ( select 1 from telefone_pessoa where telefone_id = id ) ");
 
-                return cedente;
+        jdbcTemplate.update("delete from comissionamento where plano_id in ( select id from plano where administradora_id in ( SELECT ID FROM CEDENTE where numeroDocumento = '04.769.697/0001-10'))");
+        jdbcTemplate.update("delete from plano where administradora_id in ( SELECT ID FROM CEDENTE where numeroDocumento = '04.769.697/0001-10')");
 
-            }
-        });
-
-        List<Telefone> telefones = jdbcTemplate.query("select telefone_id from telefone_administrador where administradora_id = ?", new RowMapper<Telefone>() {
-            @Override
-            public Telefone mapRow(ResultSet rs, int rowNum) throws SQLException {
-                Telefone telefone = new Telefone();
-                telefone.setId(rs.getLong("telefone_id"));
-                return telefone;
-            }
-        }, cedente.getId());
-
-        for (Telefone telefone : telefones) {
-            jdbcTemplate.update("delete from telefone_administrador where telefone_id = ?", telefone.getId());
-            jdbcTemplate.update("delete from telefone where id = ?", telefone.getId());
-        }
-        jdbcTemplate.update("delete from plano where administradora_id = ?", cedente.getId());
-        jdbcTemplate.update("delete from cedente where id = ?", cedente.getId());
-        jdbcTemplate.update("delete from endereco where id = ?", cedente.getEndereco().getId());
+        jdbcTemplate.update("DELETE FROM CEDENTE where numeroDocumento = '04.769.697/0001-10'");
+        jdbcTemplate.update("DELETE FROM ENDERECO  WHERE bairro_id = (select id from bairro where nome like 'Pechincha%' and cidade_id = 7043  and id > 12258)");
+        jdbcTemplate.update("DELETE FROM BAIRRO WHERE nome like 'Pechincha%' and cidade_id = 7043 and id > 12258");
+        jdbcTemplate.update("DELETE FROM telefone " +
+                " where not exists ( select 1 from telefone_Administrador where telefone_id = id ) " +
+                " and not exists(select 1 from telefone_pessoa where telefone_id = id )");
 
 
     }

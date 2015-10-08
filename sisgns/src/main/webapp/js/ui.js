@@ -34,12 +34,13 @@ $('[id="adicionar-telefone"]').click(function () {
 
     if ($('[id*="residencial.ddd"]').val() != "" && $('[id*="residencial.numero"]').val() != null) {
 
-        $("ul#telefones").append("<li class=\"list-group-item\">(" + $('[id*="residencial.ddd"]').val() + ") "
-            + $('[id*="residencial.numero"]').val()
+        var telefone = $('[id*="residencial.ddd"]').val() + ") " + $('[id*="residencial.numero"]').val();
+
+        $("ul#telefones").append("<li class=\"list-group-item\">" + telefone
             + "<input type=\"hidden\" name=\"object.residenciais[" + $("ul#telefones > li").length + "].id\" value=\"\" />"
             + "<input type=\"hidden\" name=\"object.residenciais[" + $("ul#telefones > li").length + "].ddd\" value=\"" + $('[id*="residencial.ddd"]').val() + "\" />"
             + "<input type=\"hidden\" name=\"object.residenciais[" + $("ul#telefones > li").length + "].numero\" value=\"" + $('[id*="residencial.numero"]').val() + "\" />"
-            + "<button id=\"remover-telefone\" onclick='javascript:removerLI(this);' class=\"btn btn-danger btn-circle\" style='float: right; margin-top: -5px;' type=\"button\">"
+            + "<button id=\"remover-telefone\" telefone=\"" + telefone + "\" onclick='javascript:removerLI(this);' class=\"btn btn-danger btn-circle\" style='float: right; margin-top: -5px;' type=\"button\">"
             + "<i class=\"fa fa-minus\"></i>"
             + "</button>"
             + "</li>");

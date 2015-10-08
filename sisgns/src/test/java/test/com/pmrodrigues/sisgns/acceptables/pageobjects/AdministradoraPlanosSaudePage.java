@@ -5,14 +5,21 @@ import com.pmodrigues.pageobjects.annotations.URL;
 import com.pmodrigues.pageobjects.tags.TagFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 /**
  * Created by Marceloo on 01/10/2015.
  */
 @URL("http://localhost:8080/administradora/novo.do")
 public class AdministradoraPlanosSaudePage extends AbstractPageObject {
+
+    protected AdministradoraPlanosSaudePage(final WebDriver driver, final boolean navigateTo) {
+        super(driver, navigateTo);
+    }
 
     public AdministradoraPlanosSaudePage nome(final String nome) {
         TagFactory.getInstance(super.getDriver())
@@ -64,14 +71,14 @@ public class AdministradoraPlanosSaudePage extends AbstractPageObject {
         return this;
     }
 
-    public AdministradoraPlanosSaudePage cidade(final String cidade) {
+    public AdministradoraPlanosSaudePage cidade(final String cidade, final Integer estado) {
 
         boolean atualizouEstado = new WebDriverWait(this.getDriver(), 10)
                 .until(new ExpectedCondition<Boolean>() {
                     @Override
                     public Boolean apply(final WebDriver input) {
-                        return "19".equals(TagFactory.getInstance(input).byId("object.endereco.estado").getValue()) &&
-                                "19".equals(TagFactory.getInstance(input).byId("object.endereco.cidade.estado").getValue());
+                        return String.valueOf(estado).equals(TagFactory.getInstance(input).byId("object.endereco.estado").getValue()) &&
+                                String.valueOf(estado).equals(TagFactory.getInstance(input).byId("object.endereco.cidade.estado").getValue());
                     }
                 });
 
@@ -84,14 +91,14 @@ public class AdministradoraPlanosSaudePage extends AbstractPageObject {
         return this;
     }
 
-    public AdministradoraPlanosSaudePage bairro(final String bairro) {
+    public AdministradoraPlanosSaudePage bairro(final String bairro, final Integer cidade) {
 
         boolean atualizouCidade = new WebDriverWait(this.getDriver(), 10)
                 .until(new ExpectedCondition<Boolean>() {
                     @Override
                     public Boolean apply(final WebDriver input) {
-                        return "7043".equals(TagFactory.getInstance(input).byId("object.endereco.cidade").getValue()) &&
-                                "7043".equals(TagFactory.getInstance(input).byId("object.endereco.bairro.cidade").getValue());
+                        return String.valueOf(cidade).equals(TagFactory.getInstance(input).byId("object.endereco.cidade").getValue()) &&
+                                String.valueOf(cidade).equals(TagFactory.getInstance(input).byId("object.endereco.bairro.cidade").getValue());
                     }
                 });
 
@@ -126,5 +133,33 @@ public class AdministradoraPlanosSaudePage extends AbstractPageObject {
                 .click();
 
         return new ListAdministradoraPlanosSaudePage(this.getDriver());
+    }
+
+    @Override
+    public AbstractPageObject abrir(String value) {
+        return null;
+    }
+
+    public AdministradoraPlanosSaudePage apagar(final String telefone) {
+        List<WebElement> buttons = this.getDriver().findElements(By.id("remover-telefone"));
+
+        for (WebElement button : buttons) {
+            if (telefone.equalsIgnoreCase(button.getAttribute("telefone"))) {
+                button.click();
+
+                boolean apagouTelefone = new WebDriverWait(this.getDriver(), 5)
+                        .until(new ExpectedCondition<Boolean>() {
+                            @Override
+                            public Boolean apply(final WebDriver input) {
+                                return !input.getPageSource().contains(telefone);
+                            }
+                        });
+                if (apagouTelefone) {
+                    break;
+                }
+            }
+        }
+
+        return this;
     }
 }

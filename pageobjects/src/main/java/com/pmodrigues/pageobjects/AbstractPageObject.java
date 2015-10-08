@@ -8,9 +8,15 @@ public abstract class AbstractPageObject {
     private WebDriver driver;
 
     public AbstractPageObject(final WebDriver driver) {
+        this(driver, false);
+    }
+
+    public AbstractPageObject(final WebDriver driver, final boolean navigateTo) {
         this.driver = driver;
-        URL url = this.getClass().getAnnotation(URL.class);
-        driver.get(url.value());
+        if (!navigateTo) {
+            URL url = this.getClass().getAnnotation(URL.class);
+            driver.get(url.value());
+        }
     }
 
     public void close() {
@@ -18,6 +24,8 @@ public abstract class AbstractPageObject {
     }
 
     public abstract AbstractPageObject submit();
+
+    public abstract AbstractPageObject abrir(final String value) throws Exception;
 
     public AbstractPageObject navigateTo(Class<? extends AbstractPageObject> toPage) throws Exception {
         final AbstractPageObject page = toPage.getConstructor(WebDriver.class)
@@ -41,4 +49,5 @@ public abstract class AbstractPageObject {
     public WebDriver getDriver() {
         return driver;
     }
+
 }

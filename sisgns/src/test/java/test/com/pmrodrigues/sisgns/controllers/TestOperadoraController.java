@@ -31,6 +31,7 @@ public class TestOperadoraController extends AbstractTransactionalJUnit4SpringCo
 
     @Before
     public void setup() {
+        jdbcTemplate.update("delete from comissionamento where plano_id in ( select id from plano where operadora_id in ( select id from operadora where nome like 'UNIMED%'))");
         jdbcTemplate.update("delete from plano where operadora_id in ( select id from operadora where nome like 'UNIMED%')");
         jdbcTemplate.update("delete from operadora where nome like 'UNIMED%'");
         jdbcTemplate.update("insert into operadora (nome) VALUES  ('UNIMED')");
