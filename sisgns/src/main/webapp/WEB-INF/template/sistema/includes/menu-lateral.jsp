@@ -46,6 +46,10 @@
                     </li>
 
                     <li>
+                        <a href="<c:url value='/corretor/index.do' />">Corretores</a>
+                    </li>
+
+                    <li>
                         <a href="<c:url value='/cliente/index.do' />">Clientes</a>
                     </li>
 

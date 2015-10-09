@@ -57,4 +57,18 @@
 
     <definition name="plano/*/show-template" extends="plano/formulario-template"/>
 
+    <definition name="corretor/index-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/corretor/index.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/corretor/index.jsp"/>
+    </definition>
+
+    <definition name="corretor/search-template" extends="corretor/index-template"/>
+
+    <definition name="corretor/formulario-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/corretor/formulario.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/corretor/formulario.jsp"/>
+    </definition>
+
+    <definition name="corretor/*/show-template" extends="corretor/formulario-template"/>
+
 </tiles-definitions>

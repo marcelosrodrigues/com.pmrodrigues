@@ -3,7 +3,6 @@ package com.pmrodrigues.sisgns.models.security;
 
 import com.pmrodrigues.security.utilities.MD5;
 import lombok.*;
-import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.security.core.GrantedAuthority;
 
@@ -12,6 +11,7 @@ import java.util.Collection;
 import java.util.HashSet;
 
 import static com.pmrodrigues.security.Constante.NUMERO_MAXIMO_TENTATIVAS_FALHAS;
+import static org.apache.commons.validator.GenericValidator.isBlankOrNull;
 
 /**
  * Created by Marceloo on 21/09/2015.
@@ -19,7 +19,7 @@ import static com.pmrodrigues.security.Constante.NUMERO_MAXIMO_TENTATIVAS_FALHAS
 @Entity
 @Table
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@EqualsAndHashCode(exclude = {"password", "perfis"})
+@EqualsAndHashCode(of = {"id"})
 @ToString(exclude = {"password"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class Usuario implements com.pmrodrigues.security.models.Usuario {
@@ -30,18 +30,19 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
     @Getter
     private Long id;
 
+    @NotBlank(message = "Nome é obrigatório")
     @Setter
     @Getter
     @Column
     public String nome;
 
-    @Email(message = "E-mail é inválido")
     @NotBlank(message = "E-mail é obrigatório")
     @Column(unique = true, nullable = false)
     @Setter
     @Getter
     private String email;
 
+    @NotBlank(message = "Senha é obrigatório")
     @Column
     @Getter
     private String password;
@@ -49,7 +50,7 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
     @Column
     @Setter
     @Getter
-    private boolean bloqueado = true;
+    private boolean bloqueado = false;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "membros", joinColumns = @JoinColumn(name = "usuario_id"),
@@ -119,6 +120,8 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
     }
 
     public void setPassword(final String password) {
-        this.password = MD5.encrypt(password);
+        if (!isBlankOrNull(password)) {
+            this.password = MD5.encrypt(password);
+        }
     }
 }
