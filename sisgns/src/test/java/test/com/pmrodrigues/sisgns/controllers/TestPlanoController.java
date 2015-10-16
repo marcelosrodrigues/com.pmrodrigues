@@ -37,6 +37,7 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
     private long planoId;
     private long operadoraId;
     private long cedenteId;
+    private long enderecoId;
 
     @Before
     public void setup() {
@@ -46,7 +47,14 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
         jdbcTemplate.update("insert into operadora (nome) values ( 'UNIMED') ");
         this.operadoraId = jdbcTemplate.queryForObject("select LAST_INSERT_ID()", Long.class);
 
-        this.cedenteId = jdbcTemplate.queryForObject("select id from cedente where numeroDocumento = '04.769.697/0001-10'", Long.class);
+        jdbcTemplate.update("insert into endereco (complemento,numero,logradouro , cep , cidade_id , bairro_id , estado_id ) " +
+                " values ('TESTE','TESTE','TESTE' , '22743310' , 7043 , 12258 , 19 ) ");
+
+        this.enderecoId = jdbcTemplate.queryForObject("select LAST_INSERT_ID()", Long.class);
+
+        jdbcTemplate.update("insert into cedente (DTYPE , convenio, nome, numeroDocumento , endereco_id) values ( 'Administradora' , '1' , 'TESTE' , '04.769.697/0001-10' , ?)",
+                enderecoId);
+        this.cedenteId = jdbcTemplate.queryForObject("select LAST_INSERT_ID()", Long.class);
 
         jdbcTemplate.update("insert into plano (nome, operadora_id, administradora_id) values ( 'plano_1' , ? , ? ) ",
                 operadoraId, cedenteId);

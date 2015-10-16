@@ -8,7 +8,9 @@ import com.pmrodrigues.endereco.models.Cidade;
 import com.pmrodrigues.endereco.models.Estado;
 import com.pmrodrigues.endereco.repositories.CidadeRepository;
 import com.pmrodrigues.persistence.daos.ResultList;
+import org.springframework.http.HttpStatus;
 
+import static br.com.caelum.vraptor.view.Results.http;
 import static br.com.caelum.vraptor.view.Results.json;
 
 /**
@@ -28,15 +30,26 @@ public class CidadeController {
     @Path("/endereco/cidade/{estado}/{nome}.json")
     public ResultList<Cidade> buscarCidade(final Estado estado, final String nome) {
 
-        final ResultList<Cidade> resultList = repository.buscarCidadesDoEstadoPeloNome(estado, nome);
-        result.use(json()).from(resultList
-                .todos()
-                .getConsulta())
-                .excludeAll()
-                .include("id", "nome")
-                .serialize();
+        if (estado == null) {
+            result.use(http())
+                    .setStatusCode(HttpStatus.EXPECTATION_FAILED.value());
+            return null;
+        }
 
-        return resultList;
+        final ResultList<Cidade> cidades = repository.buscarCidadesDoEstadoPeloNome(estado, nome);
+        if (!cidades.estaVazio()) {
+            result.use(json()).from(cidades
+                    .todos()
+                    .getConsulta())
+                    .excludeAll()
+                    .include("id", "nome")
+                    .serialize();
+        } else {
+            result.use(http()).setStatusCode(HttpStatus.NO_CONTENT.value());
+
+        }
+
+        return cidades;
 
     }
 }

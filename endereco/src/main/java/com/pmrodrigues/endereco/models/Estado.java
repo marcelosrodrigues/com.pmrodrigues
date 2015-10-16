@@ -15,6 +15,7 @@ import java.io.Serializable;
 @EqualsAndHashCode(exclude = {"id" , "nome"})
 @ToString(of = {"id", "uf", "nome"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
+@RequiredArgsConstructor(access = AccessLevel.PUBLIC)
 public @Data class Estado implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -23,10 +24,12 @@ public @Data class Estado implements Serializable {
     @Column(name = "id")
     private Long id;
 
+    @NonNull
     @NotNull
     @Column(columnDefinition = "char(2)", nullable = false, unique = true)
     private String uf;
 
+    @NonNull
     @NotEmpty(message = "Estado é obrigatória")
     @Column(insertable = true, updatable = true, nullable = false)
     private String nome;

@@ -7,7 +7,9 @@ import br.com.caelum.vraptor.Result;
 import com.pmrodrigues.endereco.models.Estado;
 import com.pmrodrigues.endereco.repositories.EstadoRepository;
 import com.pmrodrigues.persistence.daos.ResultList;
+import org.springframework.http.HttpStatus;
 
+import static br.com.caelum.vraptor.view.Results.http;
 import static br.com.caelum.vraptor.view.Results.json;
 
 /**
@@ -28,10 +30,16 @@ public class EstadoController {
     @Path("/endereco/estado/{nome}.json")
     public ResultList<Estado> buscarEstadosPeloNome(final String nome) {
         ResultList<Estado> estados = repository.listEstadoByNome(nome);
-        result.use(json())
-                .from(estados.todos().getConsulta())
-                .serialize();
 
-        return estados;
+        if (!estados.estaVazio()) {
+            result.use(json())
+                    .from(estados.todos().getConsulta())
+                    .serialize();
+
+            return estados;
+        } else {
+            result.use(http()).setStatusCode(HttpStatus.NO_CONTENT.value());
+            return null;
+        }
     }
 }

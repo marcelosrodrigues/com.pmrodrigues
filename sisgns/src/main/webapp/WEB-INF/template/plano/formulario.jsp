@@ -19,17 +19,12 @@
             <input type="hidden" name="object.id" value="${object.id}"/>
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
-            <input type="hidden" name="object.administradora" id="object.administradora"
-                   value="${object.administradora.id}"/>
-            <bootstrap:textfield label="Administradora" value="${object.administradora.nome}"
-                                 id="object.administradora.nome" errorField="administradora.nome"/>
+            <jsp:include page="/WEB-INF/includes/administradora.jsp"/>
 
             <div class="row">
 
                 <div class="col-lg-6">
-                    <input type="hidden" name="object.operadora" id="object.operadora" value="${object.operadora.id}"/>
-                    <bootstrap:textfield label="Operadora" value="${object.operadora.nome}" id="object.operadora.nome"
-                                         errorField="nome"/>
+                    <jsp:include page="/WEB-INF/includes/operadora.jsp"/>
                 </div>
 
                 <div class="col-lg-6">

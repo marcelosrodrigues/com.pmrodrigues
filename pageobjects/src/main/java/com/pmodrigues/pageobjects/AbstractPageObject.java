@@ -27,12 +27,12 @@ public abstract class AbstractPageObject {
 
     public abstract AbstractPageObject abrir(final String value) throws Exception;
 
-    public AbstractPageObject navigateTo(Class<? extends AbstractPageObject> toPage) throws Exception {
+    public <E extends AbstractPageObject> E navigateTo(Class<? extends AbstractPageObject> toPage) throws Exception {
         final AbstractPageObject page = toPage.getConstructor(WebDriver.class)
                 .newInstance(this.driver);
         page.url(toPage.getAnnotation(URL.class).value());
 
-        return page;
+        return (E) page;
     }
 
     private AbstractPageObject url(final String url) {

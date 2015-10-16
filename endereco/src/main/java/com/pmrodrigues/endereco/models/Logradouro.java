@@ -10,9 +10,10 @@ import java.io.Serializable;
  */
 @Entity
 @Table
-@EqualsAndHashCode()
+@EqualsAndHashCode(of = "cep")
 @ToString(of = {"id", "logradouro", "cep"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
+@RequiredArgsConstructor(access = AccessLevel.PUBLIC)
 public @Data class Logradouro implements Serializable {
 
     @Id
@@ -23,9 +24,11 @@ public @Data class Logradouro implements Serializable {
     @JoinColumn(name = "bairro_id")
     private Bairro bairro;
 
+    @NonNull
     @Column(nullable = false)
     private String logradouro;
 
+    @NonNull
     @Column(nullable = false)
     private String cep;
 

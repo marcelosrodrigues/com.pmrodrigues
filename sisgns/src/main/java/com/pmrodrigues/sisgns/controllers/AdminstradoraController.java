@@ -31,7 +31,6 @@ public class AdminstradoraController extends AbstractCRUDController<Administrado
         this.getResult().use(json())
                 .from(resultList.todos()
                         .getConsulta())
-                .exclude("planos", "comissionamentos")
                 .serialize();
 
         return resultList;

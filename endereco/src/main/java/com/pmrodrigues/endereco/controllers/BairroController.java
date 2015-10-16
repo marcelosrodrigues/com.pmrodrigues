@@ -8,7 +8,9 @@ import com.pmrodrigues.endereco.models.Bairro;
 import com.pmrodrigues.endereco.models.Cidade;
 import com.pmrodrigues.endereco.repositories.BairroRepository;
 import com.pmrodrigues.persistence.daos.ResultList;
+import org.springframework.http.HttpStatus;
 
+import static br.com.caelum.vraptor.view.Results.http;
 import static br.com.caelum.vraptor.view.Results.json;
 
 /**
@@ -29,16 +31,26 @@ public class BairroController {
     @Path("/endereco/bairro/{cidade}/{nome}.json")
     public ResultList<Bairro> buscarBairroDaCidadePeloNome(final Cidade cidade, final String nome) {
 
-        final ResultList<Bairro> resultlist = this.repository.getBairrosDaCidadePeloNome(cidade, nome);
+        if (cidade == null) {
+            result.use(http())
+                    .setStatusCode(HttpStatus.EXPECTATION_FAILED.value());
+            return null;
+        }
 
-        result.use(json())
-                .from(resultlist.todos()
-                        .getConsulta())
-                .excludeAll()
-                .include("id", "nome")
-                .serialize();
+        final ResultList<Bairro> bairros = this.repository.getBairrosDaCidadePeloNome(cidade, nome);
 
-        return resultlist;
+        if (!bairros.estaVazio()) {
+            result.use(json())
+                    .from(bairros.todos()
+                            .getConsulta())
+                    .excludeAll()
+                    .include("id", "nome")
+                    .serialize();
+        } else {
+            result.use(http()).setStatusCode(HttpStatus.NO_CONTENT.value());
+        }
+        return bairros;
+
 
     }
 }

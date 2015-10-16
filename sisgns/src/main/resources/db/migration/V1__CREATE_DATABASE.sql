@@ -28,6 +28,7 @@ CREATE TABLE `bairro` (
   `cidade_id` BIGINT(20)   NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_CIDADE_BAIRRO` (`cidade_id`),
+  INDEX IX_BAIRRO USING BTREE (cidade_id, nome),
   CONSTRAINT `FK_CIDADE_BAIRRO` FOREIGN KEY (`cidade_id`) REFERENCES `cidade` (`id`)
 )
   ENGINE = InnoDB
@@ -138,6 +139,7 @@ CREATE TABLE `cidade` (
   `estado_id` BIGINT(20)   NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_CIDADE_ESTADO` (`estado_id`),
+  INDEX IX_CIDADE USING BTREE (estado_id, nome),
   CONSTRAINT `FK_CIDADE_ESTADO` FOREIGN KEY (`estado_id`) REFERENCES `estado` (`id`)
 )
   ENGINE = InnoDB
@@ -302,6 +304,7 @@ CREATE TABLE `estado` (
   `nome` VARCHAR(255) NOT NULL,
   `uf`   CHAR(2)      NOT NULL,
   PRIMARY KEY (`id`),
+  INDEX IX_ESTADO USING BTREE (nome),
   UNIQUE KEY `UK_UF` (`uf`)
 )
   ENGINE = InnoDB

@@ -47,7 +47,7 @@
     <orderEntry type="module" module-name="xml" />
     <orderEntry type="module" module-name="pessoa" />
     <orderEntry type="module" module-name="endereco" />
-    <orderEntry type="library" name="Maven: com.pmrodrigues:persistence:1.0" level="project" />
+    <orderEntry type="module" module-name="persistence" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
@@ -65,7 +65,7 @@
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.5" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.5.4" level="project" />
     <orderEntry type="library" name="Maven: net.vidageek:mirror:1.6.1" level="project" />
-    <orderEntry type="library" name="Maven: com.pmrodrigues:utilities:1.0" level="project" />
+    <orderEntry type="module" module-name="utilities" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.velocity:velocity:1.7" level="project" />

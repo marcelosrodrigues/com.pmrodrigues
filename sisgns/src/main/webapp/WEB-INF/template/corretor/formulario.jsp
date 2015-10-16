@@ -16,35 +16,11 @@
 
         <form action="<c:url value='/corretor/salvar.do' />" method="post" accept-charset="utf-8" role="form">
 
-            <input type="hidden" name="object.id" value="${object.id}"/>
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
-            <input type="hidden" name="object.administradora" id="object.administradora"
-                   value=""/>
+            <jsp:include page="/WEB-INF/includes/administradora.jsp"/>
 
-            <bootstrap:textfield label="Administradora" value=""
-                                 id="object.administradora.nome" errorField="administradora.nome"/>
-
-            <bootstrap:textfield label="Nome" value="${object.nome}" id="object.nome" errorField="nome"/>
-
-            <bootstrap:textfield label="E-mail" value="${object.email}" id="object.email" errorField="nome"/>
-
-            <bootstrap:password label="Senha" value="" id="object.password" errorField="password"/>
-
-            <div class="form-group">
-                <label class="checkbox-inline">
-                    <c:choose>
-                        <c:when test="${object.bloqueado}">
-                            <input type="checkbox" id="object.bloqueado" name="object.bloqueado" value="true"
-                                   checked="checked"/>
-                        </c:when>
-                        <c:otherwise>
-                            <input type="checkbox" id="object.bloqueado" name="object.bloqueado" value="true"/>
-                        </c:otherwise>
-                    </c:choose>
-                    Bloqueado
-                </label>
-            </div>
+            <jsp:include page="/WEB-INF/includes/usuario.jsp"/>
 
             <bootstrap:salvar label="Salvar"/>
         </form>

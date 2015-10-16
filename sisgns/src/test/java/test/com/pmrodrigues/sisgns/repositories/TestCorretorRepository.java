@@ -104,15 +104,15 @@ public class TestCorretorRepository extends AbstractTransactionalJUnit4SpringCon
     @Test(expected = UniqueException.class)
     public void naoPodeAtualizarOCorretor() {
 
-        long id = jdbcTemplate.queryForObject("select id from usuario where dtype = 'Corretor' and email = ?",
-                Long.class, "teste@teste.com");
+        jdbcTemplate.update("insert into usuario ( DTYPE ,  nome , email , password , bloqueado , tentativas ) values " +
+                "( 'Corretor' , 'teste' , 'teste@teste.com.com' , md5('12345678') , false , 0)");
 
 
-        String email = jdbcTemplate.queryForObject("select email from usuario where dtype = 'Corretor' and id != ? limit 1", String.class, id);
+        long id = jdbcTemplate.queryForObject("select LAST_INSERT_ID()", Long.class);
 
         Corretor corretor = new Corretor();
         corretor.setId(id);
-        corretor.setEmail(email);
+        corretor.setEmail("teste@teste.com");
         corretor.setNome("TESTE");
         corretor.setBloqueado(false);
         corretor.setPassword("12345678");

@@ -100,7 +100,6 @@
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
-            <version>2.2</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -184,7 +183,6 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.27</version>
             <scope>test</scope>
         </dependency>
 
@@ -323,7 +321,6 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-support</artifactId>
-            <version>2.44.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -331,6 +328,13 @@
             <groupId>commons-dbutils</groupId>
             <artifactId>commons-dbutils</artifactId>
             <version>1.6</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jayway.restassured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>2.6.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -444,6 +448,16 @@
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <version>2.6</version>
                 <configuration>
+                    <instrumentation>
+                        <ignores>
+                            <ignore>com.pmrodrigues.sisgns.converters.*</ignore>
+                            <ignore>com.pmrodrigues.sisgns.controllers.IndexController</ignore>
+                        </ignores>
+                        <excludes>
+                            <exclude>com/pmrodrigues/sisgns/converters/*.class</exclude>
+                            <exclude>com/pmrodrigues/sisgns/controllers/IndexController.class</exclude>
+                        </excludes>
+                    </instrumentation>
                     <check>
                         <lineRate>85</lineRate>
                         <haltOnFailure>false</haltOnFailure>
@@ -470,6 +484,39 @@
             </plugin>
         </plugins>
 
+        <pluginManagement>
+            <plugins>
+                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>org.flywaydb</groupId>
+                                        <artifactId>
+                                            flyway-maven-plugin
+                                        </artifactId>
+                                        <versionRange>
+                                            [3.1,)
+                                        </versionRange>
+                                        <goals>
+                                            <goal>migrate</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore></ignore>
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
 </project>

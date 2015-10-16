@@ -30,6 +30,10 @@ public class ResultList<E> {
         calculaQuantidadeDePaginas(TAMANHO_DEFAULT_PAGINA);
     }
 
+    public boolean estaVazio() {
+        return recordCount == 0L;
+    }
+
     private void calculaQuantidadeDePaginas(final long quantidadeMaximaRegistros) {
         if (quantidadeMaximaRegistros > 0) {
             this.pageCount = recordCount / quantidadeMaximaRegistros;
