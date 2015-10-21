@@ -20,7 +20,7 @@ import java.io.Serializable;
 @XmlType(name = "CedenteType"
         , namespace = "http://data.pmrodrigues.biz/boleto/emissor/1.0")
 @XmlAccessorType(XmlAccessType.FIELD)
-@EqualsAndHashCode(exclude = {"nome", "convenio"})
+@EqualsAndHashCode(of = {"id", "numeroDocumento"})
 @ToString()
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 @RequiredArgsConstructor(staticName = "novoCedente", access = AccessLevel.PUBLIC)

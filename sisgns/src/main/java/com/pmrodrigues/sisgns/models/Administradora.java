@@ -16,7 +16,7 @@ import java.util.List;
  */
 @Entity
 @Table
-@EqualsAndHashCode(callSuper = true, exclude = {"planos", "nome"})
+@EqualsAndHashCode(callSuper = true, exclude = {"planos", "nome", "residenciais", "celulares"})
 @ToString(callSuper = true, exclude = {"planos", "comissionamento"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class Administradora extends Cedente {
@@ -32,6 +32,7 @@ public class Administradora extends Cedente {
     private List<Telefone> residenciais = new ArrayList<>();
 
 
+    @Setter
     @Getter
     @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinTable(name = "telefone_administrador",

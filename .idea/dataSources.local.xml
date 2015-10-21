@@ -2,7 +2,8 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="MySQL - sisgns@localhost" uuid="9c07c10b-6827-4160-a93f-2baf7522b42d">
-      <user-name>root</user-name>
+      <secret-storage>master_key</secret-storage>
+      <user-name>sisgns</user-name>
     </data-source>
   </component>
 </project>
