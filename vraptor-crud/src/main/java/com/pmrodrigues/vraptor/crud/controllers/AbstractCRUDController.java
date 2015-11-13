@@ -148,4 +148,6 @@ public abstract class AbstractCRUDController<E> { //NOPMD
         result.include(Constante.SUCESSO, format("%s excluído com sucesso", persistentClass.getSimpleName()));
         result.forwardTo(this.getClass()).index();
     }
+
+
 }

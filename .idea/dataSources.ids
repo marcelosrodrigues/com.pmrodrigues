@@ -5083,6 +5083,15 @@
       <index name="UK_UF" unique="true" columns="uf"/>
       <index name="IX_ESTADO" unique="false" columns="nome"/>
     </table>
+    <table name="faixa_etaria" schema="" catalog="sisgns" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="inicio" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="termino" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="descricao" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_faixa_etaria_preco" table="preco_plano_saude" schema="" catalog="sisgns" columns="faixa_etaria_id"/>
+      <index name="uk_faixa_etaria" unique="true" columns="inicio,termino"/>
+    </table>
     <table name="instrucao" schema="" catalog="sisgns" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="instrucao" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
@@ -5178,8 +5187,21 @@
       <foreign-key name="fk_plano_operadora" columns="operadora_id" ref-table="operadora" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="fk_plano_comissionamento" table="comissionamento" schema="" catalog="sisgns" columns="plano_id"/>
       <exported-key name="fk_contrato_plano" table="contrato" schema="" catalog="sisgns" columns="plano_id"/>
+      <exported-key name="fk_plano_precos" table="preco_plano_saude" schema="" catalog="sisgns" columns="plano_id"/>
       <index name="fk_plano_administradora_idx" unique="false" columns="administradora_id"/>
       <index name="fk_plano_operadora" unique="false" columns="operadora_id"/>
+    </table>
+    <table name="preco_plano_saude" schema="" catalog="sisgns" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="plano_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="faixa_etaria_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="preco" sqlType="DECIMAL" precision="15" scale="9" nullable="false" jdbcType="3"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_faixa_etaria_preco" columns="faixa_etaria_id" ref-table="faixa_etaria" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_plano_precos" columns="plano_id" ref-table="plano" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="uk_preco_plano_saude" unique="true" columns="plano_id,faixa_etaria_id"/>
+      <index name="fk_faixa_etaria_preco" unique="false" columns="faixa_etaria_id"/>
+      <index name="fk_plano_precos" unique="false" columns="plano_id"/>
     </table>
     <table name="schema_version" schema="" catalog="sisgns" type="TABLE">
       <column name="version_rank" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>

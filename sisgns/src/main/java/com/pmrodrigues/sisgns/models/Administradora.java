@@ -22,7 +22,6 @@ import java.util.List;
 public class Administradora extends Cedente {
 
     @Getter
-    @Setter
     @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinTable(name = "telefone_administrador",
             joinColumns = {@JoinColumn(name = "administradora_id")},
@@ -31,8 +30,6 @@ public class Administradora extends Cedente {
     @NotEmpty(message = "Deve existir pelo menos um telefone cadastrado para a Administradora")
     private List<Telefone> residenciais = new ArrayList<>();
 
-
-    @Setter
     @Getter
     @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinTable(name = "telefone_administrador",
@@ -47,4 +44,13 @@ public class Administradora extends Cedente {
         }
     }
 
+    public void setResidenciais(final List<Telefone> telefones) {
+        this.residenciais.clear();
+        this.residenciais.addAll(telefones);
+    }
+
+    public void setCelulares(final List<Celular> telefones) {
+        this.celulares.clear();
+        this.celulares.addAll(telefones);
+    }
 }

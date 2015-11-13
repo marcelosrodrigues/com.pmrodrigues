@@ -32,6 +32,64 @@
                 </div>
 
             </div>
+
+            <hr/>
+            <h4>Preços</h4>
+
+            <div id="precos">
+                <table class="table table-striped table-bordered table-hover">
+                    <tbody>
+
+                    <c:choose>
+                        <c:when test="${object.id == null or object.id == 0}">
+                            <c:forEach items="${faixa_etaria.consulta}" var="faixa" varStatus="loop">
+                                <tr>
+                                    <td width="75%">
+                                            ${faixa.descricao}
+                                        <input type="hidden" name="object.precos[${loop.index}].faixaEtaria"
+                                               id="object.precos[${loop.index}].faixaEtaria"
+                                               value="${faixa.id}"/>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" name="object.precos[${loop.index}].valor"
+                                                   id="object.precos[${loop.index}].valor" class="form-control"
+                                                   pattern="###.##"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                        </c:when>
+                        <c:otherwise>
+                            <c:forEach items="${object.precos}" var="preco" varStatus="loop">
+                                <tr>
+                                    <td width="75%">
+                                            ${preco.faixaEtaria.descricao}
+                                        <input type="hidden" name="object.precos[${loop.index}].id"
+                                               id="object.precos[${loop.index}].id"
+                                               value="${preco.id}"/>
+                                        <input type="hidden" name="object.precos[${loop.index}].faixaEtaria"
+                                               id="object.precos[${loop.index}].faixaEtaria"
+                                               value="${preco.faixaEtaria.id}"/>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <fmt:formatNumber value="${preco.valor}" pattern="###.##" var="valor"
+                                                              maxFractionDigits="2" minFractionDigits="2"/>
+                                            <input type="text" name="object.precos[${loop.index}].valor"
+                                                   id="object.precos[${loop.index}].valor"
+                                                   value="${valor}" class="form-control" pattern="###,##"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                        </c:otherwise>
+                    </c:choose>
+
+                    </tbody>
+                </table>
+            </div>
+
             <hr/>
             <h4>Regras de comissionamento</h4>
 

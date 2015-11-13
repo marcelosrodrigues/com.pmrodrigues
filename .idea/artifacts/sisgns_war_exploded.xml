@@ -42,7 +42,7 @@
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.16" />
           <element id="library" level="project" name="Maven: br.com.caelum.stella:caelum-stella-bean-validation:2.0.4" />
           <element id="library" level="project" name="Maven: br.com.caelum.stella:caelum-stella-core:2.0.4" />
-          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.0.0.GA" />
           <element id="library" level="project" name="Maven: net.vidageek:mirror:1.6.1" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:4.3.1.Final" />
           <element id="archive" name="utilities-1.1.jar">

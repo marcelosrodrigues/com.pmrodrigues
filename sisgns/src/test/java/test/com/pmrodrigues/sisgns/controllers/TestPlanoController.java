@@ -1,13 +1,14 @@
 package test.com.pmrodrigues.sisgns.controllers;
 
-import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.Validator;
 import br.com.caelum.vraptor.util.test.MockResult;
 import br.com.caelum.vraptor.util.test.MockValidator;
+import com.pmrodrigues.sisgns.Constante;
 import com.pmrodrigues.sisgns.controllers.PlanoController;
 import com.pmrodrigues.sisgns.models.Administradora;
 import com.pmrodrigues.sisgns.models.Operadora;
 import com.pmrodrigues.sisgns.models.Plano;
+import com.pmrodrigues.sisgns.repositories.FaixaEtariaRepository;
 import com.pmrodrigues.sisgns.repositories.PlanoRepository;
 import org.hibernate.SessionFactory;
 import org.junit.Before;
@@ -17,6 +18,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * Created by Marceloo on 08/10/2015.
@@ -28,9 +30,12 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
     private PlanoRepository repository;
 
     @Autowired
+    private FaixaEtariaRepository faixaEtariaRepository;
+
+    @Autowired
     private SessionFactory sessionFactory;
 
-    private Result result = new MockResult();
+    private MockResult result = new MockResult();
 
     private Validator validator = new MockValidator();
 
@@ -85,7 +90,7 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
         administradora.setId(this.cedenteId);
         plano.setAdministradora(administradora);
 
-        PlanoController controller = new PlanoController(this.repository, result, validator);
+        PlanoController controller = new PlanoController(this.repository, this.faixaEtariaRepository, result, validator);
         controller.doUpdate(plano);
 
         sessionFactory.getCurrentSession().flush();
@@ -94,4 +99,15 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
         assertEquals(0L, count);
 
     }
+
+    @Test
+    public void deveAdicionarFaixasEtariasNoResult() throws Exception {
+        PlanoController controller = new PlanoController(this.repository, this.faixaEtariaRepository, result, validator);
+        controller.doBefore();
+
+        assertNotNull(result.included(Constante.FAIXA_ETARIA));
+    }
+
+
+
 }

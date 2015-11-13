@@ -21,5 +21,5 @@ public class Corretor extends Usuario {
             joinColumns = {@JoinColumn(name = "corretor_id")},
             inverseJoinColumns = {@JoinColumn(name = "administradora_id")},
             uniqueConstraints = {@UniqueConstraint(columnNames = {"corretor_id", "administradora_id"})})
-    private Administradora adminstradora;
+    private Administradora administradora;
 }

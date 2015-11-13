@@ -6,6 +6,18 @@ $('[id*="ddd"]').mask("999");
 $('[id*="residencial.numero"]').mask("9999-9999");
 $('[id*="celular.numero"]').mask("99999-9999");
 
+function permitApenasDinheiro(e) {
+    if (e.which > 47 && e.which < 58) {
+        return true;
+    } else if (String.fromCharCode(e.which) == "," && $(this).val().indexOf(",") < 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+$('[id*=precos]').on('keypress', permitApenasDinheiro);
+
 $('[id="adicionar-regra"]').click(function () {
 
     if ($('[id*="comissionamento.nome"]').val() != null && $('[id*="comissionamento.percentual"]').val() != null && $('[id*="comissionamento.ordem"]').val() != null) {
@@ -34,7 +46,7 @@ $('[id="adicionar-telefone"]').click(function () {
 
     if ($('[id*="residencial.ddd"]').val() != "" && $('[id*="residencial.numero"]').val() != null) {
 
-        var telefone = $('[id*="residencial.ddd"]').val() + ") " + $('[id*="residencial.numero"]').val();
+        var telefone = "(" + $('[id*="residencial.ddd"]').val() + ") " + $('[id*="residencial.numero"]').val();
 
         $("ul#telefones").append("<li class=\"list-group-item\">" + telefone
             + "<input type=\"hidden\" name=\"object.residenciais[" + $("ul#telefones > li").length + "].id\" value=\"\" />"
