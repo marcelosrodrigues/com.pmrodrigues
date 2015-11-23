@@ -1,6 +1,7 @@
 package com.pmrodrigues.sisgns.repositories;
 
 import com.pmrodrigues.persistence.daos.Repository;
+import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.sisgns.models.Corretor;
 
 /**
@@ -8,4 +9,5 @@ import com.pmrodrigues.sisgns.models.Corretor;
  */
 public interface CorretorRepository extends Repository<Corretor> {
 
+    ResultList<Corretor> buscarCorretorPorNome(final String nome);
 }

@@ -4936,6 +4936,19 @@
       <column name="cd_cidade" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="ds_bairro_nome" sqlType="VARCHAR" precision="4000" scale="0" nullable="true" jdbcType="12"/>
     </table>
+    <table name="beneficiario" schema="" catalog="sisgns" type="TABLE">
+      <column name="contrato_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="nome" sqlType="VARCHAR" precision="250" scale="0" nullable="false" jdbcType="12"/>
+      <column name="dataNascimento" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="pai_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_contrato_beneficiario" columns="contrato_id" ref-table="contrato" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_dependentes_pai" columns="pai_id" ref-table="beneficiario" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="fk_dependentes_pai" table="beneficiario" schema="" catalog="sisgns" columns="pai_id"/>
+      <index name="fk_contrato_beneficiario" unique="false" columns="contrato_id"/>
+      <index name="fk_dependentes_pai" unique="false" columns="pai_id"/>
+    </table>
     <table name="boleto" schema="" catalog="sisgns" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="digito_agencia" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
@@ -4959,8 +4972,8 @@
       <column name="sacado_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="contrato_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="fk_boleto_contrato" columns="contrato_id" ref-table="contrato" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_boleto_cedente" columns="cedente_id" ref-table="cedente" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_boleto_contrato" columns="contrato_id" ref-table="contrato" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_boleto_sacado" columns="sacado_id" ref-table="pessoa" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="fk_comissao_boleto" table="comissao" schema="" catalog="sisgns" columns="boleto_id"/>
       <exported-key name="fk_instrucao_boleto" table="instrucao" schema="" catalog="sisgns" columns="boleto_id"/>
@@ -4980,7 +4993,7 @@
       <exported-key name="fk_boleto_cedente" table="boleto" schema="" catalog="sisgns" columns="cedente_id"/>
       <exported-key name="fk_contrato_administradora" table="contrato" schema="" catalog="sisgns" columns="administradora_id"/>
       <exported-key name="fk_corretor_administradora" table="corretores_administradora" schema="" catalog="sisgns" columns="administradora_id"/>
-      <exported-key name="fk_cliente_administradora" table="pessoa" schema="" catalog="sisgns" columns="administradora_id"/>
+      <exported-key name="FK_ADMINISTRADORA_OPERADORA" table="operadora" schema="" catalog="sisgns" columns="administradora_id"/>
       <exported-key name="fk_plano_administradora" table="plano" schema="" catalog="sisgns" columns="administradora_id"/>
       <exported-key name="fk_telefone_administradora" table="telefone_administrador" schema="" catalog="sisgns" columns="administradora_id"/>
       <index name="uk_numerodocumento" unique="true" columns="numeroDocumento"/>
@@ -5007,8 +5020,8 @@
       <column name="boleto_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="regra_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="fk_comissao_regra_comissionamento" columns="regra_id" ref-table="comissionamento" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_comissao_boleto" columns="boleto_id" ref-table="boleto" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_comissao_regra_comissionamento" columns="regra_id" ref-table="comissionamento" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="uk_comissao" unique="true" columns="boleto_id,regra_id"/>
       <index name="fk_comissao_regra_comissionamento" unique="false" columns="regra_id"/>
     </table>
@@ -5038,6 +5051,7 @@
       <foreign-key name="fk_contrato_cliente" columns="cliente_id" ref-table="pessoa" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_contrato_corretor" columns="corretor_id" ref-table="usuario" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_contrato_plano" columns="plano_id" ref-table="plano" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="fk_contrato_beneficiario" table="beneficiario" schema="" catalog="sisgns" columns="contrato_id"/>
       <exported-key name="fk_boleto_contrato" table="boleto" schema="" catalog="sisgns" columns="contrato_id"/>
       <index name="uk_contrato" unique="true" columns="administradora_id,dataInicio,numeroContrato,dataTermino"/>
       <index name="fk_contrato_cliente" unique="false" columns="cliente_id"/>
@@ -5048,8 +5062,8 @@
       <column name="corretor_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="administradora_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="corretor_id,administradora_id"/>
-      <foreign-key name="fk_corretor_administradora" columns="administradora_id" ref-table="cedente" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_administradora_corretora" columns="corretor_id" ref-table="usuario" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_corretor_administradora" columns="administradora_id" ref-table="cedente" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="fk_administradora_corretora" unique="false" columns="corretor_id"/>
       <index name="fk_corretor_administradora" unique="false" columns="administradora_id"/>
     </table>
@@ -5063,8 +5077,8 @@
       <column name="bairro_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="estado_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_ENDERECO_cidade" columns="cidade_id" ref-table="cidade" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_ENDERECO_bairro" columns="bairro_id" ref-table="bairro" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_ENDERECO_cidade" columns="cidade_id" ref-table="cidade" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_ENDERECO_estado" columns="estado_id" ref-table="estado" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="fk_endereco_cedente" table="cedente" schema="" catalog="sisgns" columns="endereco_id"/>
       <exported-key name="fk_endereco_pessoa" table="pessoa" schema="" catalog="sisgns" columns="endereco_id"/>
@@ -5120,16 +5134,34 @@
     <table name="membros" schema="" catalog="sisgns" type="TABLE">
       <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="perfil_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <foreign-key name="fk_usuario_membros" columns="usuario_id" ref-table="usuario" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_perfil_membros" columns="perfil_id" ref-table="perfil" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_usuario_membros" columns="usuario_id" ref-table="usuario" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="uk_membro" unique="true" columns="usuario_id,perfil_id"/>
       <index name="fk_perfil_membros" unique="false" columns="perfil_id"/>
+    </table>
+    <table name="modalidade" schema="" catalog="sisgns" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="codigo" sqlType="CHAR" precision="4" scale="0" nullable="false" jdbcType="1"/>
+      <column name="nome" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_MODALIDADE_OPERADORA" table="operadora" schema="" catalog="sisgns" columns="modalidade_id"/>
     </table>
     <table name="operadora" schema="" catalog="sisgns" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="nome" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="modalidade_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="codigo" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="qualicorp" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <column name="usaPrimeiraParcela" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <column name="excluido" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <column name="quantidadeParcelas" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="administradora_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_ADMINISTRADORA_OPERADORA" columns="administradora_id" ref-table="cedente" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_MODALIDADE_OPERADORA" columns="modalidade_id" ref-table="modalidade" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="fk_plano_operadora" table="plano" schema="" catalog="sisgns" columns="operadora_id"/>
+      <index name="FK_ADMINISTRADORA_OPERADORA" unique="false" columns="administradora_id"/>
+      <index name="FK_MODALIDADE_OPERADORA" unique="false" columns="modalidade_id"/>
     </table>
     <table name="perfil" schema="" catalog="sisgns" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
@@ -5143,9 +5175,7 @@
       <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="nome" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="endereco_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="administradora_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="fk_cliente_administradora" columns="administradora_id" ref-table="cedente" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_endereco_pessoa" columns="endereco_id" ref-table="endereco" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_PESSOA_ENDERECO" columns="endereco_id" ref-table="endereco" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="fk_boleto_sacado" table="boleto" schema="" catalog="sisgns" columns="sacado_id"/>
@@ -5154,7 +5184,6 @@
       <exported-key name="fk_pessoa_pessoajuridica" table="pessoajuridica" schema="" catalog="sisgns" columns="id"/>
       <exported-key name="fk_telefone_pessoa" table="telefone_pessoa" schema="" catalog="sisgns" columns="pessoa_id"/>
       <index name="uk_email_pessoa" unique="true" columns="email"/>
-      <index name="fk_cliente_administradora_idx" unique="false" columns="administradora_id"/>
       <index name="FK_PESSOA_ENDERECO" unique="false" columns="endereco_id"/>
     </table>
     <table name="pessoafisica" schema="" catalog="sisgns" type="TABLE">
@@ -5171,8 +5200,7 @@
     </table>
     <table name="pessoajuridica" schema="" catalog="sisgns" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="cnpj" sqlType="VARCHAR" precision="17" scale="0" nullable="false" jdbcType="12"/>
-      <column name="endereco_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cnpj" sqlType="VARCHAR" precision="18" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="fk_pessoa_pessoajuridica" columns="id" ref-table="pessoa" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="UK_CNPJ" unique="true" columns="cnpj"/>
@@ -5233,16 +5261,16 @@
       <column name="administradora_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="telefone_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="administradora_id,telefone_id"/>
-      <foreign-key name="fk_telefone_administradora" columns="administradora_id" ref-table="cedente" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_administradora_telefone" columns="telefone_id" ref-table="telefone" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_telefone_administradora" columns="administradora_id" ref-table="cedente" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="fk_administradora_telefone" unique="false" columns="telefone_id"/>
     </table>
     <table name="telefone_pessoa" schema="" catalog="sisgns" type="TABLE">
       <column name="pessoa_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="telefone_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="pessoa_id,telefone_id"/>
-      <foreign-key name="fk_telefone_pessoa" columns="pessoa_id" ref-table="pessoa" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_pessoa_telefone" columns="telefone_id" ref-table="telefone" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_telefone_pessoa" columns="pessoa_id" ref-table="pessoa" ref-schema="" ref-catalog="sisgns" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="fk_pessoa_telefone" unique="false" columns="telefone_id"/>
     </table>
     <table name="uf" schema="" catalog="sisgns" type="TABLE">

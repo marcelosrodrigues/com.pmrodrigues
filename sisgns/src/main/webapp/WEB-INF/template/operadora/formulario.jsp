@@ -5,26 +5,28 @@
 <%@ taglib prefix="bootstrap" uri="http://com.pmrodrigues.biz/taglib/bootstrap" %>
 
 
-<bootstrap:summary text="Não foi possível salvar a operadora de planos de saúde"/>
-<div class="panel panel-default">
+<bootstrap:summary text="Não foi possível salvar a Operadora"/>
+<form action="<c:url value='/operadora/salvar.do' />" method="post" accept-charset="utf-8" role="form">
 
-    <div class="panel-heading">
-        Operadora de planos de saúde
-    </div>
+    <div class="panel panel-default">
 
-    <div class="panel-body">
+        <div class="panel-heading">
+            Operadora
+        </div>
 
-        <form action="<c:url value='/operadora/salvar.do' />" method="post" accept-charset="utf-8" role="form">
+        <div class="panel-body">
 
             <input type="hidden" name="object.id" value="${object.id}"/>
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
-            <bootstrap:textfield label="Nome" value="${object.nome}" id="object.nome" errorField="nome"/>
+            <jsp:include page="_form.jsp"/>
 
+            <div style="float:right">
+                <bootstrap:salvar label="Salvar"/>
+            </div>
 
-            <bootstrap:salvar label="Salvar"/>
-        </form>
+        </div>
 
     </div>
 
-</div>
+</form>

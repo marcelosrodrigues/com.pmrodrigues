@@ -39,9 +39,8 @@
             <td>${object.nome}</td>
             <td>${object.email}</td>
             <td align="center">
-                <button type="button" class="btn btn-danger btn-circle">
-                    <i class="fa fa-times"></i>
-                </button>
+                <bootstrap:delete action="/corretor/excluir.do" fieldName="object" value="${object.id}"
+                                  message="Confirma a exclusão do corretor ${object.nome}"/>
             </td>
         </tr>
     </c:forEach>

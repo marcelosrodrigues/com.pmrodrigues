@@ -3,6 +3,7 @@ package test.com.pmrodrigues.sisgns.controllers;
 import br.com.caelum.vraptor.Validator;
 import br.com.caelum.vraptor.util.test.MockResult;
 import br.com.caelum.vraptor.util.test.MockValidator;
+import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.sisgns.Constante;
 import com.pmrodrigues.sisgns.controllers.PlanoController;
 import com.pmrodrigues.sisgns.models.Administradora;
@@ -16,6 +17,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import test.com.pmrodrigues.sisgns.utilities.GeradorCNPJCPF;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -49,7 +51,7 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
 
         limparBaseDeDados();
 
-        jdbcTemplate.update("insert into operadora (nome) values ( 'UNIMED') ");
+        jdbcTemplate.update("insert into operadora (nome) values ( 'TESTE') ");
         this.operadoraId = jdbcTemplate.queryForObject("select LAST_INSERT_ID()", Long.class);
 
         jdbcTemplate.update("insert into endereco (complemento,numero,logradouro , cep , cidade_id , bairro_id , estado_id ) " +
@@ -57,8 +59,8 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
 
         this.enderecoId = jdbcTemplate.queryForObject("select LAST_INSERT_ID()", Long.class);
 
-        jdbcTemplate.update("insert into cedente (DTYPE , convenio, nome, numeroDocumento , endereco_id) values ( 'Administradora' , '1' , 'TESTE' , '04.769.697/0001-10' , ?)",
-                enderecoId);
+        jdbcTemplate.update("insert into cedente (DTYPE , convenio, nome, numeroDocumento , endereco_id) values ( 'Administradora' , '1' , 'TESTE' , ? , ?)",
+                GeradorCNPJCPF.cnpj(), enderecoId);
         this.cedenteId = jdbcTemplate.queryForObject("select LAST_INSERT_ID()", Long.class);
 
         jdbcTemplate.update("insert into plano (nome, operadora_id, administradora_id) values ( 'plano_1' , ? , ? ) ",
@@ -71,10 +73,11 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
     }
 
     private void limparBaseDeDados() {
-        jdbcTemplate.update("delete from comissionamento where plano_id in ( select id from plano where operadora_id in ( select id from operadora where nome like 'UNIMED%'))");
-        jdbcTemplate.update("delete from plano where operadora_id in ( select id from operadora where nome like 'UNIMED%')");
-        jdbcTemplate.update("delete from operadora where nome like 'UNIMED%'");
-        jdbcTemplate.update("insert into operadora (nome) VALUES  ('UNIMED')");
+        jdbcTemplate.update("delete from comissionamento where plano_id in ( select id from plano where operadora_id in ( select id from operadora where nome like 'TESTE%'))");
+        jdbcTemplate.update("delete from cedente where endereco_id = ?", enderecoId);
+        jdbcTemplate.update("delete from plano where operadora_id in ( select id from operadora where nome like 'TESTE%')");
+        jdbcTemplate.update("delete from operadora where nome like 'TESTE%'");
+
     }
 
     @Test
@@ -108,6 +111,15 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
         assertNotNull(result.included(Constante.FAIXA_ETARIA));
     }
 
+    @Test
+    public void deveBuscarPlano() {
+        PlanoController controller = new PlanoController(this.repository, this.faixaEtariaRepository, result, validator);
+        Operadora operadora = new Operadora();
+        operadora.setId(this.operadoraId);
+        final ResultList<Plano> resultList = controller.buscarPlanoPeloNome(operadora, "plano");
 
 
+        assertNotNull(resultList);
+
+    }
 }

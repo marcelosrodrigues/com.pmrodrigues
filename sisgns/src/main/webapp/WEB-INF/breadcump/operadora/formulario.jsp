@@ -2,5 +2,5 @@
          pageEncoding="ISO-8859-1" %>
 <ol class='breadcrumb'>
     <li><i class='fa fa-edit fa-fw'></i> Administração</li>
-    <li class='active'>Operadora de planos de saúde</li>
+    <li class='active'>Operadora</li>
 </ol>

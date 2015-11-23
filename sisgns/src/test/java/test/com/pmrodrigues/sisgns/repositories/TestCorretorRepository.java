@@ -1,5 +1,6 @@
 package test.com.pmrodrigues.sisgns.repositories;
 
+import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.sisgns.models.Corretor;
 import com.pmrodrigues.sisgns.repositories.CorretorRepository;
 import com.pmrodrigues.vraptor.crud.exceptions.UniqueException;
@@ -11,6 +12,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * Created by Marceloo on 09/10/2015.
@@ -119,5 +121,16 @@ public class TestCorretorRepository extends AbstractTransactionalJUnit4SpringCon
 
         repository.set(corretor);
 
+    }
+
+    @Test
+    public void devePesquisarCorretorPeloNome() {
+
+        ResultList<Corretor> corretores = repository.buscarCorretorPorNome("teste");
+
+        long count = jdbcTemplate.queryForObject("select count(1) from usuario where DTYPE = 'Corretor' and nome like 'teste%'", Long.class);
+
+        assertNotNull(corretores);
+        assertEquals(count, corretores.getQuantidadeRegistros());
     }
 }

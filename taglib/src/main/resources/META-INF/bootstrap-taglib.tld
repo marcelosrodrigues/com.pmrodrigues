@@ -106,48 +106,6 @@
     </tag>
 
     <tag>
-        <name>delete</name>
-        <tag-class>com.pmrodrigues.taglib.DeleteButtonTagLib</tag-class>
-        <body-content>empty</body-content>
-
-        <attribute>
-            <name>isInList</name>
-            <required>false</required>
-            <rtexprvalue>true</rtexprvalue>
-            <type>java.lang.Boolean</type>
-        </attribute>
-
-        <attribute>
-            <name>action</name>
-            <required>false</required>
-            <rtexprvalue>true</rtexprvalue>
-            <type>java.lang.String</type>
-        </attribute>
-
-        <attribute>
-            <name>label</name>
-            <required>false</required>
-            <rtexprvalue>true</rtexprvalue>
-            <type>java.lang.String</type>
-        </attribute>
-
-        <attribute>
-            <name>title</name>
-            <required>false</required>
-            <rtexprvalue>true</rtexprvalue>
-            <type>java.lang.String</type>
-        </attribute>
-
-        <attribute>
-            <name>message</name>
-            <required>false</required>
-            <rtexprvalue>true</rtexprvalue>
-            <type>java.lang.String</type>
-        </attribute>
-
-    </tag>
-
-    <tag>
         <name>number</name>
         <tag-class>com.pmrodrigues.taglib.InputNumberTag</tag-class>
         <body-content>empty</body-content>
@@ -639,6 +597,91 @@
         <attribute>
             <name>action</name>
             <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>adicionar</name>
+        <tag-class>com.pmrodrigues.taglib.AdicionarButtonTaglLib</tag-class>
+        <body-content>empty</body-content>
+
+        <attribute>
+            <name>label</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <name>action</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>excluir</name>
+        <tag-class>com.pmrodrigues.taglib.RemoverButtonTaglLib</tag-class>
+        <body-content>empty</body-content>
+
+        <attribute>
+            <name>label</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <name>action</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>delete</name>
+        <tag-class>com.pmrodrigues.taglib.DeleteButtonTag</tag-class>
+        <body-content>empty</body-content>
+
+        <attribute>
+            <name>action</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <name>fieldName</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.Object</type>
+        </attribute>
+
+        <attribute>
+            <name>message</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>new</name>
+        <tag-class>com.pmrodrigues.taglib.NovoButtonTagLib</tag-class>
+        <body-content>empty</body-content>
+
+        <attribute>
+            <name>url</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <name>label</name>
+            <required>true</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>

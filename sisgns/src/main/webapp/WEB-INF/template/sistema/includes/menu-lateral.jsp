@@ -26,14 +26,9 @@
                 <li>
                     <a href="#"><i class="fa fa-dollar fa-fw"></i> Financeiro<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-
-                            <li>
-                                <a href="<c:url value='/boleto/index.do' />">Boletos</a>
-                            </li>
-                            <li>
-                                <a href="<c:url value='/boletos/upload.do' />">Carregar arquivo de boletos</a>
-                            </li>
-
+                        <li>
+                            <a href="<c:url value='/contrato/index.do' />">Contratos</a>
+                        </li>
                     </ul>
                 </li>
 
@@ -42,7 +37,7 @@
                 <ul class="nav nav-second-level">
 
                     <li>
-                        <a href="<c:url value='/plano/index.do' />">Planos de saúde</a>
+                        <a href="<c:url value='/plano/index.do' />">Convênios</a>
                     </li>
 
                     <li>
@@ -61,11 +56,11 @@
                     <ul class="nav nav-second-level">
 
                         <li>
-                            <a href="<c:url value='/administradora/index.do' />">Administradoras de plano de saúde</a>
+                            <a href="<c:url value='/administradora/index.do' />">Administradoras</a>
                         </li>
 
                         <li>
-                            <a href="<c:url value='/operadora/index.do' />">Operadoras de plano de saúde</a>
+                            <a href="<c:url value='/operadora/index.do' />">Operadoras</a>
                         </li>
 
 

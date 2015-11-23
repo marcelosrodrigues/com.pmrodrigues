@@ -7,4 +7,4 @@
 <input type="hidden" name="object.administradora" id="object.administradora"
        value="${object.administradora.id}"/>
 <bootstrap:textfield label="Administradora" value="${object.administradora.nome}"
-                     id="object.administradora.nome" errorField="administradora.nome"/>
+                     id="object.administradora.nome" errorField="object.administradora"/>

@@ -45,21 +45,22 @@ public abstract class AbstractCRUDController<E> { //NOPMD
     @Post
     public void salvar(final E object) {
 
-        validator.validate(object);
+        this.validate(object);
+
         final Long idValue = crudutils.getId(object);
-        validator.onErrorForwardTo(this.getClass()).formulario();
 
         logging.debug(format("iniciando a operação de inclusão de %s", object));
 
         try {
             if (idValue == null || idValue == 0L) {
-
+                validator.onErrorRedirectTo(this.getClass()).formulario();
                 if (!crudutils.doInsert(object)) {
                     repository.add(object);
                 }
                 crudutils.postExecute(object);
                 result.include(Constante.SUCESSO, format("%s adicionada com sucesso", persistentClass.getSimpleName()));
             } else {
+                validator.onErrorRedirectTo(this.getClass()).show(idValue);
                 if (!crudutils.doUpdate(object)) {
                     repository.set(object);
                 }
@@ -71,6 +72,10 @@ public abstract class AbstractCRUDController<E> { //NOPMD
             validator.add(new ValidationMessage(ex.getMessage(), ex.getMessage()));
             validator.onErrorForwardTo(this.getClass()).formulario();
         }
+    }
+
+    protected void validate(final E object) {
+        validator.validate(object);
     }
 
     @Get
@@ -145,7 +150,7 @@ public abstract class AbstractCRUDController<E> { //NOPMD
         repository.remove(object);
 
         logging.debug(format("%s excluido com sucesso", object));
-        result.include(Constante.SUCESSO, format("%s excluído com sucesso", persistentClass.getSimpleName()));
+        result.include(Constante.SUCESSO, format("%s excluido com sucesso", persistentClass.getSimpleName()));
         result.forwardTo(this.getClass()).index();
     }
 

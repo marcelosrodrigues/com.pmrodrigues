@@ -164,4 +164,7 @@
       <module name="xml" target="1.7" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="GENERATE_NO_WARNINGS" value="true" />
+  </component>
 </project>

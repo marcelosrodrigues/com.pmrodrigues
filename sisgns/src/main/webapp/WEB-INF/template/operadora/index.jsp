@@ -5,24 +5,25 @@
 <%@ taglib prefix="bootstrap" uri="http://com.pmrodrigues.biz/taglib/bootstrap" %>
 
 <bootstrap:summary text="${sucesso}"/>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form action="<c:url value="/operadora/pesquisar.do" />" method="get" role="form">
 
-<form action="<c:url value="/operadora/pesquisar.do" />" method="get" role="form">
-    <div class="row">
-        <div class="col-lg-5">
-            <bootstrap:textfield label="Nome" value="${object.nome}" id="object.nome" errorField="object.nome"/>
-        </div>
+            <jsp:include page="_form.jsp"/>
 
-        <div class="col-lg-2" style="margin-top: 25px;">
-            <bootstrap:pesquisar/>
-        </div>
+            <div style="float:right">
+                <bootstrap:pesquisar/>
+                <bootstrap:new url="/operadora/novo.do" label="Novo"/>
+            </div>
+        </form>
     </div>
-</form>
-
+</div>
 <table class="table table-striped table-bordered table-hover">
     <thead>
     <tr>
         <th style="width:10%">#</th>
         <th>Nome</th>
+        <th>Modalidade</th>
         <th style="width:5%"></th>
     </tr>
     </thead>
@@ -30,20 +31,14 @@
     <c:forEach items="${resultlist.consulta}" var="object">
         <tr>
             <td><a href='<c:url value="/operadora/${object.id}/abrir.do" />'>${object.id}</a></td>
-            <td>${object.nome}</td>
+            <td>${object.codigo} - ${object.nome}</td>
+            <td>${object.modalidade.codigo} - ${object.modalidade.nome}</td>
             <td align="center">
-                <button type="button" class="btn btn-danger btn-circle">
-                    <i class="fa fa-times"></i>
-                </button>
+                <bootstrap:delete action="/operadora/excluir.do" fieldName="object" value="${object.id}"
+                                  message="Confirmar a exclusão da Operadora ${object.nome}"/>
             </td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
 <bootstrap:paginate url="/operadora/pesquisar.do" resultList="${resultlist}"/>
-
-<div class="row">
-    <div class="col-sm-6">
-        <a href="<c:url value='/operadora/novo.do' />" class="btn btn-info">Adicionar</a>
-    </div>
-</div>

@@ -61,7 +61,6 @@ public abstract class Pessoa implements Serializable {
     @Where(clause = "tipo = 'C'")
     private Collection<Celular> celulares = new HashSet<>();
 
-
     public abstract String getDocumento();
 
     public Pessoa comEndereco(final Endereco endereco) {
@@ -80,5 +79,6 @@ public abstract class Pessoa implements Serializable {
         this.email = email;
         return this;
     }
+
 
 }

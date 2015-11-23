@@ -7,7 +7,7 @@
 
 <bootstrap:textfield label="Nome" value="${object.nome}" id="object.nome" errorField="nome"/>
 
-<bootstrap:textfield label="E-mail" value="${object.email}" id="object.email" errorField="nome"/>
+<bootstrap:textfield label="E-mail" value="${object.email}" id="object.email" errorField="email"/>
 
 <bootstrap:password label="Senha" value="" id="object.password" errorField="password"/>
 

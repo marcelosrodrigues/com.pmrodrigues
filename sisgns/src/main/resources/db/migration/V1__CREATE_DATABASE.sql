@@ -469,14 +469,9 @@ CREATE TABLE `pessoa` (
   `email`             VARCHAR(255) NOT NULL,
   `nome`              VARCHAR(255) NOT NULL,
   `endereco_id`       BIGINT(20)   NOT NULL,
-  `administradora_id` BIGINT(20)   NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_email_pessoa` (`email`),
   KEY `FK_PESSOA_ENDERECO` (`endereco_id`),
-  KEY `fk_cliente_administradora_idx` (`administradora_id`),
-  CONSTRAINT `fk_cliente_administradora` FOREIGN KEY (`administradora_id`) REFERENCES `cedente` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_endereco_pessoa` FOREIGN KEY (`endereco_id`) REFERENCES `endereco` (`id`),
   CONSTRAINT `FK_PESSOA_ENDERECO` FOREIGN KEY (`endereco_id`) REFERENCES `endereco` (`id`)
 )
@@ -533,8 +528,7 @@ DROP TABLE IF EXISTS `pessoajuridica`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pessoajuridica` (
   `id`          BIGINT(20)  NOT NULL,
-  `cnpj`        VARCHAR(17) NOT NULL,
-  `endereco_id` BIGINT(20)  NOT NULL,
+  `cnpj` VARCHAR(18) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_CNPJ` (`cnpj`),
   CONSTRAINT `fk_pessoa_pessoajuridica` FOREIGN KEY (`id`) REFERENCES `pessoa` (`id`)

@@ -129,6 +129,35 @@ $('[id*="administradora.nome"]').each(function (i, item) {
     }).data("ui-autocomplete")._renderItem = renderAutocomple;
 });
 
+$('[id*="modalidade.nome"]').each(function (i, item) {
+    $(item).autocomplete({
+        source: function (request, response) {
+            $.ajax("/modalidade/" + $(item).val() + ".json")
+                .done(function (data) {
+                    response(data.list);
+                });
+        },
+        minLength: 2,
+        select: function (event, ui) {
+            $('[id*="modalidade"]').val(ui.item.id);
+            $('[id*="modalidade.nome"]').val(ui.item.nome);
+            return false;
+        },
+        focus: function (event, ui) {
+            $('[id*="administradora"]').val(ui.item.id);
+            $('[id*="administradora.nome"]').val(ui.item.nome);
+            return false;
+        },
+        response: function (event, ui) {
+            if (ui.content.length == 1) {
+                $('[id*="modalidade"]').val(ui.content[0].id);
+                $('[id*="modalidade.nome"]').val(ui.content[0].nome);
+                $(this).autocomplete("close");
+            }
+        }
+    }).data("ui-autocomplete")._renderItem = renderAutocomple;
+});
+
 $('[id*="operadora.nome"]').each(function (i, item) {
     $(item).autocomplete({
             source: function (request, response) {
@@ -157,5 +186,81 @@ $('[id*="operadora.nome"]').each(function (i, item) {
             }
         }
     ).data("ui-autocomplete")._renderItem = renderAutocomple;
-})
+});
 
+$('[id*="plano.nome"]').each(function (i, item) {
+    $(item).autocomplete({
+            source: function (request, response) {
+                $.ajax("/plano/" + $('[id*="operadora"]').val() + "/" + $(item).val() + ".json")
+                    .done(function (data) {
+                        response(data.list);
+                    });
+            },
+            minLength: 2,
+            select: function (event, ui) {
+                $('[id*="plano"]').val(ui.item.id);
+                $('[id*="plano.nome"]').val(ui.item.nome);
+                return false;
+            },
+            focus: function (event, ui) {
+                $('[id*="plano"]').val(ui.item.id);
+                $('[id*="plano.nome"]').val(ui.item.nome);
+                return false;
+            },
+            response: function (event, ui) {
+                if (ui.content.length == 1) {
+                    $('[id*="plano"]').val(ui.content[0].id);
+                    $('[id*="plano.nome"]').val(ui.content[0].nome);
+                    $(this).autocomplete("close");
+                }
+            }
+        }
+    ).data("ui-autocomplete")._renderItem = renderAutocomple;
+});
+
+$('[id*="vendidoPor.nome"]').each(function (i, item) {
+    $(item).autocomplete({
+            source: function (request, response) {
+                $.ajax("/corretor/" + $(item).val() + ".json")
+                    .done(function (data) {
+                        response(data.list);
+                    });
+            },
+            minLength: 2,
+            select: function (event, ui) {
+                $('[id*="vendidoPor"]').val(ui.item.id);
+                $('[id*="vendidoPor.nome"]').val(ui.item.nome);
+                return false;
+            },
+            focus: function (event, ui) {
+                $('[id*="vendidoPor"]').val(ui.item.id);
+                $('[id*="vendidoPor.nome"]').val(ui.item.nome);
+                return false;
+            },
+            response: function (event, ui) {
+                if (ui.content.length == 1) {
+                    $('[id*="vendidoPor"]').val(ui.content[0].id);
+                    $('[id*="vendidoPor.nome"]').val(ui.content[0].nome);
+                    $(this).autocomplete("close");
+                }
+            }
+        }
+    ).data("ui-autocomplete")._renderItem = renderAutocomple;
+});
+
+$('[id*="cep"]').blur(function () {
+
+    var cep = $(this).val().replace('-', '');
+    if (cep != '') {
+        $.ajax("/endereco/logradouro/" + $(this).val().replace('-', '') + ".json")
+            .done(function (endereco) {
+                $('[id*="bairro"]').val(endereco.logradouro.bairro.id);
+                $('[id*="cidade"]').val(endereco.logradouro.bairro.cidade.id);
+                $('[id*="estado"]').val(endereco.logradouro.bairro.cidade.estado.id);
+                $('[id*="logradouro"]').val(endereco.logradouro.logradouro);
+                $('[id*="bairro.nome"]').val(endereco.logradouro.bairro.nome);
+                $('[id*="cidade.nome"]').val(endereco.logradouro.bairro.cidade.nome);
+                $('[id*="estado.nome"]').val(endereco.logradouro.bairro.cidade.estado.nome);
+            });
+    }
+})

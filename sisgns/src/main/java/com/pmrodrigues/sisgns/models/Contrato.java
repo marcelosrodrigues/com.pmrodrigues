@@ -2,7 +2,6 @@ package com.pmrodrigues.sisgns.models;
 
 import com.pmrodrigues.boletos.models.Boleto;
 import com.pmrodrigues.pessoa.models.Pessoa;
-import com.pmrodrigues.pessoa.models.PessoaFisica;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
@@ -20,8 +19,7 @@ import java.util.HashSet;
 @Table
 @SQLDelete(sql = "update contrato set excluido = 1 where id = ?")
 @Where(clause = "excluido = 0")
-@EqualsAndHashCode(exclude = {"id" , "plano" , "cliente" , "beneficiarios" ,
-        "vendidoPor" , "boletosEmitidos" , "dataInicio" , "dataTermino"})
+@EqualsAndHashCode(of = {"numeroContrato"})
 @ToString()
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class Contrato implements Serializable {
@@ -44,10 +42,10 @@ public class Contrato implements Serializable {
     @JoinColumn(name = "cliente_id")
     private Pessoa cliente;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name="contrato_id")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "contrato_id", nullable = false)
     @Getter
-    private Collection<PessoaFisica> beneficiarios = new HashSet<>();
+    private Collection<Beneficiario> beneficiarios = new HashSet<>();
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "corretor_id")
@@ -56,7 +54,7 @@ public class Contrato implements Serializable {
     private Corretor vendidoPor;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "administrador_id")
+    @JoinColumn(name = "administradora_id")
     @Getter
     @Setter
     private Administradora administradora;
@@ -85,4 +83,38 @@ public class Contrato implements Serializable {
     @Column
     private String numeroContrato;
 
+    public Contrato comBeneficiarios(final Collection<Beneficiario> beneficiarios) {
+        this.beneficiarios.addAll(beneficiarios);
+        return this;
+    }
+
+    public Contrato daAdministradora(final Administradora administradora) {
+        this.administradora = administradora;
+        return this;
+    }
+
+    public Contrato comPlano(final Plano plano) {
+        this.plano = plano;
+        return this;
+    }
+
+    public Contrato vendidoPor(final Corretor corretor) {
+        this.vendidoPor = corretor;
+        return this;
+    }
+
+    public Contrato comNumeroContrato(final String numero) {
+        this.numeroContrato = numero;
+        return this;
+    }
+
+    public Contrato comDataAssinatura(final Date dataAssinatura) {
+        this.dataInicio = dataAssinatura;
+        return this;
+    }
+
+    public Contrato paraCliente(final Pessoa cliente) {
+        this.cliente = cliente;
+        return this;
+    }
 }

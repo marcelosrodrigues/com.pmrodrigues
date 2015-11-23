@@ -35,5 +35,4 @@ public class AdminstradoraController extends AbstractCRUDController<Administrado
 
         return resultList;
     }
-
 }

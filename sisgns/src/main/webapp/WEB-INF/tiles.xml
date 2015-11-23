@@ -71,4 +71,9 @@
 
     <definition name="corretor/*/show-template" extends="corretor/formulario-template"/>
 
+    <definition name="contrato/formulario-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/contrato/formulario.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/contrato/formulario.jsp"/>
+    </definition>
+
 </tiles-definitions>
