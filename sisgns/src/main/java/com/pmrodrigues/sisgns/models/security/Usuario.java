@@ -63,6 +63,13 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
     @Getter
     private Long tentativas = 0L;
 
+    public Usuario(final String nome, final String email, final String password) {
+        this();
+        this.nome = nome;
+        this.email = email;
+        this.password = MD5.encrypt(password);
+    }
+
     @Override
     public void realizouTentativaInvalida() {
         this.incrementarTentativasFalhas();

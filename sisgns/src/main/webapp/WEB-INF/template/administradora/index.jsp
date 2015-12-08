@@ -6,24 +6,30 @@
 
 <bootstrap:summary text="${sucesso}"/>
 
-<form action="<c:url value="/administradora/pesquisar.do" />" method="get" role="form">
-    <div class="row">
-        <div class="col-lg-4">
-            <bootstrap:textfield label="CNPJ"
-                                 value="${object.numeroDocumento}"
-                                 id="object.numeroDocumento"
-                                 errorField="object.numeroDocumento"/>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form action="<c:url value="/administradora/pesquisar.do" />" method="get" role="form">
+            <div class="row">
+                <div class="col-lg-4">
+                    <bootstrap:textfield label="CNPJ"
+                                         value="${object.numeroDocumento}"
+                                         id="object.numeroDocumento"
+                                         errorField="object.numeroDocumento"/>
 
-        </div>
-        <div class="col-lg-5">
-            <bootstrap:textfield label="Nome" value="${object.nome}" id="object.nome" errorField="object.nome"/>
-        </div>
+                </div>
+                <div class="col-lg-8">
+                    <bootstrap:textfield label="Nome" value="${object.nome}" id="object.nome" errorField="object.nome"/>
+                </div>
+            </div>
 
-        <div class="col-lg-2" style="margin-top: 25px;">
-            <bootstrap:pesquisar/>
-        </div>
+            <div style="float:right">
+                <bootstrap:pesquisar/>
+                <bootstrap:new url="/administradora/novo.do" label="Novo"/>
+            </div>
+
+        </form>
     </div>
-</form>
+</div>
 
 <table class="table table-striped table-bordered table-hover">
     <thead>
@@ -50,9 +56,3 @@
     </tbody>
 </table>
 <bootstrap:paginate url="/administradora/pesquisar.do" resultList="${resultlist}"/>
-
-<div class="row">
-    <div class="col-sm-6">
-        <a href="<c:url value='/administradora/novo.do' />" class="btn btn-info">Adicionar</a>
-    </div>
-</div>

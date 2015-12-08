@@ -7,6 +7,8 @@ import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Created by Marceloo on 21/09/2015.
@@ -16,6 +18,7 @@ import java.io.Serializable;
 @EqualsAndHashCode(of = {"codigo"})
 @ToString()
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
+@RequiredArgsConstructor(access = AccessLevel.PUBLIC)
 @SQLDelete(sql = "update operadora set excluido = 1 where id = ?")
 @Where(clause = "excluido = 0")
 public class Operadora implements Serializable{
@@ -29,21 +32,25 @@ public class Operadora implements Serializable{
     @Getter
     @Setter
     @Column
+    @NonNull
     private String codigo;
 
     @Getter
     @Setter
     @Column
+    @NonNull
     private String nome;
 
     @Getter
     @Setter
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @NonNull
     private Modalidade modalidade;
 
     @Getter
     @Setter
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @NonNull
     private Administradora administradora;
 
     @Getter
@@ -62,8 +69,15 @@ public class Operadora implements Serializable{
     @Enumerated(EnumType.ORDINAL)
     private QuantidadeParcelas quantidadeParcelas;
 
+    @Getter
+    @Setter
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JoinColumn(name = "operadora_id", nullable = false)
+    private Collection<ComissionamentoPorOperadora> regrasDeComissionamento = new ArrayList<>();
+
     public Operadora comNome(final String nome) {
         this.nome = nome;
         return this;
     }
+
 }

@@ -15,8 +15,13 @@ import static java.lang.String.format;
 public class UsuarioService implements UserService {
 
     private static final Logger logging = Logger.getLogger(UsuarioService.class);
-    @Autowired
+
     private UsuarioRepository repository;
+
+    @Autowired
+    public UsuarioService(final UsuarioRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
     public UserDetails loadUserByUsername(final String username)

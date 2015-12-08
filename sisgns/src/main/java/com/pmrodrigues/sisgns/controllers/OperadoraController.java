@@ -37,7 +37,6 @@ public class OperadoraController extends AbstractCRUDController<Operadora> {
 
     @Override
     protected void validate(final Operadora object) {
-
         if (object.getAdministradora().getId() == null || object.getAdministradora().getId() == 0L) {
             this.getValidator().add(new ValidationMessage("Administradora é obrigatória", "object.administradora"));
         }

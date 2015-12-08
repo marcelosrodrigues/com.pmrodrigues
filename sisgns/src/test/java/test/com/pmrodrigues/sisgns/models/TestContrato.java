@@ -12,6 +12,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import test.com.pmrodrigues.sisgns.builders.AdministradoraBuilder;
+import test.com.pmrodrigues.sisgns.builders.CorretorBuilder;
 
 import static java.util.Arrays.asList;
 import static org.hibernate.criterion.Restrictions.eq;
@@ -37,8 +39,9 @@ public class TestContrato extends AbstractTransactionalJUnit4SpringContextTests 
     @Before
     public void setup() {
         this.plano = (Plano) this.sessionFactory.getCurrentSession().get(Plano.class, 1L);
-        this.administradora = (Administradora) this.sessionFactory.getCurrentSession().get(Administradora.class, 1L);
-        this.corretor = (Corretor) this.sessionFactory.getCurrentSession().get(Corretor.class, 136L);
+        this.administradora = AdministradoraBuilder.getFactory(sessionFactory).criar();
+        this.corretor = CorretorBuilder.getFactory(sessionFactory).criar();
+
         final Logradouro logradouro = (Logradouro) this.sessionFactory
                 .getCurrentSession()
                 .createCriteria(Logradouro.class)

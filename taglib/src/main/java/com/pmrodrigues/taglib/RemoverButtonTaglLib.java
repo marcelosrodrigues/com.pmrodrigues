@@ -6,7 +6,7 @@ package com.pmrodrigues.taglib;
 public class RemoverButtonTaglLib extends AbstractButtonTagLib {
     @Override
     public String getIcone() {
-        return "fa-times";
+        return "fa-trash-o";
     }
 
     @Override

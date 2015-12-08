@@ -16,6 +16,7 @@ import java.io.Serializable;
 @EqualsAndHashCode()
 @ToString(of = {"id", "logradouro", "numero", "complemento", "cep", "bairro", "cidade", "estado"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
+@RequiredArgsConstructor(access = AccessLevel.PUBLIC)
 public @Data class Endereco implements Serializable {
 
     @Id
@@ -26,22 +27,26 @@ public @Data class Endereco implements Serializable {
     @NotNull(message = "Bairro é obrigatório")
     @ManyToOne(optional = false, cascade = CascadeType.ALL)
     @JoinColumn(name = "bairro_id")
+    @NonNull
     private Bairro bairro;
 
     @Valid
     @NotNull(message = "Cidade é obrigatório")
     @ManyToOne(optional = false, cascade = CascadeType.ALL)
     @JoinColumn(name = "cidade_id")
+    @NonNull
     private Cidade cidade;
 
     @Valid
     @NotNull(message = "Estado é obrigatório")
     @ManyToOne(optional = false)
     @JoinColumn(name = "estado_id")
+    @NonNull
     private Estado estado;
 
     @NotEmpty(message = "Número é obrigatório")
     @Column
+    @NonNull
     private String numero;
 
     @Column
@@ -49,10 +54,12 @@ public @Data class Endereco implements Serializable {
 
     @NotEmpty(message = "Logradouro é obrigatório")
     @Column
+    @NonNull
     private String logradouro;
 
     @NotEmpty(message = "CEP é obrigatório")
     @Column
+    @NonNull
     private String cep;
 
     public Endereco comCEP(final String cep) {

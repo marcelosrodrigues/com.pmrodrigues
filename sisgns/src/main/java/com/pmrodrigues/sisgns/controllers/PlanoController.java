@@ -34,7 +34,7 @@ public class PlanoController extends AbstractCRUDController<Plano> {
         toUpdate.setNome(plano.getNome());
         toUpdate.setAdministradora(plano.getAdministradora());
         toUpdate.setOperadora(plano.getOperadora());
-        toUpdate.setRegra(plano.getRegra());
+        toUpdate.setRegrasDeComissionamento(plano.getRegrasDeComissionamento());
         toUpdate.setPrecos(plano.getPrecos());
 
         this.getRepository().set(toUpdate);

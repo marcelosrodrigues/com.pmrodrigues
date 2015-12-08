@@ -1,7 +1,8 @@
-package com.pmrodrigues.sisgns.repositories;
+package test.com.pmrodrigues.sisgns.repositories;
 
 import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.sisgns.models.Operadora;
+import com.pmrodrigues.sisgns.repositories.OperadoraRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +47,7 @@ public class TestOperadoraRepository extends AbstractTransactionalJUnit4SpringCo
         final Operadora operadora = new Operadora();
         operadora.comNome("TESTE");
 
-        final long quantidadeEsperada = jdbcTemplate.queryForObject("select count(1) from operadora where excluido = 0 and nome like = 'TESTE%'", Long.class);
+        final long quantidadeEsperada = jdbcTemplate.queryForObject("select count(1) from operadora where excluido = 0 and nome like 'TESTE%'", Long.class);
         ResultList<Operadora> operadoras = repository.search(operadora);
 
         assertEquals(quantidadeEsperada, operadoras.getQuantidadeRegistros());

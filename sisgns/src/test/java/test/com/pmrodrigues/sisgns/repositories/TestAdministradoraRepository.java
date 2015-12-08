@@ -8,19 +8,21 @@ import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.sisgns.models.Administradora;
 import com.pmrodrigues.sisgns.repositories.AdministradoraRepository;
 import com.pmrodrigues.vraptor.crud.exceptions.UniqueException;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
-import test.com.pmrodrigues.sisgns.utilities.GeradorCNPJCPF;
+import test.com.pmrodrigues.sisgns.builders.AdministradoraBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static java.lang.String.format;
 import static org.junit.Assert.assertEquals;
+import static test.com.pmrodrigues.sisgns.utilities.GeradorCNPJCPF.cnpj;
 
 /**
  * Created by Marceloo on 21/10/2015.
@@ -40,23 +42,25 @@ public class TestAdministradoraRepository extends AbstractTransactionalJUnit4Spr
     private List<String> cnpjs = new ArrayList<>();
 
     @Before
-    public void inicia() {
+    public void setup() {
+
+        final Session session = sessionFactory.getCurrentSession();
 
         for (int i = 0; i < 3; i++) {
-            final String cnpj = GeradorCNPJCPF.cnpj();
+
+            final String cnpj = cnpj();
+
+            AdministradoraBuilder.getFactory(sessionFactory)
+                    .comCNPJ(cnpj)
+                    .comNome(format("TESTE_%s", i))
+                    .criar();
+
             cnpjs.add(cnpj);
 
-            jdbcTemplate.update("insert into endereco ( bairro_id , cidade_id , estado_id , " +
-                    "   cep , logradouro , complemento , numero  ) values " +
-                    " ( 12258 , 7043 , 19 , '22743310' , 'TESTE' , 'TESTE' , 10  )");
-
-            long enderecoId = jdbcTemplate.queryForObject("select last_insert_id()", Long.class);
-
-            jdbcTemplate.update("insert into cedente (nome, numeroDocumento , DTYPE , endereco_id) values " +
-                            " ( ? , ? , 'Administradora' , ? )",
-                    format("test_%s", i), cnpj, enderecoId);
-
         }
+
+        session.flush();
+        session.clear();
 
 
     }
@@ -129,7 +133,7 @@ public class TestAdministradoraRepository extends AbstractTransactionalJUnit4Spr
     @Test
     public void podeIncluirAdministradora() {
 
-        final String cnpj = GeradorCNPJCPF.cnpj();
+        final String cnpj = cnpj();
 
         final Administradora administradora = (Administradora) new Administradora()
                 .comNumeroDocumento(cnpj)
@@ -207,17 +211,16 @@ public class TestAdministradoraRepository extends AbstractTransactionalJUnit4Spr
     @Test
     public void podeAtualizarComCNPJQueNaoExisteAindaNoSistema() {
 
-        final String cnpj = GeradorCNPJCPF.cnpj();
+        final String cnpj = cnpj();
 
         final Long id = jdbcTemplate.queryForObject("select max(id) from cedente", Long.class);
 
-        Administradora administradora = (Administradora) new Administradora()
-                .comNumeroDocumento(cnpj)
-                .comEndereco(criaEndereco())
-                .comNome("test");
+        Administradora administradora = AdministradoraBuilder.getFactory()
+                .comCNPJ(cnpj)
+                .comNome("test")
+                .comId(id)
+                .criar();
 
-        administradora.adicionar(new Telefone("021", "33926222"));
-        administradora.setId(id);
         repository.set(administradora);
 
     }

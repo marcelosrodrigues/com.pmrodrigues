@@ -13,6 +13,7 @@ import java.util.List;
 @Entity
 @Table
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
+@RequiredArgsConstructor(access = AccessLevel.PUBLIC)
 @EqualsAndHashCode(of = "id")
 @ToString(exclude = {"administradora"})
 public class Plano {
@@ -26,19 +27,21 @@ public class Plano {
     @Getter
     @Setter
     @Column
+    @NonNull
     private String nome;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "operadora_id")
     @Getter
     @Setter
+    @NonNull
     private Operadora operadora;
 
     @Getter
+    @Setter
     @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(name = "plano_id", nullable = false)
-    @OrderBy("ordem")
-    private List<Comissionamento> regra = new ArrayList<>();
+    private Collection<ComissionamentoPorPlano> regrasDeComissionamento = new ArrayList<>();
 
 
     @Getter
@@ -51,12 +54,8 @@ public class Plano {
     @JoinColumn(name = "administradora_id")
     @Getter
     @Setter
+    @NonNull
     private Administradora administradora;
-
-    public void setRegra(final Collection<Comissionamento> regras) {
-        this.regra.clear();
-        this.regra.addAll(regras);
-    }
 
     public void setPrecos(final Collection<Preco> precos) {
         this.precos.clear();

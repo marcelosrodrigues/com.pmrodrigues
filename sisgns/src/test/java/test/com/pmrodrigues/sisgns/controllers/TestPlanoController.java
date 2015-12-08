@@ -3,12 +3,13 @@ package test.com.pmrodrigues.sisgns.controllers;
 import br.com.caelum.vraptor.Validator;
 import br.com.caelum.vraptor.util.test.MockResult;
 import br.com.caelum.vraptor.util.test.MockValidator;
+import com.pmrodrigues.endereco.models.Endereco;
+import com.pmrodrigues.endereco.models.Logradouro;
+import com.pmrodrigues.endereco.models.Telefone;
 import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.sisgns.Constante;
 import com.pmrodrigues.sisgns.controllers.PlanoController;
-import com.pmrodrigues.sisgns.models.Administradora;
-import com.pmrodrigues.sisgns.models.Operadora;
-import com.pmrodrigues.sisgns.models.Plano;
+import com.pmrodrigues.sisgns.models.*;
 import com.pmrodrigues.sisgns.repositories.FaixaEtariaRepository;
 import com.pmrodrigues.sisgns.repositories.PlanoRepository;
 import org.hibernate.SessionFactory;
@@ -17,10 +18,13 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
-import test.com.pmrodrigues.sisgns.utilities.GeradorCNPJCPF;
+import test.com.pmrodrigues.sisgns.builders.OperadoraBuilder;
 
+import static java.util.Arrays.asList;
+import static org.hibernate.criterion.Restrictions.eq;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static test.com.pmrodrigues.sisgns.utilities.GeradorCNPJCPF.cnpj;
 
 /**
  * Created by Marceloo on 08/10/2015.
@@ -41,56 +45,59 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
 
     private Validator validator = new MockValidator();
 
-    private long planoId;
-    private long operadoraId;
-    private long cedenteId;
-    private long enderecoId;
+    private RegraComissionamento primeiraParcelaCorretor;
+    private RegraComissionamento segundaParcelaCorretor;
+    private RegraComissionamento terceiraParcelaCorretor;
+    private Administradora administradora;
+    private Operadora operadora;
+    private Plano plano;
 
     @Before
     public void setup() {
 
-        limparBaseDeDados();
+        jdbcTemplate.batchUpdate("insert into regra_comissionamento ( id , nome,ordem) values (? , ? , ? )",
+                asList(new Object[]{1, "REGRA 1", 1},
+                        new Object[]{2, "REGRA 2", 2},
+                        new Object[]{3, "REGRA 3", 3}));
 
-        jdbcTemplate.update("insert into operadora (nome) values ( 'TESTE') ");
-        this.operadoraId = jdbcTemplate.queryForObject("select LAST_INSERT_ID()", Long.class);
+        this.primeiraParcelaCorretor = (RegraComissionamento) sessionFactory.getCurrentSession().get(RegraComissionamento.class, 1L);
+        this.segundaParcelaCorretor = (RegraComissionamento) sessionFactory.getCurrentSession().get(RegraComissionamento.class, 2L);
+        this.terceiraParcelaCorretor = (RegraComissionamento) sessionFactory.getCurrentSession().get(RegraComissionamento.class, 3L);
 
-        jdbcTemplate.update("insert into endereco (complemento,numero,logradouro , cep , cidade_id , bairro_id , estado_id ) " +
-                " values ('TESTE','TESTE','TESTE' , '22743310' , 7043 , 12258 , 19 ) ");
+        Logradouro campoDaAreia = (Logradouro) sessionFactory.getCurrentSession()
+                .createCriteria(Logradouro.class)
+                .add(eq("cep", "22743310"))
+                .uniqueResult();
 
-        this.enderecoId = jdbcTemplate.queryForObject("select LAST_INSERT_ID()", Long.class);
 
-        jdbcTemplate.update("insert into cedente (DTYPE , convenio, nome, numeroDocumento , endereco_id) values ( 'Administradora' , '1' , 'TESTE' , ? , ?)",
-                GeradorCNPJCPF.cnpj(), enderecoId);
-        this.cedenteId = jdbcTemplate.queryForObject("select LAST_INSERT_ID()", Long.class);
+        this.administradora = (Administradora) new Administradora()
+                .comNome("Administradora")
+                .comNumeroDocumento(cnpj());
 
-        jdbcTemplate.update("insert into plano (nome, operadora_id, administradora_id) values ( 'plano_1' , ? , ? ) ",
-                operadoraId, cedenteId);
+        administradora.comEndereco(new Endereco(campoDaAreia.getBairro(),
+                campoDaAreia.getBairro().getCidade(),
+                campoDaAreia.getBairro().getCidade().getEstado(),
+                "84", campoDaAreia.getLogradouro(), campoDaAreia.getCep()));
 
-        this.planoId = jdbcTemplate.queryForObject("select last_insert_id()", Long.class);
+        administradora.adicionar(new Telefone("021", "33926222"));
 
-        jdbcTemplate.update("insert into comissionamento ( plano_id , nome , percentual , ordem ) values ( ? , 'NOME' , 100 , 1)", this.planoId);
+        sessionFactory.getCurrentSession().persist(administradora);
 
-    }
-
-    private void limparBaseDeDados() {
-        jdbcTemplate.update("delete from comissionamento where plano_id in ( select id from plano where operadora_id in ( select id from operadora where nome like 'TESTE%'))");
-        jdbcTemplate.update("delete from cedente where endereco_id = ?", enderecoId);
-        jdbcTemplate.update("delete from plano where operadora_id in ( select id from operadora where nome like 'TESTE%')");
-        jdbcTemplate.update("delete from operadora where nome like 'TESTE%'");
-
+        final Modalidade modalidade = (Modalidade) sessionFactory.getCurrentSession().get(Modalidade.class, 1L);
+        this.operadora = OperadoraBuilder.getFactory(sessionFactory).comAdministradora(administradora).comModalidade(modalidade).criar();
+        sessionFactory.getCurrentSession().persist(operadora);
+        this.plano = new Plano("PLANO", operadora, administradora);
+        sessionFactory.getCurrentSession().persist(plano);
     }
 
     @Test
     public void testDoUpdate() throws Exception {
 
         Plano plano = new Plano();
-        plano.setId(this.planoId);
+        plano.setId(this.plano.getId());
         plano.setNome("TESTE_1");
-        Operadora operadora = new Operadora();
-        operadora.setId(this.operadoraId);
+
         plano.setOperadora(operadora);
-        Administradora administradora = new Administradora();
-        administradora.setId(this.cedenteId);
         plano.setAdministradora(administradora);
 
         PlanoController controller = new PlanoController(this.repository, this.faixaEtariaRepository, result, validator);
@@ -98,7 +105,7 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
 
         sessionFactory.getCurrentSession().flush();
 
-        long count = jdbcTemplate.queryForObject("select count(1) from comissionamento where plano_id = ?", Long.class, this.planoId);
+        long count = jdbcTemplate.queryForObject("select count(1) from comissionamento_por_plano where plano_id = ?", Long.class, this.plano.getId());
         assertEquals(0L, count);
 
     }
@@ -114,8 +121,6 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
     @Test
     public void deveBuscarPlano() {
         PlanoController controller = new PlanoController(this.repository, this.faixaEtariaRepository, result, validator);
-        Operadora operadora = new Operadora();
-        operadora.setId(this.operadoraId);
         final ResultList<Plano> resultList = controller.buscarPlanoPeloNome(operadora, "plano");
 
 

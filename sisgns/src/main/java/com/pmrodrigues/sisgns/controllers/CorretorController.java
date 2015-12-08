@@ -15,7 +15,7 @@ import static br.com.caelum.vraptor.view.Results.json;
 @CRUD
 @Resource
 public class CorretorController extends AbstractCRUDController<Corretor> {
-    protected CorretorController(final CorretorRepository repository, final Result result, final Validator validator) {
+    public CorretorController(final CorretorRepository repository, final Result result, final Validator validator) {
         super(repository, result, validator);
     }
 

@@ -12,7 +12,7 @@ import static java.lang.String.format;
  */
 public class DeleteButtonTag extends SimpleTagSupport {
 
-    private static final String BUTTON_TEMPLATE = "<button type=\"submit\" class=\"btn btn-danger btn-circle\"><i class=\"fa fa-times\"></i></button>";
+    private static final String BUTTON_TEMPLATE = "<button type=\"submit\" class=\"btn btn-danger btn-circle\"><i class=\"fa fa-trash-o\"></i></button>";
 
     private String action;
 

@@ -18,6 +18,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 
 import static org.junit.Assert.assertEquals;
+import static test.com.pmrodrigues.sisgns.utilities.GeradorCNPJCPF.cnpj;
 
 /**
  * Created by Marceloo on 24/09/2015.
@@ -34,36 +35,22 @@ public class TestAdminstradoraController extends AbstractTransactionalJUnit4Spri
     @Autowired
     private SessionFactory sessionFactory;
 
+    private String cnpj;
+    private Logradouro logradouro;
+
     @Before
     public void setup() {
 
-        jdbcTemplate.update("DELETE FROM telefone_administrador " +
-                " WHERE administradora_id IN ( " +
-                "       SELECT ID FROM CEDENTE where numeroDocumento = '04.769.697/0001-10')");
-        jdbcTemplate.update(" DELETE FROM telefone " +
-                " where not exists ( select 1 from telefone_Administrador where telefone_id = id )  " +
-                " and not exists ( select 1 from telefone_pessoa where telefone_id = id ) ");
-
-        jdbcTemplate.update("delete from comissionamento where plano_id in ( select id from plano where administradora_id in ( SELECT ID FROM CEDENTE where numeroDocumento = '04.769.697/0001-10'))");
-        jdbcTemplate.update("delete from plano where administradora_id in ( SELECT ID FROM CEDENTE where numeroDocumento = '04.769.697/0001-10')");
-
-        jdbcTemplate.update("DELETE FROM CEDENTE where numeroDocumento = '04.769.697/0001-10'");
-        jdbcTemplate.update("DELETE FROM ENDERECO  WHERE bairro_id = (select id from bairro where nome like 'Pechincha%' and cidade_id = 7043  and id > 12258)");
-        jdbcTemplate.update("DELETE FROM BAIRRO WHERE nome like 'Pechincha%' and cidade_id = 7043 and id > 12258");
-        jdbcTemplate.update("DELETE FROM telefone " +
-                " where not exists ( select 1 from telefone_Administrador where telefone_id = id ) " +
-                " and not exists(select 1 from telefone_pessoa where telefone_id = id )");
-
+        this.cnpj = cnpj();
+        this.logradouro = logradouroRepository.getByCEP("22743310");
 
     }
-
 
     @Test
     public void deveIncluirAdministradora() throws Exception {
 
         final MockResult result = new MockResult();
         final MockValidator validator = new MockValidator();
-        final Logradouro logradouro = logradouroRepository.getByCEP("22743310");
 
         final AdminstradoraController controller = new AdminstradoraController(administradoraRepository, result, validator);
 
@@ -77,7 +64,7 @@ public class TestAdminstradoraController extends AbstractTransactionalJUnit4Spri
                 .comComplemento("apto 206");
 
         administradora.setEndereco(endereco);
-        administradora.setNumeroDocumento("04.769.697/0001-10");
+        administradora.setNumeroDocumento(cnpj);
         administradora.setNome("TESTE");
         administradora.adicionar(new Telefone("21", "33926222"));
 
@@ -98,8 +85,6 @@ public class TestAdminstradoraController extends AbstractTransactionalJUnit4Spri
     public void devenBuscarAdministradoraPorNome() {
         final MockResult result = new MockResult();
         final MockValidator validator = new MockValidator();
-        final Logradouro logradouro = logradouroRepository.getByCEP("22743310");
-
         final AdminstradoraController controller = new AdminstradoraController(administradoraRepository, result, validator);
 
         final Administradora administradora = new Administradora();
@@ -112,7 +97,7 @@ public class TestAdminstradoraController extends AbstractTransactionalJUnit4Spri
                 .comComplemento("apto 206");
 
         administradora.setEndereco(endereco);
-        administradora.setNumeroDocumento("04.769.697/0001-10");
+        administradora.setNumeroDocumento(cnpj);
         administradora.setNome("TESTE");
         administradora.adicionar(new Telefone("21", "33926222"));
 
@@ -124,8 +109,8 @@ public class TestAdminstradoraController extends AbstractTransactionalJUnit4Spri
         long count = jdbcTemplate.queryForObject("select count(1) from cedente where nome like 'TESTE%'", Long.class);
         assertEquals(count, resultList.getQuantidadeRegistros());
 
-        resultList = controller.buscarAdministradoraPeloNome("04.769.697/0001-10");
-        count = jdbcTemplate.queryForObject("select count(1) from cedente where numeroDocumento like '04.769.697/0001-10%'", Long.class);
+        resultList = controller.buscarAdministradoraPeloNome(cnpj);
+        count = jdbcTemplate.queryForObject("select count(1) from cedente where numeroDocumento like ?", Long.class, cnpj + "%");
         assertEquals(count, resultList.getQuantidadeRegistros());
     }
 }

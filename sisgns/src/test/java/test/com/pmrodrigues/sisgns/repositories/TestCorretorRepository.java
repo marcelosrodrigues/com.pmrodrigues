@@ -1,6 +1,7 @@
 package test.com.pmrodrigues.sisgns.repositories;
 
 import com.pmrodrigues.persistence.daos.ResultList;
+import com.pmrodrigues.sisgns.models.Administradora;
 import com.pmrodrigues.sisgns.models.Corretor;
 import com.pmrodrigues.sisgns.repositories.CorretorRepository;
 import com.pmrodrigues.vraptor.crud.exceptions.UniqueException;
@@ -10,6 +11,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import test.com.pmrodrigues.sisgns.builders.AdministradoraBuilder;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -28,15 +30,20 @@ public class TestCorretorRepository extends AbstractTransactionalJUnit4SpringCon
 
     @Before
     public void setup() {
-        jdbcTemplate.update("insert into usuario ( DTYPE ,  nome , email , password , bloqueado , tentativas ) values " +
-                "( 'Corretor' , 'teste' , 'teste@teste.com' , md5('12345678') , false , 0)");
+
+        Administradora administradora = AdministradoraBuilder.getFactory(sessionFactory).criar();
+
+        sessionFactory.getCurrentSession().persist(administradora);
+
+        sessionFactory.getCurrentSession().persist(new Corretor("teste", "teste@teste.com", "12345678", administradora));
+
     }
 
     @Test
     public void deveAdicionar() throws Exception {
 
         Corretor corretor = new Corretor();
-        corretor.setEmail("marsilvarodrigues@globo.com");
+        corretor.setEmail("corretor@corretor.com");
         corretor.setNome("TESTE");
         corretor.setBloqueado(false);
         corretor.setPassword("12345678");
@@ -67,7 +74,7 @@ public class TestCorretorRepository extends AbstractTransactionalJUnit4SpringCon
                 Long.class, "teste@teste.com");
         Corretor corretor = new Corretor();
         corretor.setId(id);
-        corretor.setEmail("marcelosrodrigues@teste.com");
+        corretor.setEmail("corretor@corretor.com");
         corretor.setNome("TESTE");
         corretor.setBloqueado(false);
         corretor.setPassword("12345678");

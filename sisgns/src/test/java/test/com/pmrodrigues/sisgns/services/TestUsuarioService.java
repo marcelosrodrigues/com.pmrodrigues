@@ -1,31 +1,58 @@
 package test.com.pmrodrigues.sisgns.services;
 
-import com.pmrodrigues.security.services.UserService;
+import com.pmrodrigues.sisgns.models.security.Usuario;
+import com.pmrodrigues.sisgns.repositories.UsuarioRepository;
+import com.pmrodrigues.sisgns.services.UsuarioService;
+import org.jmock.Expectations;
+import org.jmock.Mockery;
+import org.jmock.lib.legacy.ClassImposteriser;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import static org.junit.Assert.assertNotNull;
 
 /**
  * Created by Marceloo on 23/09/2015.
  */
-@ContextConfiguration(locations = {"classpath:test-applicationContext.xml"})
-public class TestUsuarioService extends AbstractTransactionalJUnit4SpringContextTests {
 
-    @Autowired
-    private UserService service;
+public class TestUsuarioService {
+
+    private final Mockery context = new Mockery() {
+        {
+            setImposteriser(ClassImposteriser.INSTANCE);
+        }
+    };
 
     @Test
-    public void testLoadUserByUsername() throws Exception {
+    public void deveRetornarUmUsuario() throws Exception {
 
-        jdbcTemplate.update("insert into usuario ( DTYPE ,  nome , email , password , bloqueado , tentativas ) values " +
-                "( 'Usuario' , 'teste' , 'teste@teste.com' , md5('12345678') , false , 0)");
+        final UsuarioRepository repository = context.mock(UsuarioRepository.class);
+        final UsuarioService service = new UsuarioService(repository);
+
+        context.checking(new Expectations() {{
+            oneOf(repository).findByEmail(with(aNonNull(String.class)));
+            will(returnValue(new Usuario()));
+        }});
+
 
         UserDetails usuario = service.loadUserByUsername("teste@teste.com");
         assertNotNull(usuario);
+
+    }
+
+    @Test(expected = UsernameNotFoundException.class)
+    public void naoDeveRetornarUmUsuario() throws Exception {
+
+        final UsuarioRepository repository = context.mock(UsuarioRepository.class);
+        final UsuarioService service = new UsuarioService(repository);
+
+        context.checking(new Expectations() {{
+            oneOf(repository).findByEmail(with(aNonNull(String.class)));
+            will(returnValue(null));
+        }});
+
+        service.loadUserByUsername("teste@teste.com");
 
     }
 }
