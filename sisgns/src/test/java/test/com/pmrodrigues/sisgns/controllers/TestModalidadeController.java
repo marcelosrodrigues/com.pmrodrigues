@@ -39,20 +39,26 @@ public class TestModalidadeController extends AbstractTransactionalJUnit4SpringC
     @Before
     public void setup() {
 
-        ModalidadeBuilder.getFactory(sessionFactory)
+        Modalidade primeira = ModalidadeBuilder.getFactory()
                 .comNome("TESTE 1")
                 .comCodigo("0001")
                 .criar();
 
-        ModalidadeBuilder.getFactory(sessionFactory)
+        sessionFactory.getCurrentSession().persist(primeira);
+
+        Modalidade segunda = ModalidadeBuilder.getFactory()
                 .comNome("TESTE 2")
                 .comCodigo("0002")
                 .criar();
 
-        ModalidadeBuilder.getFactory(sessionFactory)
+        sessionFactory.getCurrentSession().persist(segunda);
+
+        Modalidade terceira = ModalidadeBuilder.getFactory()
                 .comNome("TESTE 3")
                 .comCodigo("0003")
                 .criar();
+
+        sessionFactory.getCurrentSession().persist(terceira);
 
         controller = new ModalidadeController(repository, result, validator);
     }

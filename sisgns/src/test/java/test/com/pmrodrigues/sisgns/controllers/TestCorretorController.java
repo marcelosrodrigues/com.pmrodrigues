@@ -2,6 +2,7 @@ package test.com.pmrodrigues.sisgns.controllers;
 
 import br.com.caelum.vraptor.util.test.MockResult;
 import br.com.caelum.vraptor.util.test.MockValidator;
+import com.pmrodrigues.endereco.models.Logradouro;
 import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.sisgns.controllers.CorretorController;
 import com.pmrodrigues.sisgns.models.Administradora;
@@ -16,6 +17,7 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
 import test.com.pmrodrigues.sisgns.builders.AdministradoraBuilder;
 import test.com.pmrodrigues.sisgns.builders.CorretorBuilder;
 
+import static org.hibernate.criterion.Restrictions.eq;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -39,16 +41,39 @@ public class TestCorretorController extends AbstractTransactionalJUnit4SpringCon
     @Before
     public void setup() {
 
-        this.controller = new CorretorController(repository, result, validator);
-        Administradora administradora = AdministradoraBuilder.getFactory(sessionFactory).criar();
+        Logradouro campoDaAreia = (Logradouro) sessionFactory.getCurrentSession()
+                .createCriteria(Logradouro.class)
+                .add(eq("cep", "22743310"))
+                .uniqueResult();
 
-        CorretorBuilder.getFactory(sessionFactory)
+        Administradora administradora = AdministradoraBuilder.getFactory()
+                .comEndereco(campoDaAreia)
+                .criar();
+
+        sessionFactory.getCurrentSession().persist(administradora);
+
+        this.controller = new CorretorController(repository, result, validator);
+
+        Corretor marcelo = CorretorBuilder.getFactory()
                 .comAdministradora(administradora)
                 .comNome("Marcelo")
                 .comEmail("teste@teste.com")
                 .criar();
-        CorretorBuilder.getFactory(sessionFactory).comAdministradora(administradora).comNome("Arthur").comEmail("arthur@teste.com").criar();
-        CorretorBuilder.getFactory(sessionFactory).comAdministradora(administradora).comNome("Miguel").comEmail("miguel@teste.com").criar();
+
+        Corretor arthur = CorretorBuilder.getFactory()
+                .comAdministradora(administradora)
+                .comNome("Arthur")
+                .comEmail("arthur@teste.com")
+                .criar();
+        Corretor miguel = CorretorBuilder.getFactory()
+                .comAdministradora(administradora)
+                .comNome("Miguel")
+                .comEmail("miguel@teste.com")
+                .criar();
+
+        this.sessionFactory.getCurrentSession().persist(marcelo);
+        this.sessionFactory.getCurrentSession().persist(arthur);
+        this.sessionFactory.getCurrentSession().persist(miguel);
 
     }
 

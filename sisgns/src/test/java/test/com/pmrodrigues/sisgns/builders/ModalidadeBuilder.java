@@ -1,22 +1,20 @@
 package test.com.pmrodrigues.sisgns.builders;
 
 import com.pmrodrigues.sisgns.models.Modalidade;
-import org.hibernate.SessionFactory;
 
 /**
  * Created by Marceloo on 08/12/2015.
  */
 public class ModalidadeBuilder {
-    private final SessionFactory sessionFactory;
+
     private final Modalidade modalidade;
 
-    private ModalidadeBuilder(final SessionFactory sessionFactory) {
-        this.modalidade = new Modalidade();
-        this.sessionFactory = sessionFactory;
+    private ModalidadeBuilder() {
+        this.modalidade = new Modalidade("0001", "MODALIDADE");
     }
 
-    public static ModalidadeBuilder getFactory(SessionFactory sessionFactory) {
-        return new ModalidadeBuilder(sessionFactory);
+    public static ModalidadeBuilder getFactory() {
+        return new ModalidadeBuilder();
     }
 
     public ModalidadeBuilder comNome(final String nome) {
@@ -30,7 +28,6 @@ public class ModalidadeBuilder {
     }
 
     public Modalidade criar() {
-        this.sessionFactory.getCurrentSession().persist(modalidade);
         return modalidade;
     }
 }

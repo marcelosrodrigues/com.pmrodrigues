@@ -25,14 +25,14 @@ public @Data class Endereco implements Serializable {
 
     @Valid
     @NotNull(message = "Bairro é obrigatório")
-    @ManyToOne(optional = false, cascade = CascadeType.ALL)
+    @ManyToOne(optional = false, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "bairro_id")
     @NonNull
     private Bairro bairro;
 
     @Valid
     @NotNull(message = "Cidade é obrigatório")
-    @ManyToOne(optional = false, cascade = CascadeType.ALL)
+    @ManyToOne(optional = false, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "cidade_id")
     @NonNull
     private Cidade cidade;

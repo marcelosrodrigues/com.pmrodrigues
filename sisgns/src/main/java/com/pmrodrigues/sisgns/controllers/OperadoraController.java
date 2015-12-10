@@ -7,7 +7,9 @@ import com.pmrodrigues.sisgns.models.Operadora;
 import com.pmrodrigues.sisgns.repositories.OperadoraRepository;
 import com.pmrodrigues.vraptor.crud.annotations.CRUD;
 import com.pmrodrigues.vraptor.crud.controllers.AbstractCRUDController;
+import org.springframework.http.HttpStatus;
 
+import static br.com.caelum.vraptor.view.Results.http;
 import static br.com.caelum.vraptor.view.Results.json;
 import static org.apache.commons.validator.GenericValidator.isBlankOrNull;
 
@@ -27,10 +29,16 @@ public class OperadoraController extends AbstractCRUDController<Operadora> {
 
         final ResultList<Operadora> resultList = this.getRepository().search(new Operadora().comNome(nome));
 
-        this.getResult().use(json())
-                .from(resultList.todos().getConsulta())
-                .serialize();
 
+        if (!resultList.estaVazio()) {
+            this.getResult().use(json())
+                    .from(resultList.todos().getConsulta())
+                    .excludeAll()
+                    .include("id", "codigo", "nome")
+                    .serialize();
+        } else {
+            getResult().use(http()).setStatusCode(HttpStatus.NO_CONTENT.value());
+        }
         return resultList;
 
     }

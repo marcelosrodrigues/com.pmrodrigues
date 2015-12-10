@@ -2,7 +2,6 @@ package test.com.pmrodrigues.sisgns.builders;
 
 import com.pmrodrigues.sisgns.models.Administradora;
 import com.pmrodrigues.sisgns.models.RegraComissionamento;
-import org.hibernate.SessionFactory;
 
 /**
  * Created by Marceloo on 08/12/2015.
@@ -10,17 +9,16 @@ import org.hibernate.SessionFactory;
 public class RegraComissionamentoBuilder {
 
     private Administradora administradora;
-    private SessionFactory sessionFactory;
     private RegraComissionamento regraComissionamento;
 
-    private RegraComissionamentoBuilder(final SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-        administradora = AdministradoraBuilder.getFactory(sessionFactory).criar();
+    private RegraComissionamentoBuilder() {
+
+        administradora = AdministradoraBuilder.getFactory().criar();
         regraComissionamento = new RegraComissionamento("REGRA 1", 1, administradora);
     }
 
-    public static RegraComissionamentoBuilder getBuilder(final SessionFactory sessionFactory) {
-        return new RegraComissionamentoBuilder(sessionFactory);
+    public static RegraComissionamentoBuilder getBuilder() {
+        return new RegraComissionamentoBuilder();
     }
 
     public RegraComissionamentoBuilder comNome(final String nome) {
@@ -39,7 +37,6 @@ public class RegraComissionamentoBuilder {
     }
 
     public RegraComissionamento criar() {
-        sessionFactory.getCurrentSession().persist(this.regraComissionamento);
         return regraComissionamento;
     }
 

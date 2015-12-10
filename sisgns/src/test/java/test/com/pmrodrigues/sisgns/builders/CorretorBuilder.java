@@ -2,25 +2,22 @@ package test.com.pmrodrigues.sisgns.builders;
 
 import com.pmrodrigues.sisgns.models.Administradora;
 import com.pmrodrigues.sisgns.models.Corretor;
-import org.hibernate.SessionFactory;
 
 /**
  * Created by Marceloo on 08/12/2015.
  */
 public class CorretorBuilder {
 
-    private final SessionFactory sessionFactory;
     private final Corretor corretor;
 
-    private CorretorBuilder(SessionFactory sessionFactory) {
+    private CorretorBuilder() {
 
-        this.sessionFactory = sessionFactory;
         corretor = new Corretor("TESTE", "teste@teste.com", "123456", null);
 
     }
 
-    public static CorretorBuilder getFactory(final SessionFactory sessionFactory) {
-        return new CorretorBuilder(sessionFactory);
+    public static CorretorBuilder getFactory() {
+        return new CorretorBuilder();
     }
 
     public CorretorBuilder comAdministradora(final Administradora administradora) {
@@ -39,7 +36,6 @@ public class CorretorBuilder {
     }
 
     public Corretor criar() {
-        this.sessionFactory.getCurrentSession().persist(this.corretor);
         return corretor;
     }
 }

@@ -4,10 +4,8 @@ import com.pmrodrigues.endereco.models.Endereco;
 import com.pmrodrigues.endereco.models.Logradouro;
 import com.pmrodrigues.endereco.models.Telefone;
 import com.pmrodrigues.sisgns.models.Administradora;
-import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Service;
 
-import static org.hibernate.criterion.Restrictions.eq;
 import static test.com.pmrodrigues.sisgns.utilities.GeradorCNPJCPF.cnpj;
 
 /**
@@ -16,25 +14,16 @@ import static test.com.pmrodrigues.sisgns.utilities.GeradorCNPJCPF.cnpj;
 @Service
 public class AdministradoraBuilder {
 
-    private SessionFactory sessionFactory;
     private Administradora adminstradora;
 
-    private AdministradoraBuilder(final SessionFactory sessionFactory) {
+    /*private AdministradoraBuilder(final SessionFactory sessionFactory) {
         this();
-        this.sessionFactory = sessionFactory;
-
-        Logradouro campoDaAreia = (Logradouro) sessionFactory.getCurrentSession()
-                .createCriteria(Logradouro.class)
-                .add(eq("cep", "22743310"))
-                .uniqueResult();
 
         adminstradora.comEndereco(new Endereco(campoDaAreia.getBairro(),
                 campoDaAreia.getBairro().getCidade(),
                 campoDaAreia.getBairro().getCidade().getEstado(),
                 "84", campoDaAreia.getLogradouro(), campoDaAreia.getCep()));
-
-
-    }
+    }*/
 
     private AdministradoraBuilder() {
         adminstradora = (Administradora) new Administradora()
@@ -42,10 +31,6 @@ public class AdministradoraBuilder {
                 .comNumeroDocumento(cnpj());
 
         adminstradora.adicionar(new Telefone("021", "33926222"));
-    }
-
-    public static AdministradoraBuilder getFactory(final SessionFactory sessionFactory) {
-        return new AdministradoraBuilder(sessionFactory);
     }
 
     public static AdministradoraBuilder getFactory() {
@@ -71,15 +56,7 @@ public class AdministradoraBuilder {
         return this;
     }
 
-    public AdministradoraBuilder comEndereco(final Endereco endereco) {
-        adminstradora.comEndereco(endereco);
-        return this;
-    }
-
     public Administradora criar() {
-        if (sessionFactory != null) {
-            sessionFactory.getCurrentSession().persist(adminstradora);
-        }
         return adminstradora;
     }
 

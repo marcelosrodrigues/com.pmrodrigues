@@ -1,5 +1,6 @@
 package test.com.pmrodrigues.sisgns.repositories;
 
+import com.pmrodrigues.endereco.models.Logradouro;
 import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.sisgns.models.Administradora;
 import com.pmrodrigues.sisgns.models.Corretor;
@@ -13,6 +14,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import test.com.pmrodrigues.sisgns.builders.AdministradoraBuilder;
 
+import static org.hibernate.criterion.Restrictions.eq;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -31,7 +33,14 @@ public class TestCorretorRepository extends AbstractTransactionalJUnit4SpringCon
     @Before
     public void setup() {
 
-        Administradora administradora = AdministradoraBuilder.getFactory(sessionFactory).criar();
+        Logradouro campoDaAreia = (Logradouro) sessionFactory.getCurrentSession()
+                .createCriteria(Logradouro.class)
+                .add(eq("cep", "22743310"))
+                .uniqueResult();
+
+        Administradora administradora = AdministradoraBuilder.getFactory()
+                .comEndereco(campoDaAreia)
+                .criar();
 
         sessionFactory.getCurrentSession().persist(administradora);
 

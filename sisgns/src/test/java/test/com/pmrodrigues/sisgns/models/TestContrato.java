@@ -39,8 +39,20 @@ public class TestContrato extends AbstractTransactionalJUnit4SpringContextTests 
     @Before
     public void setup() {
         this.plano = (Plano) this.sessionFactory.getCurrentSession().get(Plano.class, 1L);
-        this.administradora = AdministradoraBuilder.getFactory(sessionFactory).criar();
-        this.corretor = CorretorBuilder.getFactory(sessionFactory).criar();
+
+        Logradouro campoDaAreia = (Logradouro) sessionFactory.getCurrentSession()
+                .createCriteria(Logradouro.class)
+                .add(eq("cep", "22743310"))
+                .uniqueResult();
+
+        this.administradora = AdministradoraBuilder.getFactory()
+                .comEndereco(campoDaAreia)
+                .criar();
+
+        sessionFactory.getCurrentSession().persist(administradora);
+
+        this.corretor = CorretorBuilder.getFactory().criar();
+        this.sessionFactory.getCurrentSession().persist(this.corretor);
 
         final Logradouro logradouro = (Logradouro) this.sessionFactory
                 .getCurrentSession()

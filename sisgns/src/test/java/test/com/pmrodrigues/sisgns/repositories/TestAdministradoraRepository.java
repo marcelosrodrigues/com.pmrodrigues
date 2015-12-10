@@ -2,6 +2,7 @@ package test.com.pmrodrigues.sisgns.repositories;
 
 import com.pmrodrigues.endereco.models.Bairro;
 import com.pmrodrigues.endereco.models.Endereco;
+import com.pmrodrigues.endereco.models.Logradouro;
 import com.pmrodrigues.endereco.models.Telefone;
 import com.pmrodrigues.endereco.repositories.BairroRepository;
 import com.pmrodrigues.persistence.daos.ResultList;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static java.lang.String.format;
+import static org.hibernate.criterion.Restrictions.eq;
 import static org.junit.Assert.assertEquals;
 import static test.com.pmrodrigues.sisgns.utilities.GeradorCNPJCPF.cnpj;
 
@@ -45,15 +47,22 @@ public class TestAdministradoraRepository extends AbstractTransactionalJUnit4Spr
     public void setup() {
 
         final Session session = sessionFactory.getCurrentSession();
+        Logradouro campoDaAreia = (Logradouro) sessionFactory.getCurrentSession()
+                .createCriteria(Logradouro.class)
+                .add(eq("cep", "22743310"))
+                .uniqueResult();
 
         for (int i = 0; i < 3; i++) {
 
             final String cnpj = cnpj();
 
-            AdministradoraBuilder.getFactory(sessionFactory)
+            Administradora administradora = AdministradoraBuilder.getFactory()
                     .comCNPJ(cnpj)
-                    .comNome(format("TESTE_%s", i))
+                    .comNome(format("teste%s", i))
+                    .comEndereco(campoDaAreia)
                     .criar();
+
+            sessionFactory.getCurrentSession().persist(administradora);
 
             cnpjs.add(cnpj);
 

@@ -13,6 +13,7 @@ import java.io.Serializable;
 @EqualsAndHashCode(of = {"codigo"})
 @ToString()
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
+@RequiredArgsConstructor(access = AccessLevel.PUBLIC)
 public class Modalidade implements Serializable {
 
     @Id
@@ -24,11 +25,13 @@ public class Modalidade implements Serializable {
     @Getter
     @Setter
     @Column
+    @NonNull
     private String codigo;
 
     @Getter
     @Setter
     @Column
+    @NonNull
     private String nome;
 
 }

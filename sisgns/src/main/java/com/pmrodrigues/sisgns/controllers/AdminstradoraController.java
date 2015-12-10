@@ -6,7 +6,9 @@ import com.pmrodrigues.sisgns.models.Administradora;
 import com.pmrodrigues.sisgns.repositories.AdministradoraRepository;
 import com.pmrodrigues.vraptor.crud.annotations.CRUD;
 import com.pmrodrigues.vraptor.crud.controllers.AbstractCRUDController;
+import org.springframework.http.HttpStatus;
 
+import static br.com.caelum.vraptor.view.Results.http;
 import static br.com.caelum.vraptor.view.Results.json;
 
 /**
@@ -23,15 +25,23 @@ public class AdminstradoraController extends AbstractCRUDController<Administrado
     @Get
     @Path("/administradora/{nome}.json")
     public ResultList<Administradora> buscarAdministradoraPeloNome(final String nome) {
+
         final Administradora administradora = new Administradora();
         administradora.setNome(nome);
         administradora.setNumeroDocumento(nome);
+
         final ResultList<Administradora> resultList = this.getRepository()
                 .search(administradora);
-        this.getResult().use(json())
+
+        if (resultList.estaVazio()) {
+            getResult().use(http()).setStatusCode(HttpStatus.NO_CONTENT.value());
+        } else {
+            this.getResult()
+                    .use(json())
                 .from(resultList.todos()
                         .getConsulta())
                 .serialize();
+        }
 
         return resultList;
     }

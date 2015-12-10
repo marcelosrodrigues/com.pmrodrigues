@@ -18,6 +18,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import test.com.pmrodrigues.sisgns.builders.ModalidadeBuilder;
 import test.com.pmrodrigues.sisgns.builders.OperadoraBuilder;
 
 import static java.util.Arrays.asList;
@@ -83,8 +84,9 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
 
         sessionFactory.getCurrentSession().persist(administradora);
 
-        final Modalidade modalidade = (Modalidade) sessionFactory.getCurrentSession().get(Modalidade.class, 1L);
-        this.operadora = OperadoraBuilder.getFactory(sessionFactory).comAdministradora(administradora).comModalidade(modalidade).criar();
+        final Modalidade modalidade = ModalidadeBuilder.getFactory().criar();
+        sessionFactory.getCurrentSession().persist(modalidade);
+        this.operadora = OperadoraBuilder.getFactory().comAdministradora(administradora).comModalidade(modalidade).criar();
         sessionFactory.getCurrentSession().persist(operadora);
         this.plano = new Plano("PLANO", operadora, administradora);
         sessionFactory.getCurrentSession().persist(plano);

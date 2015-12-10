@@ -1,5 +1,6 @@
 package test.com.pmrodrigues.sisgns.models;
 
+import com.pmrodrigues.endereco.models.Logradouro;
 import com.pmrodrigues.sisgns.models.*;
 import org.hibernate.SessionFactory;
 import org.junit.Before;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import test.com.pmrodrigues.sisgns.builders.AdministradoraBuilder;
+import test.com.pmrodrigues.sisgns.builders.ModalidadeBuilder;
 import test.com.pmrodrigues.sisgns.builders.OperadoraBuilder;
 import test.com.pmrodrigues.sisgns.builders.RegraComissionamentoBuilder;
 
@@ -15,6 +17,7 @@ import java.math.BigDecimal;
 import java.util.Collection;
 
 import static java.util.Arrays.asList;
+import static org.hibernate.criterion.Restrictions.eq;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
@@ -35,32 +38,51 @@ public class TestComissionamento extends AbstractTransactionalJUnit4SpringContex
     @Before
     public void setup() {
 
-        this.administradora = AdministradoraBuilder.getFactory(sessionFactory).criar();
+        Logradouro campoDaAreia = (Logradouro) sessionFactory.getCurrentSession()
+                .createCriteria(Logradouro.class)
+                .add(eq("cep", "22743310"))
+                .uniqueResult();
+
+        this.administradora = AdministradoraBuilder.getFactory()
+                .comEndereco(campoDaAreia)
+                .criar();
+
+        sessionFactory.getCurrentSession().persist(administradora);
 
         this.primeiraParcelaCorretor = RegraComissionamentoBuilder
-                .getBuilder(sessionFactory)
+                .getBuilder()
                 .comAdministradora(administradora)
                 .criar();
 
+        sessionFactory.getCurrentSession().persist(primeiraParcelaCorretor);
+
         this.segundaParcelaCorretor = RegraComissionamentoBuilder
-                .getBuilder(sessionFactory)
+                .getBuilder()
                 .comAdministradora(administradora)
                 .comNome("REGRA 2")
                 .comOrdem(2)
                 .criar();
 
+        sessionFactory.getCurrentSession().persist(segundaParcelaCorretor);
+
         this.terceiraParcelaCorretor = RegraComissionamentoBuilder
-                .getBuilder(sessionFactory)
+                .getBuilder()
                 .comAdministradora(administradora)
                 .comNome("REGRA 3")
                 .comOrdem(3)
                 .criar();
 
-        final Modalidade modalidade = (Modalidade) sessionFactory.getCurrentSession().get(Modalidade.class, 1L);
-        this.nova = OperadoraBuilder.getFactory(sessionFactory)
+        sessionFactory.getCurrentSession().persist(terceiraParcelaCorretor);
+
+        final Modalidade modalidade = ModalidadeBuilder.getFactory().criar();
+        sessionFactory.getCurrentSession().persist(modalidade);
+
+        this.nova = OperadoraBuilder.getFactory()
                 .comModalidade(modalidade)
                 .comAdministradora(administradora)
                 .criar();
+
+        sessionFactory.getCurrentSession().persist(this.nova);
 
     }
 
