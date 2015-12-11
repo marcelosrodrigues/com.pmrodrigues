@@ -2,6 +2,7 @@ package com.pmrodrigues.sisgns.models.security;
 
 
 import com.pmrodrigues.security.utilities.MD5;
+import com.pmrodrigues.sisgns.models.Administradora;
 import lombok.*;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.security.core.GrantedAuthority;
@@ -63,11 +64,21 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
     @Getter
     private Long tentativas = 0L;
 
-    public Usuario(final String nome, final String email, final String password) {
+    @Setter
+    @Getter
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinTable(name = "corretores_administradora",
+            joinColumns = {@JoinColumn(name = "corretor_id")},
+            inverseJoinColumns = {@JoinColumn(name = "administradora_id")},
+            uniqueConstraints = {@UniqueConstraint(columnNames = {"corretor_id", "administradora_id"})})
+    private Administradora administradora;
+
+    public Usuario(final String nome, final String email, final String password, final Administradora administradora) {
         this();
         this.nome = nome;
         this.email = email;
         this.password = MD5.encrypt(password);
+        this.administradora = administradora;
     }
 
     @Override
@@ -75,7 +86,7 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
         this.incrementarTentativasFalhas();
     }
 
-    public void incrementarTentativasFalhas() {
+    private void incrementarTentativasFalhas() {
         tentativas++;
         if (tentativas >= NUMERO_MAXIMO_TENTATIVAS_FALHAS) {
             bloquear();
