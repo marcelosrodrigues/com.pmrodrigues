@@ -20,8 +20,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import test.com.pmrodrigues.sisgns.builders.ModalidadeBuilder;
 import test.com.pmrodrigues.sisgns.builders.OperadoraBuilder;
+import test.com.pmrodrigues.sisgns.builders.RegraComissionamentoBuilder;
 
-import static java.util.Arrays.asList;
 import static org.hibernate.criterion.Restrictions.eq;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -56,15 +56,6 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
     @Before
     public void setup() {
 
-        jdbcTemplate.batchUpdate("insert into regra_comissionamento ( id , nome,ordem) values (? , ? , ? )",
-                asList(new Object[]{1, "REGRA 1", 1},
-                        new Object[]{2, "REGRA 2", 2},
-                        new Object[]{3, "REGRA 3", 3}));
-
-        this.primeiraParcelaCorretor = (RegraComissionamento) sessionFactory.getCurrentSession().get(RegraComissionamento.class, 1L);
-        this.segundaParcelaCorretor = (RegraComissionamento) sessionFactory.getCurrentSession().get(RegraComissionamento.class, 2L);
-        this.terceiraParcelaCorretor = (RegraComissionamento) sessionFactory.getCurrentSession().get(RegraComissionamento.class, 3L);
-
         Logradouro campoDaAreia = (Logradouro) sessionFactory.getCurrentSession()
                 .createCriteria(Logradouro.class)
                 .add(eq("cep", "22743310"))
@@ -83,6 +74,18 @@ public class TestPlanoController extends AbstractTransactionalJUnit4SpringContex
         administradora.adicionar(new Telefone("021", "33926222"));
 
         sessionFactory.getCurrentSession().persist(administradora);
+
+        this.primeiraParcelaCorretor = RegraComissionamentoBuilder.getBuilder()
+                .comAdministradora(administradora).comNome("REGRA 1").comOrdem(1).criar();
+
+        this.segundaParcelaCorretor = RegraComissionamentoBuilder.getBuilder()
+                .comAdministradora(administradora).comNome("REGRA 2").comOrdem(2).criar();
+        this.terceiraParcelaCorretor = RegraComissionamentoBuilder.getBuilder()
+                .comAdministradora(administradora).comNome("REGRA 3").comOrdem(3).criar();
+
+        sessionFactory.getCurrentSession().persist(primeiraParcelaCorretor);
+        sessionFactory.getCurrentSession().persist(segundaParcelaCorretor);
+        sessionFactory.getCurrentSession().persist(terceiraParcelaCorretor);
 
         final Modalidade modalidade = ModalidadeBuilder.getFactory().criar();
         sessionFactory.getCurrentSession().persist(modalidade);

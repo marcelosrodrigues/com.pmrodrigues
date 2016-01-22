@@ -71,9 +71,38 @@
 
     <definition name="corretor/*/show-template" extends="corretor/formulario-template"/>
 
+    <definition name="usuario/index-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/usuario/index.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/usuario/index.jsp"/>
+    </definition>
+
+    <definition name="usuario/search-template" extends="usuario/index-template"/>
+
+    <definition name="usuario/formulario-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/usuario/formulario.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/usuario/formulario.jsp"/>
+    </definition>
+
+    <definition name="usuario/*/show-template" extends="corretor/formulario-template"/>
+
+    <definition name="modalidade/index-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/modalidade/index.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/modalidade/index.jsp"/>
+    </definition>
+
+    <definition name="modalidade/search-template" extends="modalidade/index-template"/>
+
+    <definition name="modalidade/formulario-template" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/modalidade/formulario.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/modalidade/formulario.jsp"/>
+    </definition>
+
+
     <definition name="contrato/formulario-template" extends="principal">
         <put-attribute name="header" value="/WEB-INF/breadcump/contrato/formulario.jsp"/>
         <put-attribute name="conteudo" value="/WEB-INF/template/contrato/formulario.jsp"/>
     </definition>
+
+    <definition name="modalidade/*/show-template" extends="modalidade/formulario-template"/>
 
 </tiles-definitions>

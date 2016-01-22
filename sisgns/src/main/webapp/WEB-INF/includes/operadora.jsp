@@ -5,5 +5,5 @@
 <%@ taglib prefix="bootstrap" uri="http://com.pmrodrigues.biz/taglib/bootstrap" %>
 
 <input type="hidden" name="object.operadora" id="object.operadora" value="${object.operadora.id}"/>
-<bootstrap:textfield label="Operadora" value="${object.operadora.nome}" id="object.operadora.nome"
+<bootstrap:textfield label="Convênio" value="${object.operadora.nome}" id="object.operadora.nome"
                      errorField="nome"/>

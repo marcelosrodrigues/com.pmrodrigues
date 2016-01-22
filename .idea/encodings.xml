@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+  <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/akatus" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boleto" charset="UTF-8" />
@@ -9,28 +9,13 @@
     <file url="file://$PROJECT_DIR$/pagamento" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pageobjects" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/persistence" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/persistence/src/main/java/com/pmrodrigues/persistence/daos/Repository.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/persistence/src/main/java/com/pmrodrigues/persistence/daos/ResultList.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/persistence/src/main/java/com/pmrodrigues/persistence/daos/impl" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/persistence/src/test/java/test/com/pmrodrigues/persistence/daos/LojaRepository.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/persistence/src/test/java/test/com/pmrodrigues/persistence/daos/LojaRepositoryImpl.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/persistence/src/test/java/test/com/pmrodrigues/persistence/daos/TestRepository.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/persistence/src/test/java/test/com/pmrodrigues/persistence/models/Loja.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/persistence/src/test/resources/jdbc.properties" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/persistence/src/test/resources/test-applicationContext-data.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/persistence/src/test/resources/test-applicationContext.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/pessoa" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sisgns" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sms" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/sms/src/test/resources/test-applicationContext.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/taglib" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/taglib/src/main/java/com/pmrodrigues/taglib/SummaryTag.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/taglib/src/main/resources/META-INF/bootstrap-taglib.tld" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/taglib/src/test/java/test/com/pmrodrigues/taglib/bean/Secao.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/utilities" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vraptor-crud" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/vraptor-crud/src/test/java/test/com/pmrodrigues/vraptor/crud/controller/Loja.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/xml" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

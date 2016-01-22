@@ -14,6 +14,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import test.com.pmrodrigues.sisgns.builders.AdministradoraBuilder;
 import test.com.pmrodrigues.sisgns.builders.CorretorBuilder;
+import test.com.pmrodrigues.sisgns.builders.OperadoraBuilder;
+import test.com.pmrodrigues.sisgns.builders.PlanoBuilder;
 
 import static java.util.Arrays.asList;
 import static org.hibernate.criterion.Restrictions.eq;
@@ -35,10 +37,10 @@ public class TestContrato extends AbstractTransactionalJUnit4SpringContextTests 
     private Corretor corretor;
 
     private Endereco endereco = new Endereco();
+    private Operadora operadora;
 
     @Before
     public void setup() {
-        this.plano = (Plano) this.sessionFactory.getCurrentSession().get(Plano.class, 1L);
 
         Logradouro campoDaAreia = (Logradouro) sessionFactory.getCurrentSession()
                 .createCriteria(Logradouro.class)
@@ -51,7 +53,7 @@ public class TestContrato extends AbstractTransactionalJUnit4SpringContextTests 
 
         sessionFactory.getCurrentSession().persist(administradora);
 
-        this.corretor = CorretorBuilder.getFactory().criar();
+        this.corretor = CorretorBuilder.getFactory().comAdministradora(administradora).criar();
         this.sessionFactory.getCurrentSession().persist(this.corretor);
 
         final Logradouro logradouro = (Logradouro) this.sessionFactory
@@ -67,6 +69,14 @@ public class TestContrato extends AbstractTransactionalJUnit4SpringContextTests 
                 .comCidade(logradouro.getBairro().getCidade())
                 .comBairro(logradouro.getBairro())
                 .comCEP(logradouro.getCep());
+
+        this.operadora = OperadoraBuilder.getFactory().comAdministradora(administradora)
+                .comModalidade((Modalidade) sessionFactory.getCurrentSession().get(Modalidade.class, 1L))
+                .criar();
+        sessionFactory.getCurrentSession().persist(operadora);
+
+        this.plano = PlanoBuilder.getFactory().comAdminstradora(administradora).comOperadora(operadora).criar();
+        sessionFactory.getCurrentSession().persist(plano);
     }
 
 

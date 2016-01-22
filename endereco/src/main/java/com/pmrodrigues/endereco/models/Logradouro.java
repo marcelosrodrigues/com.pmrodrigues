@@ -10,7 +10,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table
-@EqualsAndHashCode(of = "cep")
+@EqualsAndHashCode(of = {"id"})
 @ToString(of = {"id", "logradouro", "cep"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 @RequiredArgsConstructor(access = AccessLevel.PUBLIC)

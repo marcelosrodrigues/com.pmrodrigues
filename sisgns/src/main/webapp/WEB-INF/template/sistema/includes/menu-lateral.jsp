@@ -23,7 +23,7 @@
 
             </li>-->
 
-                <li>
+                <!--   <li>
                     <a href="#"><i class="fa fa-dollar fa-fw"></i> Financeiro<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
@@ -31,13 +31,13 @@
                         </li>
                     </ul>
                 </li>
-
-            <li>
+            -->
+                <!--<li>
                 <a href="#"><i class="fa fa-edit fa-fw"></i> Cadastro<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
 
                     <li>
-                        <a href="<c:url value='/plano/index.do' />">Convênios</a>
+                        <a href="<c:url value='/plano/index.do' />">Planos</a>
                     </li>
 
                     <li>
@@ -49,7 +49,7 @@
                     </li>
 
                 </ul>
-            </li>
+            </li>-->
 
                 <li>
                     <a href="#"><i class="fa fa-edit fa-fw"></i> Administração<span class="fa arrow"></span></a>
@@ -60,9 +60,21 @@
                         </li>
 
                         <li>
-                            <a href="<c:url value='/operadora/index.do' />">Operadoras</a>
+                            <a href="<c:url value='/operadora/index.do' />">Convênios</a>
                         </li>
 
+                        <li>
+                            <a href="<c:url value='/modalidade/index.do' />">Modalidades</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-lock fa-fw"></i> Segurança<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="<c:url value='/usuario/index.do' />">Usuários</a>
+                                </li>
+                            </ul>
+                        </li>
 
                     </ul>
                 </li>

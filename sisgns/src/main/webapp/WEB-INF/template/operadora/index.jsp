@@ -35,7 +35,7 @@
             <td>${object.modalidade.codigo} - ${object.modalidade.nome}</td>
             <td align="center">
                 <bootstrap:delete action="/operadora/excluir.do" fieldName="object" value="${object.id}"
-                                  message="Confirmar a exclusão da Operadora ${object.nome}"/>
+                                  message="Confirmar a exclusão do convênio ${object.nome}"/>
             </td>
         </tr>
     </c:forEach>

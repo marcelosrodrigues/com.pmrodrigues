@@ -11,7 +11,7 @@
     <div class="panel panel-default">
 
         <div class="panel-heading">
-            Operadora
+            Convênio
         </div>
 
         <div class="panel-body">

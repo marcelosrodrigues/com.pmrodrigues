@@ -7,6 +7,7 @@ import lombok.*;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
@@ -37,6 +38,7 @@ public abstract class Pessoa implements Serializable {
     @Getter
     private String email;
 
+    @Valid
     @ManyToOne(optional = false , cascade = CascadeType.ALL)
     @JoinColumn(name = "endereco_id")
     @Setter

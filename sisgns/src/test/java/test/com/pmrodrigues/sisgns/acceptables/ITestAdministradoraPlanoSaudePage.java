@@ -60,7 +60,7 @@ public class ITestAdministradoraPlanoSaudePage extends AbstractAcceptableTests {
     @Test
     public void devePesquisarAdministradora() throws Exception {
 
-        final ListAdministradoraPlanosSaudePage page = (ListAdministradoraPlanosSaudePage) dashboard
+        final ListAdministradoraPlanosSaudePage page = dashboard
                 .navigateTo(ListAdministradoraPlanosSaudePage.class);
 
         final List<Administradora> administradoras = query("select * from cedente limit 0 , 20", Administradora.class);
@@ -76,7 +76,7 @@ public class ITestAdministradoraPlanoSaudePage extends AbstractAcceptableTests {
     @Test
     public void deveAdicionarAdministradora() throws Exception {
 
-        AdministradoraPlanosSaudePage page = (AdministradoraPlanosSaudePage) dashboard.navigateTo(AdministradoraPlanosSaudePage.class);
+        AdministradoraPlanosSaudePage page = dashboard.navigateTo(AdministradoraPlanosSaudePage.class);
 
         ListAdministradoraPlanosSaudePage administradoras = (ListAdministradoraPlanosSaudePage) page.nome("TESTE")
                 .cnpj("99619274000120")
@@ -92,7 +92,7 @@ public class ITestAdministradoraPlanoSaudePage extends AbstractAcceptableTests {
     @Test
     public void deveAdicionarInformandoUmCEPQueNaoEstaCadastrado() throws Exception {
 
-        AdministradoraPlanosSaudePage page = (AdministradoraPlanosSaudePage) dashboard.navigateTo(AdministradoraPlanosSaudePage.class);
+        AdministradoraPlanosSaudePage page = dashboard.navigateTo(AdministradoraPlanosSaudePage.class);
 
         ListAdministradoraPlanosSaudePage administradoras = (ListAdministradoraPlanosSaudePage) page.nome("TESTE")
                 .cnpj("99619274000120")
@@ -113,11 +113,15 @@ public class ITestAdministradoraPlanoSaudePage extends AbstractAcceptableTests {
     public void deveAlterarAAdministradora() throws Exception {
 
 
-        Telefone telefone = queryForObject("select id , ddd , telefone as numero from telefone inner join telefone_administrador on telefone_id = id" +
-                " where administradora_id = 5", Telefone.class);
+        Telefone telefone = queryForObject("select t.id , ddd , telefone as numero  from telefone t " +
+                "  inner join telefone_administrador ta on telefone_id = t.id " +
+                "  inner join cedente c on c.id = ta.administradora_id " +
+                " where numeroDocumento = '44.757.560/0001-60'", Telefone.class);
+
+        Administradora administradora = queryForObject("select * from cedente where numeroDocumento = '44.757.560/0001-60'", Administradora.class);
 
         AdministradoraPlanosSaudePage page = (AdministradoraPlanosSaudePage) dashboard.navigateTo(ListAdministradoraPlanosSaudePage.class)
-                .abrir("5");
+                .abrir(String.valueOf(administradora.getId()));
 
         page.cep("22743310")
                 .apagar("(" + telefone.getDdd() + ") " + telefone.getNumero())

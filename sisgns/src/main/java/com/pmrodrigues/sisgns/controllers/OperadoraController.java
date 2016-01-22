@@ -6,6 +6,7 @@ import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.sisgns.models.Operadora;
 import com.pmrodrigues.sisgns.repositories.OperadoraRepository;
 import com.pmrodrigues.vraptor.crud.annotations.CRUD;
+import com.pmrodrigues.vraptor.crud.annotations.Validate;
 import com.pmrodrigues.vraptor.crud.controllers.AbstractCRUDController;
 import org.springframework.http.HttpStatus;
 
@@ -43,8 +44,8 @@ public class OperadoraController extends AbstractCRUDController<Operadora> {
 
     }
 
-    @Override
-    protected void validate(final Operadora object) {
+    @Validate
+    public void validate(final Operadora object) {
         if (object.getAdministradora().getId() == null || object.getAdministradora().getId() == 0L) {
             this.getValidator().add(new ValidationMessage("Administradora é obrigatória", "object.administradora"));
         }

@@ -10,8 +10,11 @@ import com.pmrodrigues.sisgns.models.Operadora;
 public class OperadoraBuilder {
     private final Operadora operadora;
 
-    public OperadoraBuilder() {
-        this.operadora = new Operadora("0001", "Operadora nova", new Modalidade(), new Administradora());
+    private OperadoraBuilder() {
+
+        Administradora administradora = AdministradoraBuilder.getFactory().criar();
+        Modalidade modalidade = ModalidadeBuilder.getFactory().criar();
+        this.operadora = new Operadora("0001", "Operadora nova", modalidade, administradora);
     }
 
     public static OperadoraBuilder getFactory() {

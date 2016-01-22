@@ -5,5 +5,6 @@ package com.pmrodrigues.sisgns;
  */
 public interface Constante {
 
-    final static String FAIXA_ETARIA = "faixa_etaria";
+    String FAIXA_ETARIA = "faixa_etaria";
+    String PERFIS = "perfis";
 }

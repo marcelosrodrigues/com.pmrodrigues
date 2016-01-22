@@ -1,0 +1,2 @@
+ALTER TABLE cedente
+ADD excluido BOOLEAN DEFAULT 0;

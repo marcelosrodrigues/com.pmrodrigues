@@ -11,21 +11,27 @@ import java.io.Serializable;
  */
 @Entity
 @Table
-@EqualsAndHashCode()
+@EqualsAndHashCode(of = {"id"})
 @ToString(of = {"id", "nome"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
-public @Data class Bairro implements Serializable {
+public class Bairro implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter
+    @Getter
     private Long id;
 
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "cidade_id")
+    @Setter
+    @Getter
     private Cidade cidade;
 
     @NotEmpty(message = "Bairro é obrigatória")
     @Column(nullable = false)
+    @Setter
+    @Getter
     private String nome;
 
     public Bairro comNome(final String nome) {

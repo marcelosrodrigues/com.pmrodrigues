@@ -1,6 +1,8 @@
 package com.pmrodrigues.sisgns.models;
 
 import lombok.*;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,6 +16,8 @@ import java.io.Serializable;
 @ToString()
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 @RequiredArgsConstructor(access = AccessLevel.PUBLIC)
+@SQLDelete(sql = "update modalidade set excluido = 1 where id = ?")
+@Where(clause = "excluido = 0")
 public class Modalidade implements Serializable {
 
     @Id

@@ -1,10 +1,7 @@
 package com.pmrodrigues.vraptor.crud.controllers;
 
 
-import com.pmrodrigues.vraptor.crud.annotations.After;
-import com.pmrodrigues.vraptor.crud.annotations.Before;
-import com.pmrodrigues.vraptor.crud.annotations.Insert;
-import com.pmrodrigues.vraptor.crud.annotations.Update;
+import com.pmrodrigues.vraptor.crud.annotations.*;
 import org.apache.log4j.Logger;
 
 import java.lang.reflect.InvocationTargetException;
@@ -42,7 +39,14 @@ class CRUDUtils<E> {
         } catch (IllegalAccessException | InvocationTargetException e) {
             throw new RuntimeException(e);
         }
+    }
 
+    public boolean doValidate(final E object) {
+        try {
+            return invoke(Validate.class, object);
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private Method getByAnnotation(final Class annotation) {

@@ -29,6 +29,7 @@ public class TestCorretorRepository extends AbstractTransactionalJUnit4SpringCon
 
     @Autowired
     private SessionFactory sessionFactory;
+    private Administradora administradora;
 
     @Before
     public void setup() {
@@ -38,7 +39,7 @@ public class TestCorretorRepository extends AbstractTransactionalJUnit4SpringCon
                 .add(eq("cep", "22743310"))
                 .uniqueResult();
 
-        Administradora administradora = AdministradoraBuilder.getFactory()
+        this.administradora = AdministradoraBuilder.getFactory()
                 .comEndereco(campoDaAreia)
                 .criar();
 
@@ -56,6 +57,7 @@ public class TestCorretorRepository extends AbstractTransactionalJUnit4SpringCon
         corretor.setNome("TESTE");
         corretor.setBloqueado(false);
         corretor.setPassword("12345678");
+        corretor.setAdministradora(administradora);
 
         repository.add(corretor);
 

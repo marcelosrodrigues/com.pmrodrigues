@@ -47,16 +47,6 @@ public final class TagFactory {
         return null;
     }
 
-    public Tag byXPath(final String xpath) {
-        final WebElement element = driver.findElement(By.xpath(xpath));
-        return createTag(element);
-    }
-
-    public Tag byClass(String css) {
-        final WebElement element = driver.findElement(By.cssSelector(css));
-        return createTag(element);
-    }
-
     public Tag byName(String name) {
         final WebElement element = driver.findElement(By.name(name));
         return createTag(element);

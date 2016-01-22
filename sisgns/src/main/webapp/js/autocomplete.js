@@ -81,18 +81,18 @@ $('[id*="bairro.nome"]').each(function (i, item) {
         },
         minLength: 3,
         select: function (event, ui) {
-            $('[id*="bairro"]').val(ui.item.id);
+            $('[id="object.endereco.bairro"]').val(ui.item.id);
             $('[id*="bairro.nome"]').val(ui.item.nome);
             return false;
         },
         focus: function (event, ui) {
-            $('[id*="bairro"]').val(ui.item.id);
+            $('[id="object.endereco.bairro"]').val(ui.item.id);
             $('[id*="bairro.nome"]').val(ui.item.nome);
             return false;
         },
         response: function (event, ui) {
             if (ui.content.length == 1) {
-                $('[id*="bairro"]').val(ui.content[0].id);
+                $('[id="object.endereco.bairro"]').val(ui.content[0].id);
                 $('[id*="bairro.nome"]').val(ui.content[0].nome);
                 $(this).autocomplete("close");
             }

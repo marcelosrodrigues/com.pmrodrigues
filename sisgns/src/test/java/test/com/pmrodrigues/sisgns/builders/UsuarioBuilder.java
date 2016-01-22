@@ -1,5 +1,6 @@
 package test.com.pmrodrigues.sisgns.builders;
 
+import com.pmrodrigues.sisgns.models.Administradora;
 import com.pmrodrigues.sisgns.models.security.Perfil;
 import com.pmrodrigues.sisgns.models.security.Usuario;
 
@@ -28,6 +29,11 @@ public class UsuarioBuilder {
 
     public UsuarioBuilder comSenha(String senha) {
         this.usuario.setPassword(senha);
+        return this;
+    }
+
+    public UsuarioBuilder comAdministradora(Administradora administradora) {
+        this.usuario.setAdministradora(administradora);
         return this;
     }
 

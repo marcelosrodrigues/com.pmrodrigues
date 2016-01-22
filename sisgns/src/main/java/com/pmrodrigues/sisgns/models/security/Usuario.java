@@ -2,12 +2,14 @@ package com.pmrodrigues.sisgns.models.security;
 
 
 import com.pmrodrigues.security.utilities.MD5;
+import com.pmrodrigues.sisgns.exceptions.PasswordNotChangedException;
 import com.pmrodrigues.sisgns.models.Administradora;
 import lombok.*;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Collection;
 import java.util.HashSet;
 
@@ -66,6 +68,7 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
 
     @Setter
     @Getter
+    @NotNull
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinTable(name = "corretores_administradora",
             joinColumns = {@JoinColumn(name = "corretor_id")},
@@ -141,5 +144,17 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
         if (!isBlankOrNull(password)) {
             this.password = MD5.encrypt(password);
         }
+    }
+
+    public void trocarSenha(final String senhaAntiga, final String novaSenha, final String confirmacaoDaSenha) throws PasswordNotChangedException {
+
+        if (isBlankOrNull(senhaAntiga) || !this.getPassword().equalsIgnoreCase(MD5.encrypt(senhaAntiga))) {
+            throw new PasswordNotChangedException("Senha antiga fornecida não confere");
+        }
+        if (isBlankOrNull(novaSenha) || isBlankOrNull(confirmacaoDaSenha) || !novaSenha.equalsIgnoreCase(confirmacaoDaSenha)) {
+            throw new PasswordNotChangedException("A nova senha não confere com a confirmação informada");
+        }
+        this.setPassword(novaSenha);
+
     }
 }

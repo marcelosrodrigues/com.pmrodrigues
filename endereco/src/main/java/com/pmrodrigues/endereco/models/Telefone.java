@@ -15,7 +15,7 @@ import java.io.Serializable;
 @DiscriminatorValue("R")
 @NoArgsConstructor()
 @RequiredArgsConstructor(access = AccessLevel.PUBLIC)
-@EqualsAndHashCode
+@EqualsAndHashCode(of = {"id"})
 @ToString
 public class Telefone implements Serializable {
 

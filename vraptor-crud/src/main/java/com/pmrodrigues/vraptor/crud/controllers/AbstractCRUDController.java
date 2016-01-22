@@ -45,7 +45,9 @@ public abstract class AbstractCRUDController<E> { //NOPMD
     @Post
     public void salvar(final E object) {
 
-        this.validate(object);
+        if (!crudutils.doValidate(object)) {
+            validator.validate(object);
+        }
 
         final Long idValue = crudutils.getId(object);
 
@@ -72,10 +74,6 @@ public abstract class AbstractCRUDController<E> { //NOPMD
             validator.add(new ValidationMessage(ex.getMessage(), ex.getMessage()));
             validator.onErrorForwardTo(this.getClass()).formulario();
         }
-    }
-
-    protected void validate(final E object) {
-        validator.validate(object);
     }
 
     @Get

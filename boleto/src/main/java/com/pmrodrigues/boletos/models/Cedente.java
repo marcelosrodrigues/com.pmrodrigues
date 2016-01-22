@@ -3,9 +3,12 @@ package com.pmrodrigues.boletos.models;
 import br.com.caelum.stella.bean.validation.CNPJ;
 import com.pmrodrigues.endereco.models.Endereco;
 import lombok.*;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -24,6 +27,8 @@ import java.io.Serializable;
 @ToString()
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 @RequiredArgsConstructor(staticName = "novoCedente", access = AccessLevel.PUBLIC)
+@SQLDelete(sql = "update cedente set excluido = 1 where id = ?")
+@Where(clause = "excluido = 0")
 public class Cedente implements Serializable {
 
     @XmlElement(name = "id"
@@ -65,6 +70,7 @@ public class Cedente implements Serializable {
     @Getter
     private String convenio;
 
+    @Valid
     @ManyToOne(optional = false, cascade = CascadeType.ALL)
     @JoinColumn(name = "endereco_id")
     @Getter

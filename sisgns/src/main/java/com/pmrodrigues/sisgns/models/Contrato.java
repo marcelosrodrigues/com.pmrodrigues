@@ -8,6 +8,7 @@ import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
@@ -45,7 +46,7 @@ public class Contrato implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "contrato_id", nullable = false)
     @Getter
-    private Collection<Beneficiario> beneficiarios = new HashSet<>();
+    private Collection<Beneficiario> beneficiarios = new ArrayList<>();
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "corretor_id")

@@ -4,6 +4,8 @@ import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.persistence.daos.impl.AbstractRepository;
 import com.pmrodrigues.sisgns.models.Modalidade;
 import com.pmrodrigues.sisgns.repositories.ModalidadeRepository;
+import com.pmrodrigues.utilities.strings.ReflectionUtils;
+import org.hibernate.criterion.Example;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Order;
 import org.springframework.stereotype.Repository;
@@ -23,5 +25,17 @@ public class ModalidadeRepositoryImpl extends AbstractRepository<Modalidade> imp
                 .add(or(like("nome", nome, MatchMode.START),
                         like("codigo", nome, MatchMode.START)))
                 .addOrder(Order.asc("nome")));
+    }
+
+    @Override
+    public ResultList<Modalidade> search(final Modalidade modalidade) {
+
+        final Modalidade e = (modalidade == null) ? new Modalidade() : modalidade;
+
+        ReflectionUtils.nullifyStrings(e);
+        return new ResultList<>(this.getSession()
+                .createCriteria(Modalidade.class)
+                .add(Example.create(e).enableLike(MatchMode.START))
+                .addOrder(Order.asc("codigo")));
     }
 }

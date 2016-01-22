@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 @Entity
 @Table
-@EqualsAndHashCode(exclude = {"id" , "nome"})
+@EqualsAndHashCode(of = {"id"})
 @ToString(of = {"id", "uf", "nome"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 @RequiredArgsConstructor(access = AccessLevel.PUBLIC)

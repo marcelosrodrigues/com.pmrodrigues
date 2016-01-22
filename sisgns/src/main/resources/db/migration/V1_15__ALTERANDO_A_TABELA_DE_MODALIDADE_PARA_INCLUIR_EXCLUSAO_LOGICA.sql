@@ -1,0 +1,2 @@
+ALTER TABLE modalidade
+ADD COLUMN excluido BOOLEAN DEFAULT 0;

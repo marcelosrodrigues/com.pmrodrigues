@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
+import static org.apache.commons.validator.GenericValidator.isBlankOrNull;
+
 /**
  * Created by Marceloo on 01/10/2015.
  */
@@ -106,7 +108,17 @@ public class AdministradoraPlanosSaudePage extends AbstractPageObject {
             TagFactory.getInstance(super.getDriver())
                     .byId("object.endereco.bairro.nome")
                     .setValue(bairro);
+
+            new WebDriverWait(this.getDriver(), 10)
+                    .until(new ExpectedCondition<Boolean>() {
+                        @Override
+                        public Boolean apply(final WebDriver input) {
+                            return !isBlankOrNull((String) TagFactory.getInstance(input).byId("object.endereco.bairro").getValue());
+                        }
+                    });
+
         }
+
         return this;
     }
 
