@@ -2,10 +2,12 @@ package com.pmrodrigues.sisgns.models;
 
 import com.pmrodrigues.sisgns.models.enums.QuantidadeParcelas;
 import lombok.*;
-import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.Where;
+import org.hibernate.annotations.*;
 
+import javax.persistence.CascadeType;
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,6 +22,18 @@ import java.util.Collection;
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 @SQLDelete(sql = "update operadora set excluido = 1 where id = ?")
 @Where(clause = "excluido = 0")
+@FilterDefs(
+        {
+                @FilterDef(name = "administradora", parameters = {@ParamDef(
+                        name = "usuario",
+                        type = "long"
+                )})
+        }
+)
+@Filters({
+        @Filter(name = "administradora",
+                condition = " administradora_id in ( select filtro.administradora_id from corretores_administradora filtro where filtro.corretor_id = :usuario )")
+})
 public class Operadora implements Serializable{
 
     @Id

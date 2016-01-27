@@ -5,11 +5,14 @@ import com.pmrodrigues.security.utilities.MD5;
 import com.pmrodrigues.sisgns.exceptions.PasswordNotChangedException;
 import com.pmrodrigues.sisgns.models.Administradora;
 import lombok.*;
+import org.hibernate.annotations.*;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.security.core.GrantedAuthority;
 
+import javax.persistence.CascadeType;
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Collection;
 import java.util.HashSet;
 
@@ -25,6 +28,24 @@ import static org.apache.commons.validator.GenericValidator.isBlankOrNull;
 @EqualsAndHashCode(of = {"id"})
 @ToString(exclude = {"password"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
+@FilterDefs(
+        {
+                @FilterDef(name = "administradora", parameters = {@ParamDef(
+                        name = "usuario",
+                        type = "long"
+                )})
+        }
+)
+@Filters({
+        @Filter(name = "administradora",
+                condition = "  exists ( select 1 " +
+                        "              from corretores_administradora filtro" +
+                        "               where filtro.corretor_id = id " +
+                        "                 and exists ( select 1 " +
+                        "                              from corretores_administradora ca " +
+                        "                             where ca.corretor_id = :usuario" +
+                        "                               and filtro.administradora_id = ca.administradora_id ))")
+})
 public class Usuario implements com.pmrodrigues.security.models.Usuario {
 
     @Id
@@ -68,8 +89,7 @@ public class Usuario implements com.pmrodrigues.security.models.Usuario {
 
     @Setter
     @Getter
-    @NotNull
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = true, fetch = FetchType.LAZY)
     @JoinTable(name = "corretores_administradora",
             joinColumns = {@JoinColumn(name = "corretor_id")},
             inverseJoinColumns = {@JoinColumn(name = "administradora_id")},

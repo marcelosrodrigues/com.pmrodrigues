@@ -4,10 +4,13 @@ import com.pmrodrigues.boletos.models.Cedente;
 import com.pmrodrigues.endereco.models.Celular;
 import com.pmrodrigues.endereco.models.Telefone;
 import lombok.*;
-import org.hibernate.annotations.Where;
+import org.hibernate.annotations.*;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.*;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +22,20 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true, exclude = {"planos", "nome", "residenciais", "celulares"})
 @ToString(callSuper = true, exclude = {"planos", "comissionamento"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
+@FilterDefs(
+        {
+                @FilterDef(name = "administradora", parameters = {@ParamDef(
+                        name = "usuario",
+                        type = "long"
+                )})
+        }
+)
+@Filters({
+        @Filter(name = "administradora",
+                condition = " exists ( select 1 from corretores_administradora filtro " +
+                        "           where filtro.administradora_id = id " +
+                        "             and filtro.corretor_id = :usuario )")
+})
 public class Administradora extends Cedente {
 
     @Getter

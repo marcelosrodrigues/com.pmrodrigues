@@ -1,10 +1,11 @@
 package com.pmrodrigues.sisgns.models;
 
 import lombok.*;
-import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.Where;
+import org.hibernate.annotations.*;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
@@ -15,9 +16,22 @@ import java.io.Serializable;
 @EqualsAndHashCode(of = {"codigo"})
 @ToString()
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
-@RequiredArgsConstructor(access = AccessLevel.PUBLIC)
 @SQLDelete(sql = "update modalidade set excluido = 1 where id = ?")
 @Where(clause = "excluido = 0")
+@FilterDefs(
+        {
+                @FilterDef(name = "administradora", parameters = {@ParamDef(
+                        name = "usuario",
+                        type = "long"
+                )})
+        }
+)
+@Filters({
+        @Filter(name = "administradora",
+                condition = " exists ( select 1 from corretores_administradora filtro " +
+                        "          where administradora_id = filtro.administradora_id " +
+                        "            and filtro.corretor_id = :usuario )")
+})
 public class Modalidade implements Serializable {
 
     @Id
@@ -29,13 +43,21 @@ public class Modalidade implements Serializable {
     @Getter
     @Setter
     @Column
-    @NonNull
     private String codigo;
 
     @Getter
     @Setter
     @Column
-    @NonNull
     private String nome;
 
+    @Getter
+    @Setter
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    private Administradora administradora;
+
+    public Modalidade(final String codigo, final String nome) {
+        this();
+        this.codigo = codigo;
+        this.nome = nome;
+    }
 }

@@ -1,5 +1,6 @@
 package test.com.pmrodrigues.sisgns.builders;
 
+import com.pmrodrigues.sisgns.models.Administradora;
 import com.pmrodrigues.sisgns.models.Modalidade;
 
 /**
@@ -29,5 +30,10 @@ public class ModalidadeBuilder {
 
     public Modalidade criar() {
         return modalidade;
+    }
+
+    public ModalidadeBuilder comAdministradora(final Administradora administradora) {
+        modalidade.setAdministradora(administradora);
+        return this;
     }
 }
