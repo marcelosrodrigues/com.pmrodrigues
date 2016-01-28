@@ -85,6 +85,11 @@
 
     <definition name="usuario/*/show-template" extends="corretor/formulario-template"/>
 
+    <definition name="usuario/trocasenha-definition" extends="principal">
+        <put-attribute name="header" value="/WEB-INF/breadcump/usuario/trocarsenha.jsp"/>
+        <put-attribute name="conteudo" value="/WEB-INF/template/usuario/trocarsenha.jsp"/>
+    </definition>
+
     <definition name="modalidade/index-template" extends="principal">
         <put-attribute name="header" value="/WEB-INF/breadcump/modalidade/index.jsp"/>
         <put-attribute name="conteudo" value="/WEB-INF/template/modalidade/index.jsp"/>
@@ -96,7 +101,6 @@
         <put-attribute name="header" value="/WEB-INF/breadcump/modalidade/formulario.jsp"/>
         <put-attribute name="conteudo" value="/WEB-INF/template/modalidade/formulario.jsp"/>
     </definition>
-
 
     <definition name="contrato/formulario-template" extends="principal">
         <put-attribute name="header" value="/WEB-INF/breadcump/contrato/formulario.jsp"/>

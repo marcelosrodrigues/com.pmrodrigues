@@ -14,6 +14,8 @@ import com.pmrodrigues.vraptor.crud.controllers.AbstractCRUDController;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
+import static org.apache.commons.validator.GenericValidator.isBlankOrNull;
+
 /**
  * Created by Marceloo on 11/12/2015.
  */
@@ -41,14 +43,28 @@ public class UsuarioController extends AbstractCRUDController<Usuario> {
 
         final Authentication userAuthenticated = SecurityContextHolder.getContext().getAuthentication();
         final Usuario usuarioLogado = ((UsuarioRepository) this.getRepository()).findByEmail((String) userAuthenticated.getPrincipal());
-
+        this.getValidator().onErrorForwardTo(this.getClass()).montaTelaDeTrocaDeSenha();
         try {
+
+            if (isBlankOrNull(senhaAntiga)) {
+                this.getValidator().add(new ValidationMessage("Senha antiga é obrigatória", "senhaAntiga"));
+            }
+
+            if (isBlankOrNull(novaSenha)) {
+                this.getValidator().add(new ValidationMessage("A nova senha é obrigatória", "novaSenha"));
+            }
+
+            if (isBlankOrNull(confirmacaoDaSenha)) {
+                this.getValidator().add(new ValidationMessage("A confirmação da nova senha é obrigatória", "confirmacaoDaSenha"));
+            }
+
             usuarioLogado.trocarSenha(senhaAntiga, novaSenha, confirmacaoDaSenha);
             this.getRepository().set(usuarioLogado);
             this.getResult().include(com.pmrodrigues.vraptor.crud.Constante.SUCESSO, "Senha trocada com sucesso");
             this.getResult().forwardTo(this.getClass()).montaTelaDeTrocaDeSenha();
         } catch (PasswordNotChangedException e) {
             this.getValidator().add(new ValidationMessage(e.getMessage(), e.getMessage()));
+
         }
 
 

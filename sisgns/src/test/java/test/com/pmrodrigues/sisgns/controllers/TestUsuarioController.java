@@ -13,6 +13,7 @@ import com.pmrodrigues.sisgns.models.security.Perfil;
 import com.pmrodrigues.sisgns.models.security.Usuario;
 import com.pmrodrigues.sisgns.repositories.PerfilRepository;
 import com.pmrodrigues.sisgns.repositories.UsuarioRepository;
+import org.apache.commons.lang3.StringUtils;
 import org.hibernate.SessionFactory;
 import org.junit.Before;
 import org.junit.Test;
@@ -133,6 +134,25 @@ public class TestUsuarioController extends AbstractTransactionalJUnit4SpringCont
         controller.trocarSenha("12345678", "123456", "ABCDFG");
 
         assertTrue(validator.hasErrors());
+    }
+
+    @Test
+    public void naoPodeTrocarASenhaComCamposVazios() {
+
+        final UsuarioController controller = new UsuarioController(userRepository, perfilRepository, result, validator);
+        Usuario marcelo = UsuarioBuilder.getFactory()
+                .comNome("marcelo")
+                .comSenha("12345678")
+                .comAdministradora(this.administradora)
+                .criar();
+
+        this.sessionFactory.getCurrentSession().persist(marcelo);
+
+        SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(marcelo.getUsername(), "12345678"));
+
+        controller.trocarSenha(StringUtils.EMPTY, StringUtils.EMPTY, StringUtils.EMPTY);
+        assertTrue(validator.hasErrors());
+
     }
 
 }

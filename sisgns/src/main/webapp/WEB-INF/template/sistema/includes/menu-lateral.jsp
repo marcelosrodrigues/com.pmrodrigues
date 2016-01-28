@@ -71,7 +71,7 @@
                             <a href="#"><i class="fa fa-lock fa-fw"></i> Segurança<span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
                                 <li>
-                                    <a href="<c:url value='/usuario/index.do' />">Usuários</a>
+                                    <a href="<c:url value='/usuario/index.do' />"><i class="fa fa-user fa-fw"></i>Usuários</a>
                                 </li>
                             </ul>
                         </li>
