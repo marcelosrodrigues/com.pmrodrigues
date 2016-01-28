@@ -36,9 +36,4 @@ public class UsuarioService implements UserService {
 
         throw new UsernameNotFoundException(format("Usuario %s não encontrado ou senha invalida", username));
     }
-
-    @Override
-    public void update(final com.pmrodrigues.security.models.Usuario usuario) {
-        repository.set((Usuario) usuario);
-    }
 }

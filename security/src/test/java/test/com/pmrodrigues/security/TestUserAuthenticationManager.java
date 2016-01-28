@@ -2,6 +2,7 @@ package test.com.pmrodrigues.security;
 
 
 import com.pmrodrigues.security.UserAuthenticationManager;
+import com.pmrodrigues.security.event.UserUpdateEvent;
 import com.pmrodrigues.security.models.Usuario;
 import com.pmrodrigues.security.services.UserService;
 import com.pmrodrigues.security.utilities.MD5;
@@ -10,12 +11,11 @@ import org.jmock.Mockery;
 import org.jmock.lib.legacy.ClassImposteriser;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-
-import java.lang.reflect.Field;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -29,14 +29,14 @@ public class TestUserAuthenticationManager {
 
     private final UserService service = context.mock(UserService.class);
 
-    private UserAuthenticationManager authenticationManager = new UserAuthenticationManager();
+    private final ApplicationEventPublisher publisher = context.mock(ApplicationEventPublisher.class);
+
+    private UserAuthenticationManager authenticationManager;
 
     @Before
     public void before() throws Exception {
 
-        Field service = authenticationManager.getClass().getDeclaredField("service");
-        service.setAccessible(true);
-        service.set(authenticationManager, this.service);
+        authenticationManager = new UserAuthenticationManager(service, publisher);
 
     }
 
@@ -89,7 +89,7 @@ public class TestUserAuthenticationManager {
             will(returnValue(MD5.encrypt("asdfghj")));
 
             oneOf(user).realizouTentativaInvalida();
-            oneOf(service).update(with(aNonNull(Usuario.class)));
+            oneOf(publisher).publishEvent(with(aNonNull(UserUpdateEvent.class)));
         }});
 
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken("marcelosrodrigues@globo.com", "12345678"));

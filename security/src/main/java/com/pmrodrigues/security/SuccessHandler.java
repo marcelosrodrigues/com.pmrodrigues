@@ -1,10 +1,12 @@
 package com.pmrodrigues.security;
 
 
+import com.pmrodrigues.security.event.UserUpdateEvent;
 import com.pmrodrigues.security.models.Usuario;
 import com.pmrodrigues.security.services.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
@@ -25,8 +27,16 @@ public class SuccessHandler implements AuthenticationSuccessHandler {
 
     private static final Logger logging = Logger.getLogger(SuccessHandler.class);
 
+    private final UserService service;
+
+    private final ApplicationEventPublisher publisher;
+
     @Autowired
-    private UserService service;
+    public SuccessHandler(final UserService service, final ApplicationEventPublisher publisher) {
+
+        this.service = service;
+        this.publisher = publisher;
+    }
 
     @Override
     public void onAuthenticationSuccess(final HttpServletRequest request, final HttpServletResponse response,
@@ -38,7 +48,9 @@ public class SuccessHandler implements AuthenticationSuccessHandler {
 
         final Usuario usuario = (Usuario) service.loadUserByUsername(email);
         usuario.desbloquear();
-        service.update(usuario);
+
+        publisher.publishEvent(new UserUpdateEvent(usuario));
+
         String context = "";
         if (!isBlankOrNull(request.getContextPath())) {
             context = request.getContextPath();
