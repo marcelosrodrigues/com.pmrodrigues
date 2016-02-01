@@ -7,4 +7,4 @@
 <input type="hidden" name="object.modalidade" id="object.modalidade"
        value="${object.modalidade.id}"/>
 <bootstrap:textfield label="Modalidade" value="${object.modalidade.nome}"
-                     id="object.modalidade.nome" errorField="object.modalidade"/>
+                     id="object.modalidade.nome" errorField="modalidade"/>

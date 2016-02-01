@@ -1,18 +1,19 @@
 package com.pmrodrigues.sisgns.controllers;
 
 import br.com.caelum.vraptor.*;
-import br.com.caelum.vraptor.validator.ValidationMessage;
 import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.sisgns.models.Operadora;
+import com.pmrodrigues.sisgns.models.security.Usuario;
 import com.pmrodrigues.sisgns.repositories.OperadoraRepository;
+import com.pmrodrigues.sisgns.securities.SecurityContext;
 import com.pmrodrigues.vraptor.crud.annotations.CRUD;
-import com.pmrodrigues.vraptor.crud.annotations.Validate;
+import com.pmrodrigues.vraptor.crud.annotations.Insert;
+import com.pmrodrigues.vraptor.crud.annotations.Update;
 import com.pmrodrigues.vraptor.crud.controllers.AbstractCRUDController;
 import org.springframework.http.HttpStatus;
 
 import static br.com.caelum.vraptor.view.Results.http;
 import static br.com.caelum.vraptor.view.Results.json;
-import static org.apache.commons.validator.GenericValidator.isBlankOrNull;
 
 /**
  * Created by Marceloo on 28/09/2015.
@@ -20,8 +21,11 @@ import static org.apache.commons.validator.GenericValidator.isBlankOrNull;
 @Resource
 @CRUD
 public class OperadoraController extends AbstractCRUDController<Operadora> {
-    public OperadoraController(final OperadoraRepository repository, final Result result, final Validator validator) {
+    private final SecurityContext securityContext;
+
+    public OperadoraController(final OperadoraRepository repository, SecurityContext securityContext, final Result result, final Validator validator) {
         super(repository, result, validator);
+        this.securityContext = securityContext;
     }
 
     @Get
@@ -44,22 +48,31 @@ public class OperadoraController extends AbstractCRUDController<Operadora> {
 
     }
 
-    @Validate
-    public void validate(final Operadora object) {
-        if (object.getAdministradora().getId() == null || object.getAdministradora().getId() == 0L) {
-            this.getValidator().add(new ValidationMessage("Administradora é obrigatória", "object.administradora"));
+    @Insert
+    public void doInsert(final Operadora object) {
+        final Usuario usuarioLogado = securityContext.getUsuarioLogado();
+        if (usuarioLogado.getAdministradora() != null) {
+            object.setAdministradora(usuarioLogado.getAdministradora());
         }
 
-        if (object.getModalidade().getId() == null || object.getModalidade().getId() == 0L) {
-            this.getValidator().add(new ValidationMessage("Modalidade é obrigatória", "object.modalidade"));
+        this.getRepository().add(object);
+    }
+
+    @Update
+    public void doUpdate(final Operadora object) {
+        final Usuario usuarioLogado = securityContext.getUsuarioLogado();
+        final Operadora toUpdate = this.getRepository().findById(object.getId());
+        toUpdate.setCodigo(object.getCodigo());
+        toUpdate.setNome(object.getNome());
+        toUpdate.setQualicorp(object.getQualicorp());
+        toUpdate.setQuantidadeParcelas(object.getQuantidadeParcelas());
+        toUpdate.setUsaPrimeiraParcela(object.getUsaPrimeiraParcela());
+        toUpdate.setModalidade(object.getModalidade());
+        if (usuarioLogado.getAdministradora() != null) {
+            toUpdate.setAdministradora(usuarioLogado.getAdministradora());
         }
 
-        if (isBlankOrNull(object.getCodigo())) {
-            this.getValidator().add(new ValidationMessage("Código é obrigatório", "codigo"));
-        }
+        getRepository().set(toUpdate);
 
-        if (isBlankOrNull(object.getNome())) {
-            this.getValidator().add(new ValidationMessage("Nome é obrigatório", "nome"));
-        }
     }
 }

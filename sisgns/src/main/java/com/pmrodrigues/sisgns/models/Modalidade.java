@@ -2,6 +2,7 @@ package com.pmrodrigues.sisgns.models;
 
 import lombok.*;
 import org.hibernate.annotations.*;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
@@ -43,11 +44,13 @@ public class Modalidade implements Serializable {
     @Getter
     @Setter
     @Column
+    @NotEmpty(message = "Código é obrigatório")
     private String codigo;
 
     @Getter
     @Setter
     @Column
+    @NotEmpty(message = "Nome é obrigatório")
     private String nome;
 
     @Getter

@@ -3,25 +3,32 @@ package test.com.pmrodrigues.sisgns.controllers;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.util.test.MockResult;
 import br.com.caelum.vraptor.util.test.MockValidator;
-import br.com.caelum.vraptor.validator.ValidationException;
 import com.pmrodrigues.endereco.models.Logradouro;
 import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.sisgns.controllers.OperadoraController;
 import com.pmrodrigues.sisgns.models.Administradora;
 import com.pmrodrigues.sisgns.models.Modalidade;
 import com.pmrodrigues.sisgns.models.Operadora;
+import com.pmrodrigues.sisgns.models.security.Usuario;
 import com.pmrodrigues.sisgns.repositories.OperadoraRepository;
+import com.pmrodrigues.sisgns.securities.SecurityContext;
 import org.hibernate.SessionFactory;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import test.com.pmrodrigues.sisgns.builders.AdministradoraBuilder;
+import test.com.pmrodrigues.sisgns.builders.ModalidadeBuilder;
 import test.com.pmrodrigues.sisgns.builders.OperadoraBuilder;
+import test.com.pmrodrigues.sisgns.builders.UsuarioBuilder;
 
 import static org.hibernate.criterion.Restrictions.eq;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static test.com.pmrodrigues.sisgns.utilities.GeradorCNPJCPF.cnpj;
 
 /**
  * Created by Marceloo on 29/09/2015.
@@ -33,6 +40,9 @@ public class TestOperadoraController extends AbstractTransactionalJUnit4SpringCo
     private OperadoraRepository repository;
 
     @Autowired
+    private SecurityContext securityContext;
+
+    @Autowired
     private SessionFactory sessionFactory;
 
     private Result result = new MockResult();
@@ -40,11 +50,13 @@ public class TestOperadoraController extends AbstractTransactionalJUnit4SpringCo
     private MockValidator validator = new MockValidator();
 
     private Administradora administradora;
+    private Modalidade modalidade;
+    private Logradouro campoDaAreia;
 
     @Before
     public void setup() {
 
-        Logradouro campoDaAreia = (Logradouro) sessionFactory.getCurrentSession()
+        this.campoDaAreia = (Logradouro) sessionFactory.getCurrentSession()
                 .createCriteria(Logradouro.class)
                 .add(eq("cep", "22743310"))
                 .uniqueResult();
@@ -55,13 +67,26 @@ public class TestOperadoraController extends AbstractTransactionalJUnit4SpringCo
 
         sessionFactory.getCurrentSession().persist(administradora);
 
-        jdbcTemplate.update("insert into operadora (nome) VALUES  ('UNIMED')");
+        this.modalidade = ModalidadeBuilder.getFactory().comAdministradora(administradora).criar();
+
+        sessionFactory.getCurrentSession().persist(modalidade);
+
+
+        Operadora unimed = OperadoraBuilder.getFactory()
+                .comNome("UNIMED")
+                .comAdministradora(administradora)
+                .comCodigo("0001")
+                .comModalidade(modalidade)
+                .criar();
+
+
+        sessionFactory.getCurrentSession().persist(unimed);
     }
 
     @Test
     public void deveBuscarOperadoraPeloNome() throws Exception {
 
-        final OperadoraController controller = new OperadoraController(repository, result, validator);
+        final OperadoraController controller = new OperadoraController(repository, securityContext, result, validator);
         ResultList<Operadora> resultList = controller.buscarOperadoraPeloNome("UNIMED");
 
 
@@ -69,27 +94,151 @@ public class TestOperadoraController extends AbstractTransactionalJUnit4SpringCo
         assertEquals(count, resultList.getQuantidadeRegistros());
     }
 
-    @Test(expected = ValidationException.class)
-    public void naoPodeSalvarOperadoraComDadosInvalidos() {
-        final Operadora operadora = OperadoraBuilder.getFactory()
-                .comNome("")
-                .comCodigo("")
-                .criar();
-        final OperadoraController controller = new OperadoraController(repository, result, validator);
+    @Test
+    public void deveInserirOperadoraNaMesmaAdministradoraDoUsuarioLogado() throws Exception {
 
-        controller.salvar(operadora);
+        final OperadoraController controller = new OperadoraController(repository, securityContext, result, validator);
+
+
+        Administradora outraAdministradora = AdministradoraBuilder.getFactory()
+                .comNome("TESTE")
+                .comCNPJ(cnpj())
+                .comEndereco(campoDaAreia)
+                .criar();
+
+
+        sessionFactory.getCurrentSession().persist(outraAdministradora);
+
+        Usuario usuarioLogado = UsuarioBuilder.getFactory()
+                .comEmail("teste@teste.com")
+                .comAdministradora(administradora)
+                .criar();
+
+        sessionFactory.getCurrentSession().persist(usuarioLogado);
+
+        SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(usuarioLogado.getUsername(), usuarioLogado.getPassword()));
+
+        Operadora novaOperadora = OperadoraBuilder.getFactory().comNome("TESTE")
+                .comModalidade(modalidade)
+                .comAdministradora(outraAdministradora)
+                .criar();
+
+        controller.doInsert(novaOperadora);
+
+        assertNotNull(novaOperadora.getId());
+        assertEquals(usuarioLogado.getAdministradora(), novaOperadora.getAdministradora());
+
     }
 
     @Test
-    public void deveSalvarOperadora() {
+    public void deveInserirOperadoraComAdministradoraDefinidaPeloFormulario() {
+        final OperadoraController controller = new OperadoraController(repository, securityContext, result, validator);
 
-        final Operadora operadora = OperadoraBuilder.getFactory()
-                .comAdministradora(administradora)
-                .comModalidade((Modalidade) sessionFactory.getCurrentSession().get(Modalidade.class, 1L))
+
+        Administradora outraAdministradora = AdministradoraBuilder.getFactory()
+                .comNome("TESTE")
+                .comCNPJ(cnpj())
+                .comEndereco(campoDaAreia)
                 .criar();
-        final OperadoraController controller = new OperadoraController(repository, result, validator);
 
-        controller.salvar(operadora);
 
+        sessionFactory.getCurrentSession().persist(outraAdministradora);
+
+        Usuario usuarioLogado = UsuarioBuilder.getFactory()
+                .comEmail("teste@teste.com")
+                .comAdministradora(null)
+                .criar();
+
+        sessionFactory.getCurrentSession().persist(usuarioLogado);
+
+        SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(usuarioLogado.getUsername(), usuarioLogado.getPassword()));
+
+        Operadora novaOperadora = OperadoraBuilder.getFactory().comNome("TESTE")
+                .comModalidade(modalidade)
+                .comAdministradora(outraAdministradora)
+                .criar();
+
+        controller.doInsert(novaOperadora);
+
+        assertNotNull(novaOperadora.getId());
+        assertNotNull(novaOperadora.getAdministradora());
     }
+
+    @Test
+    public void deveAlterarAOperadoraSentandoAMesmaAdministradoraDoUsuarioLogado() {
+
+        final OperadoraController controller = new OperadoraController(repository, securityContext, result, validator);
+
+
+        Administradora outraAdministradora = AdministradoraBuilder.getFactory()
+                .comNome("TESTE")
+                .comCNPJ(cnpj())
+                .comEndereco(campoDaAreia)
+                .criar();
+
+
+        sessionFactory.getCurrentSession().persist(outraAdministradora);
+
+        Usuario usuarioLogado = UsuarioBuilder.getFactory()
+                .comEmail("teste@teste.com")
+                .comAdministradora(administradora)
+                .criar();
+
+        sessionFactory.getCurrentSession().persist(usuarioLogado);
+
+        SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(usuarioLogado.getUsername(), usuarioLogado.getPassword()));
+
+        Operadora novaOperadora = OperadoraBuilder.getFactory().comNome("TESTE")
+                .comModalidade(modalidade)
+                .comAdministradora(outraAdministradora)
+                .criar();
+
+        sessionFactory.getCurrentSession().persist(novaOperadora);
+
+        controller.doUpdate(novaOperadora);
+
+        sessionFactory.getCurrentSession().flush();
+
+        assertEquals(usuarioLogado.getAdministradora(), novaOperadora.getAdministradora());
+    }
+
+    @Test
+    public void deveAlterarAOperadoraSentandoAdministradoraDiferenteDoUsuarioLogado() {
+
+        final OperadoraController controller = new OperadoraController(repository, securityContext, result, validator);
+
+
+        Administradora outraAdministradora = AdministradoraBuilder.getFactory()
+                .comNome("TESTE")
+                .comCNPJ(cnpj())
+                .comEndereco(campoDaAreia)
+                .criar();
+
+
+        sessionFactory.getCurrentSession().persist(outraAdministradora);
+
+        Usuario usuarioLogado = UsuarioBuilder.getFactory()
+                .comEmail("teste@teste.com")
+                .comAdministradora(null)
+                .criar();
+
+        sessionFactory.getCurrentSession().persist(usuarioLogado);
+
+        SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(usuarioLogado.getUsername(), usuarioLogado.getPassword()));
+
+        Operadora novaOperadora = OperadoraBuilder.getFactory().comNome("TESTE")
+                .comModalidade(modalidade)
+                .comAdministradora(outraAdministradora)
+                .criar();
+
+        sessionFactory.getCurrentSession().persist(novaOperadora);
+
+        controller.doUpdate(novaOperadora);
+
+        sessionFactory.getCurrentSession().flush();
+
+        assertNotNull(novaOperadora.getAdministradora());
+        assertEquals(outraAdministradora, novaOperadora.getAdministradora());
+    }
+
 }

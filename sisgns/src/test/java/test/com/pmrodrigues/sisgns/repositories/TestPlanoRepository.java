@@ -49,8 +49,8 @@ public class TestPlanoRepository extends AbstractTransactionalJUnit4SpringContex
         sessionFactory.getCurrentSession().persist(administradora);
 
         this.operadora = OperadoraBuilder.getFactory()
-                .comNome("")
-                .comCodigo("")
+                .comNome("TESTE")
+                .comCodigo("0001")
                 .comModalidade((Modalidade) sessionFactory.getCurrentSession().get(Modalidade.class, 1L))
                 .comAdministradora(administradora)
                 .criar();

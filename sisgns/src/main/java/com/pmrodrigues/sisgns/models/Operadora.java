@@ -1,8 +1,10 @@
 package com.pmrodrigues.sisgns.models;
 
+import com.pmrodrigues.persistence.validation.annotations.NotTransient;
 import com.pmrodrigues.sisgns.models.enums.QuantidadeParcelas;
 import lombok.*;
 import org.hibernate.annotations.*;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.CascadeType;
 import javax.persistence.*;
@@ -45,21 +47,25 @@ public class Operadora implements Serializable{
     @Getter
     @Setter
     @Column
+    @NotEmpty(message = "Código é obrigatório")
     private String codigo;
 
     @Getter
     @Setter
     @Column
+    @NotEmpty(message = "Nome é obrigatório")
     private String nome;
 
     @Getter
     @Setter
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @NotTransient(message = "Modalidade é obrigatória")
     private Modalidade modalidade;
 
     @Getter
     @Setter
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @NotTransient(message = "Administradora é obrigatória")
     private Administradora administradora;
 
     @Getter

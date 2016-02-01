@@ -5,11 +5,11 @@ import com.pmrodrigues.persistence.daos.ResultList;
 import com.pmrodrigues.sisgns.models.Modalidade;
 import com.pmrodrigues.sisgns.models.security.Usuario;
 import com.pmrodrigues.sisgns.repositories.ModalidadeRepository;
-import com.pmrodrigues.sisgns.repositories.UsuarioRepository;
+import com.pmrodrigues.sisgns.securities.SecurityContext;
 import com.pmrodrigues.vraptor.crud.annotations.CRUD;
 import com.pmrodrigues.vraptor.crud.annotations.Insert;
+import com.pmrodrigues.vraptor.crud.annotations.Update;
 import com.pmrodrigues.vraptor.crud.controllers.AbstractCRUDController;
-import org.springframework.security.core.context.SecurityContextHolder;
 
 import static br.com.caelum.vraptor.view.Results.json;
 
@@ -20,11 +20,11 @@ import static br.com.caelum.vraptor.view.Results.json;
 @CRUD
 public class ModalidadeController extends AbstractCRUDController<Modalidade> {
 
-    private final UsuarioRepository userRepository;
+    private final SecurityContext securityContext;
 
-    public ModalidadeController(ModalidadeRepository repository, UsuarioRepository userRepository, Result result, Validator validator) {
+    public ModalidadeController(ModalidadeRepository repository, SecurityContext securityContext, Result result, Validator validator) {
         super(repository, result, validator);
-        this.userRepository = userRepository;
+        this.securityContext = securityContext;
     }
 
     @Get
@@ -46,13 +46,25 @@ public class ModalidadeController extends AbstractCRUDController<Modalidade> {
     @Insert
     public void doInsert(final Modalidade object) {
 
-        final String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        final Usuario usuarioLogado = userRepository.findByEmail(email);
+        final Usuario usuarioLogado = securityContext.getUsuarioLogado();
         if (usuarioLogado.getAdministradora() != null) {
             object.setAdministradora(usuarioLogado.getAdministradora());
         }
 
         this.getRepository().add(object);
 
+    }
+
+    @Update
+    public void doUpdate(Modalidade object) {
+        final Usuario usuarioLogado = securityContext.getUsuarioLogado();
+        final Modalidade toUpdate = getRepository().findById(object.getId());
+        toUpdate.setCodigo(object.getCodigo());
+        toUpdate.setNome(object.getNome());
+        if (usuarioLogado.getAdministradora() != null) {
+            toUpdate.setAdministradora(usuarioLogado.getAdministradora());
+        }
+
+        getRepository().set(toUpdate);
     }
 }

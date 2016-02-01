@@ -11,7 +11,7 @@ import com.pmrodrigues.sisgns.models.Administradora;
 import com.pmrodrigues.sisgns.models.Modalidade;
 import com.pmrodrigues.sisgns.models.security.Usuario;
 import com.pmrodrigues.sisgns.repositories.ModalidadeRepository;
-import com.pmrodrigues.sisgns.repositories.UsuarioRepository;
+import com.pmrodrigues.sisgns.securities.SecurityContext;
 import org.hibernate.SessionFactory;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,6 +27,7 @@ import test.com.pmrodrigues.sisgns.builders.UsuarioBuilder;
 import static org.hibernate.criterion.Restrictions.eq;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static test.com.pmrodrigues.sisgns.utilities.GeradorCNPJCPF.cnpj;
 
 /**
  * Created by Marceloo on 08/12/2015.
@@ -38,7 +39,7 @@ public class TestModalidadeController extends AbstractTransactionalJUnit4SpringC
     private ModalidadeRepository repository;
 
     @Autowired
-    private UsuarioRepository userRepository;
+    private SecurityContext sercurityContext;
 
     @Autowired
     private SessionFactory sessionFactory;
@@ -73,7 +74,7 @@ public class TestModalidadeController extends AbstractTransactionalJUnit4SpringC
 
         sessionFactory.getCurrentSession().persist(terceira);
 
-        controller = new ModalidadeController(repository, userRepository, result, validator);
+        controller = new ModalidadeController(repository, sercurityContext, result, validator);
     }
 
     @Test
@@ -117,6 +118,103 @@ public class TestModalidadeController extends AbstractTransactionalJUnit4SpringC
         Modalidade modalidadeSalva = (Modalidade) sessionFactory.getCurrentSession().get(Modalidade.class, modalidade.getId());
         assertEquals(usuarioLogado.getAdministradora(), modalidadeSalva.getAdministradora());
 
+    }
+
+    @Test
+    public void deveAlterarAModalidadeParaAMesmaAdministradoraDoUsuarioLogado() {
+
+        final Logradouro enderecoDaAlacoro = (Logradouro) sessionFactory.getCurrentSession()
+                .createCriteria(Logradouro.class)
+                .add(eq("cep", "22743310"))
+                .uniqueResult();
+
+
+        final Administradora administradora = AdministradoraBuilder.getFactory()
+                .comEndereco(enderecoDaAlacoro).criar();
+
+        final Usuario usuarioLogado = UsuarioBuilder.getFactory()
+                .comAdministradora(administradora)
+                .comEmail("teste@teste.com").criar();
+
+        Administradora outraAdministradora = AdministradoraBuilder.getFactory()
+                .comNome("TESTE")
+                .comCNPJ(cnpj())
+                .comEndereco(enderecoDaAlacoro)
+                .criar();
+
+
+        sessionFactory.getCurrentSession().persist(outraAdministradora);
+
+
+        Modalidade modalidade = ModalidadeBuilder.getFactory()
+                .comCodigo("0004")
+                .comNome("COM ADMINISTRADORA IGUAL A DO USUARIO")
+                .comAdministradora(outraAdministradora)
+                .criar();
+
+
+        sessionFactory.getCurrentSession().persist(administradora);
+        sessionFactory.getCurrentSession().persist(outraAdministradora);
+        sessionFactory.getCurrentSession().persist(usuarioLogado);
+
+        SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(usuarioLogado.getUsername(), usuarioLogado.getPassword()));
+
+        sessionFactory.getCurrentSession().persist(modalidade);
+
+        controller.doUpdate(modalidade);
+
+        assertNotNull(modalidade.getId());
+
+        Modalidade modalidadeSalva = (Modalidade) sessionFactory.getCurrentSession().get(Modalidade.class, modalidade.getId());
+        assertEquals(usuarioLogado.getAdministradora(), modalidadeSalva.getAdministradora());
+    }
+
+    @Test
+    public void deveAtualizarModalidadeParaAdminstradoraDiferenteDoUsuarioLogado() {
+        final Logradouro enderecoDaAlacoro = (Logradouro) sessionFactory.getCurrentSession()
+                .createCriteria(Logradouro.class)
+                .add(eq("cep", "22743310"))
+                .uniqueResult();
+
+
+        final Administradora administradora = AdministradoraBuilder.getFactory()
+                .comEndereco(enderecoDaAlacoro).criar();
+
+        final Usuario usuarioLogado = UsuarioBuilder.getFactory()
+                .comAdministradora(null)
+                .comEmail("teste@teste.com").criar();
+
+        Administradora outraAdministradora = AdministradoraBuilder.getFactory()
+                .comNome("TESTE")
+                .comCNPJ(cnpj())
+                .comEndereco(enderecoDaAlacoro)
+                .criar();
+
+
+        sessionFactory.getCurrentSession().persist(outraAdministradora);
+
+
+        Modalidade modalidade = ModalidadeBuilder.getFactory()
+                .comCodigo("0004")
+                .comNome("COM ADMINISTRADORA IGUAL A DO USUARIO")
+                .comAdministradora(outraAdministradora)
+                .criar();
+
+
+        sessionFactory.getCurrentSession().persist(administradora);
+        sessionFactory.getCurrentSession().persist(outraAdministradora);
+        sessionFactory.getCurrentSession().persist(usuarioLogado);
+
+        SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(usuarioLogado.getUsername(), usuarioLogado.getPassword()));
+
+        sessionFactory.getCurrentSession().persist(modalidade);
+
+        controller.doUpdate(modalidade);
+
+        assertNotNull(modalidade.getId());
+
+        Modalidade modalidadeSalva = (Modalidade) sessionFactory.getCurrentSession().get(Modalidade.class, modalidade.getId());
+        assertEquals(outraAdministradora, modalidadeSalva.getAdministradora());
     }
 
     @Test
